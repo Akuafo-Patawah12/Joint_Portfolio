@@ -14,7 +14,7 @@ export default function Header({DarkMode}) {
           animate={{ opacity: 1, y: 0 }}
           className="text-3xl font-bold"
         >
-          <a href="/">My Portfolio</a>
+          <a href="/">Our Portfolio</a>
         </motion.h1>
         
         <nav className="flex gap-6">
