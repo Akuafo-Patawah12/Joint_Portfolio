@@ -4,9 +4,9 @@ function Home() {
     
     return <div className="p-4">
         <section className="text-center py-20 px-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold">Welcome to My Portfolio</h1>
+        <h1 className="text-4xl md:text-6xl font-extrabold">Welcome to our portfolio</h1>
         <p className="mt-4 text-lg md:text-xl text-gray-400">Building modern web & mobile solutions with React, React native, Node.js, and Rust.</p>
-        <a href="#projects" className="mt-6 inline-block bg-blue-600 hover:bg-blue-500 text-white py-3 px-6 rounded-lg text-lg">View My Work</a>
+        <a href="#projects" className="mt-6 inline-block border-2 border-blue-600 hover:border-blue-500 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
 
       {/* About Section */}
