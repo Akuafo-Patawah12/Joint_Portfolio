@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun ,Menu} from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export default function Header({DarkMode}) {
@@ -28,6 +28,7 @@ export default function Header({DarkMode}) {
         <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
+        <Menu/>
       </div>
     </header>
     )
