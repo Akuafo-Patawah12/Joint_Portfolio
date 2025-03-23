@@ -64,9 +64,9 @@ function Home() {
         {/* Contact Card */}
         <div className="max-w-sm bg-white shadow-lg rounded-xl p-6 flex flex-col items-center">
           <img
-            src="https://via.placeholder.com/100"
+            src="/me.jpg"
             alt="Profile"
-            className="w-24 h-24 rounded-full border-4 border-blue-500 shadow-md"
+            className="w-24 h-24 rounded-full border-4 border-blue-600 shadow-md"
           />
           <h2 className="text-xl font-semibold text-gray-800 mt-4">Akuafo Patawah</h2>
           <p className="text-gray-500">Customer Support</p>

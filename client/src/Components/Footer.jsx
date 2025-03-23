@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-gray-400 text-sm">
-          You can follow me on GitHub or GitLab. I am always ready for business and project collaborations.
+          You can follow me on GitHub or GitLab. I am always open for business and project collaborations.
         </p>
         <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Techscroww. All rights reserved.</p>
       </div>
