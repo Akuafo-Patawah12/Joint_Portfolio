@@ -75,7 +75,7 @@ function Home() {
           <div className="mt-4 space-y-2 w-full text-center">
             <div className="flex items-center justify-center space-x-2 text-gray-700">
               <Mail className="w-5 h-5 text-blue-500" />
-              <span>johndoe@example.com</span>
+              <span>burxells873@gmail.com</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-700">
               <Phone className="w-5 h-5 text-blue-500" />
@@ -88,7 +88,7 @@ function Home() {
           </div>
 
           {/* Contact Button */}
-          <button className="mt-5 bg-blue-600 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+          <button className="mt-5 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
             Contact Now
           </button>
         </div>

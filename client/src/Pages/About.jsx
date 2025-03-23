@@ -14,8 +14,8 @@ const About = () => {
                 <p className="text-lg text-gray-700 mb-4">
                     We give the best our of the rest, we would love to hear from you. We are always open to new opportunities and collaborations, so feel free to reach out!
                 </p>
-                <div className="text-center mt-6">
-                    <a href="/contact" className="text-blue-500 hover:underline">Contact Me</a>
+                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-blue-700">
+                    <a href="/contact" className="text-blue-500 block  w-full h-[40px] hover:underline">Contact Me</a>
                 </div>
             </div>
         </div>
