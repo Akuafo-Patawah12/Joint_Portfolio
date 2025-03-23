@@ -1,16 +1,33 @@
 import { Link } from "react-router-dom"
 import { Mail, Phone, MapPin } from "lucide-react";
-
-function Home() {
+import "../Styles/Bubbles.css"
+function Home({darkMode}) {
 
     
     return <div className="p-4">
-    
-        <section className="text-center py-20 px-6">
+        <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
+      <section className="text-center py-20 px-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-sans tracking-wide text-white  font-extrabold uppercase">
         <h1 className="text-4xl md:text-6xl font-extrabold">Welcome to our portfolio</h1>
         <p className="mt-4 text-lg md:text-xl text-gray-400">Building modern web & mobile solutions with React, React native, Node.js, and Rust.</p>
         <a href="#projects" className="mt-6 inline-block border-2 border-blue-600 hover:border-blue-500 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+    </div>
+        
 
       {/* About Section */}
       <section id="about" className="container mx-auto py-20 px-6">
@@ -19,7 +36,7 @@ function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-gray-100 py-20 px-6 rounded-2xl">
+      <section id="projects" className={` ${darkMode ? "bg-gray-800" : "bg-stone-100" } py-20 px-6 rounded-2xl`}>
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center">Projects</h2>
           <div className="mt-8 grid md:grid-cols-2 gap-8">

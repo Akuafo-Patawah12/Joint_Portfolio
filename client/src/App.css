@@ -2,6 +2,8 @@ html{
   scroll-behavior: smooth;
 }
 
+
+
 .active{
   opacity: .8;
   position: relative;
