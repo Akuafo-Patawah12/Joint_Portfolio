@@ -56,13 +56,13 @@ function Home() {
       </div>
 
       {/* Contact Section */}
-      <section id="contact" className="text-center">
+      <section id="contact" className=" w-full text-center sm:">
         <h2 className="text-3xl font-bold mb-4">
           <Link to="/contact" className="hover:underline">Contact Us</Link>
         </h2>
 
         {/* Contact Card */}
-        <div className="max-w-sm bg-white shadow-lg rounded-xl p-6 flex flex-col items-center">
+        <div className="w-full  bg-white shadow-lg rounded-xl p-6 flex flex-col items-center ">
           <img
             src="/me.jpg"
             alt="Profile"
@@ -72,7 +72,7 @@ function Home() {
           <p className="text-gray-500">Customer Support</p>
 
           {/* Contact Details */}
-          <div className="mt-4 space-y-2 w-full text-center">
+          <div className="mt-4 space-y-2 w-full text-center ">
             <div className="flex items-center justify-center space-x-2 text-gray-700">
               <Mail className="w-5 h-5 text-blue-500" />
               <span>burxells873@gmail.com</span>

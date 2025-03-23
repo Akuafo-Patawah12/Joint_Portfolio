@@ -15,7 +15,7 @@ function App() {
     <main className={darkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}>
       <Header DarkMode={[darkMode,setDarkMode]} dropdown={[showDrop,setShowDrop]}/>
       
-      {showDrop && <div className="flex w-[95%] mx-auto relative top-[-18px] lg:hidden"><button className="w-[49%] bg-blue-100 py-3"><a href="/About">About</a></button><button className="w-[49%] border-l-2 border-stone-100 bg-blue-100 py-3"><a href="/Contact">Contact</a></button> <div className="size-4 absolute top-[-8px] right-[3%] rotate-45 bg-blue-100"></div></div>}
+      {showDrop && <div className="flex w-[95%] mx-auto relative top-[-18px] lg:hidden"><button className="w-[49%] bg-blue-100 py-3"><a href="/about">About</a></button><button className="w-[49%] border-l-2 border-stone-100 bg-blue-100 py-3"><a href="/contact">Contact</a></button> <div className="size-4 absolute top-[-8px] right-[3%] rotate-45 bg-blue-100"></div></div>}
 
         <Routes>
           <Route path="/" element={<Home />} />
