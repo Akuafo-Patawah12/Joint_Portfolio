@@ -1,11 +1,12 @@
 
 import { motion } from "framer-motion";
-import { Moon, Sun ,Menu} from "lucide-react";
+import { Moon, Sun ,Menu, X} from "lucide-react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg"
 
-export default function Header({DarkMode}) {
+export default function Header({DarkMode, dropdown}) {
     const [darkMode,setDarkMode] = DarkMode
+    const [showDrop,setShowDrop] = dropdown
 
     return(
         <header className={`p-6 ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
@@ -30,7 +31,7 @@ export default function Header({DarkMode}) {
         <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
-        <Menu/>
+        <button className="lg:hidden" onClick={()=> setShowDrop(prev => !prev)}> {showDrop ?  <X/> : <Menu />}</button>
         </section>
       </div>
     </header>
