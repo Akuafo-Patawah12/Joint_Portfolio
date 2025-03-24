@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { Moon, Sun ,Menu, X} from "lucide-react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo.svg"
+import Logowhite from "../assets/Logowhite.svg"
+import useDarkMode from "./Theme";
 
-export default function Header({DarkMode, dropdown}) {
-    const [darkMode,setDarkMode] = DarkMode
+export default function Header({ dropdown}) {
+  const { darkMode, setDarkMode } = useDarkMode();
     const [showDrop,setShowDrop] = dropdown
 
     return(
@@ -16,7 +18,7 @@ export default function Header({DarkMode, dropdown}) {
           animate={{ opacity: 1, y: 0 }}
           className="text-2xl"
         >
-          <a href="/" className="flex">Techscr<img src={Logo} alt="logo"/>ww</a>
+          <a href="/" className="flex">Techscr {darkMode ? <img src={Logowhite} alt="logo"/>: <img src={Logo} alt="logo"/>}ww</a>
         </motion.h2>
         
         <nav className="hidden gap-6 lg:flex">

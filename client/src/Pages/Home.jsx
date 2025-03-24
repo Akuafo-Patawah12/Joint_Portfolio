@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom"
 import { Mail, Phone, MapPin } from "lucide-react";
 import "../Styles/Bubbles.css"
-function Home({darkMode}) {
+import useDarkMode from "../Components/Theme";
+import { useEffect } from "react";
+function Home() {
 
+const { darkMode } = useDarkMode();
+ useEffect(()=>{
+   console.log("theme changed")
+ },[darkMode])
     
     return <div className="p-4">
         <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
       <section className="text-center py-20 px-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-sans tracking-wide text-white  font-extrabold uppercase">
         <h1 className="text-4xl md:text-6xl font-extrabold">Welcome to our portfolio</h1>
         <p className="mt-4 text-lg md:text-xl text-gray-400">Building modern web & mobile solutions with React, React native, Node.js, and Rust.</p>
-        <a href="#projects" className="mt-6 inline-block border-2 border-blue-600 hover:border-blue-500 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
+        <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
@@ -64,8 +70,8 @@ function Home({darkMode}) {
         </p>
         <div className="mt-4 space-y-2 text-lg font-medium">
           <p>📌 Connect with me on 
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline"> GitHub</a> & 
-            <a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline"> GitLab</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> GitHub</a> & 
+            <a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> GitLab</a>
           </p>
           <p>📩 Or drop me a message anytime!</p>
         </div>
