@@ -2,19 +2,67 @@ import { Link } from "react-router-dom"
 import { Mail, Phone, MapPin } from "lucide-react";
 import "../Styles/Bubbles.css"
 import useDarkMode from "../Components/Theme";
-import { useEffect } from "react";
+
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Linkicon from "../assets/Link.svg"
 function Home() {
 
 const { darkMode } = useDarkMode();
  useEffect(()=>{
    console.log("theme changed")
  },[darkMode])
+
+ const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+const text = "Welcome to our portfolio.";
+ useEffect(() => {
+  if (index < text.length) {
+    const timeout = setTimeout(() => {
+      setDisplayedText((prev) => prev + text[index]);
+      setIndex(index + 1);
+    }, 150); // Typing speed (adjust as needed)
+
+    return () => clearTimeout(timeout);
+  }
+}, [index, text]);
+
+const [activeTab, setActiveTab] = useState("tab1");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "tab1":
+        return <div>I am a full-stack JavaScript developer and Rust developer, specializing in web solutions, building APIs, and mobile app development.</div>;
+      case "tab2":
+        return <div className="mt-4 flex flex-col gap-10 items-center text-justify">
+                   <h2 className="font-bold text-4xl">Our mission</h2>
+                  Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client's unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
+              </div>;
+      case "tab3":
+        return <div>Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.</div>;
+      default:
+        return null;
+    }
+  };
     
     return <div className="p-4">
         <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
       <section className="text-center py-20 px-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-sans tracking-wide text-white  font-extrabold uppercase">
-        <h1 className="text-4xl md:text-6xl font-extrabold">Welcome to our portfolio</h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-400">Building modern web & mobile solutions with React, React native, Node.js, and Rust.</p>
+         <motion.h1
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="typing-text"
+      style={{
+        fontSize: "2rem",
+        fontWeight: "bold",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      {displayedText}
+      <span className="cursor">|</span>
+    </motion.h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-400">We are a passionate team of developers and designers specializing in custom websites, web apps, and mobile apps. From simple landing pages to complex e-commerce platforms, we bring your vision to life. Contact us to get started!</p>
         <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
@@ -33,27 +81,40 @@ const { darkMode } = useDarkMode();
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
     </div>
-        
 
-      {/* About Section */}
-      <section id="about" className="container mx-auto py-20 px-6">
-        <h2 className="text-3xl font-bold text-center">About Me</h2>
-        <p className="mt-4 text-lg text-center max-w-3xl mx-auto">I am a full-stack JavaScript developer and  Rust developer, specializing in web solutions, building APIs, and mobile app development.</p>
-      </section>
+       {/* About Section */}  
+    <div className="flex flex-col mt-4 lg:flex-row">
+      <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
+      <img src="/me.jpg" alt="me" className=" w-full " />
+        <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
+          About us
+        </button>
+        <button onClick={() => setActiveTab("tab2")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab2" ? "tab_active" : ""}`}>
+          Mission
+        </button>
+        <button onClick={() => setActiveTab("tab3")} className={`bg-stone-300 py-4 ${activeTab === "tab3" ? "tab_active" : ""}`}>
+          Vision
+        </button>
+      </div>
+      <div className="w-full px-[2.5%] flex  justify-center lg:w-[55%]">{renderContent()}</div>
+    </div>
+
+     
+     
 
       {/* Projects Section */}
       <section id="projects" className={` ${darkMode ? "bg-gray-800" : "bg-stone-100" } py-20 px-6 rounded-2xl`}>
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center">Projects</h2>
           <div className="mt-8 grid md:grid-cols-2 gap-8">
-            <div className="bg-blue-400 p-6 rounded-lg">
+            <div className="project  p-8 rounded-lg">
               <h3 className="text-xl font-semibold">Logistics Platform</h3>
-              <p className="text-gray-300 mt-2">Developed a logistics and third-party eCommerce platform with real-time tracking.</p>
+              <p className="text-gray-200 mt-2">Developed a logistics and third-party eCommerce platform with real-time tracking.</p>
               <button><a href="https://sfghanalogistics.com" target="_blank">View</a></button>
             </div>
-            <div className="bg-blue-400 p-6 rounded-lg">
+            <div className="project p-8 rounded-lg">
               <h3 className="text-xl font-semibold">Attendance App</h3>
-              <p className="text-gray-300 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
+              <p className="text-gray-200 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
             </div>
           </div>
         </div>
@@ -92,7 +153,7 @@ const { darkMode } = useDarkMode();
             className="w-24 h-24 rounded-full border-4 border-blue-600 shadow-md"
           />
           <h2 className="text-xl font-semibold text-gray-800 mt-4">Akuafo Patawah</h2>
-          <p className="text-gray-500">Customer Support</p>
+          <p className="text-gray-500">Tech/Customer Support</p>
 
           {/* Contact Details */}
           <div className="mt-4 space-y-2 w-full text-center ">
@@ -111,8 +172,8 @@ const { darkMode } = useDarkMode();
           </div>
 
           {/* Contact Button */}
-          <button className="mt-5 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-            Contact Now
+          <button className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+            Contact Now <img src={Linkicon} alt="link" className="w-5 "/>
           </button>
         </div>
       </section>
