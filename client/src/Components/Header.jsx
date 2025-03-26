@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Moon, Sun ,Menu, X} from "lucide-react";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/Logo.svg"
+import Logo from "../assets/Logoicon.svg"
 import Logowhite from "../assets/Logowhite.svg"
 import useDarkMode from "./Theme";
 

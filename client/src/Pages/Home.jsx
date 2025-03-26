@@ -5,7 +5,7 @@ import useDarkMode from "../Components/Theme";
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Linkicon from "../assets/Link.svg"
+import Linkicon from "../assets/Linkicon.svg"
 function Home() {
 
 const { darkMode } = useDarkMode();
@@ -32,14 +32,31 @@ const [activeTab, setActiveTab] = useState("tab1");
   const renderContent = () => {
     switch (activeTab) {
       case "tab1":
-        return <div>I am a full-stack JavaScript developer and Rust developer, specializing in web solutions, building APIs, and mobile app development.</div>;
+        return <div className="mt-4 flex flex-col gap-10 items-center text-justify"> 
+                <h2 className="font-bold text-4xl">About us</h2>
+        I am a full-stack JavaScript developer and Rust developer, specializing in web solutions, building APIs, and mobile app development. With a strong foundation in modern web technologies, I design and develop scalable, high-performance applications that enhance user experience and drive business growth.
+
+        My expertise spans frontend and backend development, database management, and cloud infrastructure, ensuring seamless integration and efficient system architecture. I am passionate about writing clean, maintainable code, optimizing performance, and leveraging the latest frameworks and tools to build innovative digital solutions.
+        
+        Beyond coding, I thrive on solving complex technical challenges, collaborating with teams, and continuously learning to stay ahead in the ever-evolving tech landscape. Whether it's developing a dynamic web application, crafting robust APIs, or engineering scalable mobile solutions, I am committed to delivering excellence and pushing the boundaries of what technology can achieve.
+        
+        
+        
+        
+        
+        
+        </div>;
       case "tab2":
         return <div className="mt-4 flex flex-col gap-10 items-center text-justify">
                    <h2 className="font-bold text-4xl">Our mission</h2>
                   Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client's unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
               </div>;
       case "tab3":
-        return <div>Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.</div>;
+        return <div className="mt-4 flex flex-col gap-10 items-center text-justify">
+                  <h2 className="font-bold text-4xl">Our vision</h2>
+                  Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.
+
+        We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. Our commitment to quality, scalability, and adaptability ensures that we not only meet the evolving needs of businesses but also shape the future of technology with groundbreaking solutions.</div>;
       default:
         return null;
     }
@@ -172,9 +189,11 @@ const [activeTab, setActiveTab] = useState("tab1");
           </div>
 
           {/* Contact Button */}
+          <Link to="/contact" >
           <button className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-            Contact Now <img src={Linkicon} alt="link" className="w-5 "/>
+              Contact Now <img src={Linkicon} alt="link" className="w-5 "/>
           </button>
+          </Link>
         </div>
       </section>
     </div>
