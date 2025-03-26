@@ -103,8 +103,8 @@ const [activeTab, setActiveTab] = useState("tab1");
     <div className="w-[95%] mx-auto flex flex-col mt-4 lg:flex-row">
       <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
       <section className="w-full relative">
-      <div className="absolute top-0 left-0 w-full h-full z-4  bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl">Overview</div>
-      <img src="/me.jpg" alt="me" className=" w-full " />
+      <div className="absolute top-0 left-0 w-full h-full z-4  bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl italic">Overview</div>
+      <img src="/code.jpg" alt="me" className=" w-full " />
       
       </section>
         <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
