@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Mail, Phone, MapPin ,Github, Gitlab,} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import "../Styles/Bubbles.css"
 import useDarkMode from "../Components/Theme";
 
@@ -140,16 +140,16 @@ const [activeTab, setActiveTab] = useState("tab1");
       {/* Contact Section */}
       <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-center gap-8">
       {/* Idea Section */}
-      <div className="max-w-xl p-6 text-center bg-white shadow-lg rounded-lg">
+      <div className=" p-6 text-center bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800">Got an idea? Let’s bring it to life!</h2>
         <p className="text-gray-600 mt-3">
           Whether you have a project in mind, a business proposal, or just want to say hello—I’d love to hear from you! 
           I’m always open to collaboration and exciting new opportunities.
         </p>
         
-      <div className="flex items-center gap-2">
-        <Github className="w-6 h-6 text-blue-500" />
-        <p>
+      <div className="flex items-center justify-center gap-2">
+        
+        <p className="mx-auto">
           Connect with me on{" "}
           <a
             href="https://github.com/"
@@ -171,9 +171,9 @@ const [activeTab, setActiveTab] = useState("tab1");
         </p>
       </div>
 
-      <div className="flex items-center gap-2">
-        <Mail className="w-6 h-6 text-blue-500" />
-        <p>Or drop me a message anytime!</p>
+      <div className="flex items-center gap-2 mt-2">
+        
+        <p className="mx-auto">Or drop me a message anytime!</p>
       </div>
 
       <p className="text-xl font-semibold text-blue-600 mt-5">
