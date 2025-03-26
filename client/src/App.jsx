@@ -22,7 +22,7 @@ function App() {
       
       {showDrop && (
   <div className="relative w-[95%] rounded-lg border-[1px] border-stone-300 top-[-10px] isolate mx-auto lg:hidden">
-    <div className="absolute border-t-[1px] border-l-[1px] border-stone-300 top-[-10px] right-[2%] w-4 h-4 rotate-45 bg-blue-50"></div>
+    <div className="absolute border-t-[1px] border-l-[1px] border-stone-300 top-[-8px] right-[5px] w-3 h-3 rotate-45 bg-blue-50"></div>
     <div className="flex w-full bg-blue-50 shadow-md rounded-lg overflow-hidden">
       <button className="w-1/2 py-3 text-center border-r-[1px] border-stone-300 text-blue-900 font-semibold hover:bg-blue-200 transition">
         <a href="/about">About</a>
