@@ -62,9 +62,9 @@ const [activeTab, setActiveTab] = useState("tab1");
     }
   };
     
-    return <div className="p-4">
+    return <div>
         <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
-      <section className="text-center py-20 px-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-sans tracking-wide text-white  font-extrabold uppercase">
+      <section className="text-center  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-sans tracking-wide text-white  font-extrabold uppercase">
          <motion.h1
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -79,8 +79,8 @@ const [activeTab, setActiveTab] = useState("tab1");
       {displayedText}
       <span className="cursor">|</span>
     </motion.h1>
-        <p className="mt-4 text-lg md:text-md text-gray-200">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
-        <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
+        <p className=" mt-4 text-lg md:text-md text-gray-200">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
+        <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-sm">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
@@ -100,7 +100,7 @@ const [activeTab, setActiveTab] = useState("tab1");
     </div>
 
        {/* About Section */}  
-    <div className="mx-auto flex flex-col mt-4 lg:flex-row">
+    <div className="w-[95%] mx-auto flex flex-col mt-4 lg:flex-row">
       <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
       <img src="/me.jpg" alt="me" className=" w-full " />
         <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
