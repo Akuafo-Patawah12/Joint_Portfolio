@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin ,Github, Gitlab,} from "lucide-react";
 import "../Styles/Bubbles.css"
 import useDarkMode from "../Components/Theme";
 
@@ -146,15 +146,40 @@ const [activeTab, setActiveTab] = useState("tab1");
           Whether you have a project in mind, a business proposal, or just want to say hello—I’d love to hear from you! 
           I’m always open to collaboration and exciting new opportunities.
         </p>
-        <div className="mt-4 space-y-2 text-lg font-medium">
-          <p>📌 Connect with me on 
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> GitHub</a> & 
-            <a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> GitLab</a>
-          </p>
-          <p>📩 Or drop me a message anytime!</p>
-        </div>
-        <p className="text-xl font-semibold text-blue-500 mt-5">Let’s build something amazing together. 🚀</p>
+        
+      <div className="flex items-center gap-2">
+        <Github className="w-6 h-6 text-blue-500" />
+        <p>
+          Connect with me on{" "}
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            GitHub
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://gitlab.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            GitLab
+          </a>
+        </p>
       </div>
+
+      <div className="flex items-center gap-2">
+        <Mail className="w-6 h-6 text-blue-500" />
+        <p>Or drop me a message anytime!</p>
+      </div>
+
+      <p className="text-xl font-semibold text-blue-600 mt-5">
+        Let’s build something amazing together. 🚀
+      </p>
+    </div>
 
       {/* Contact Section */}
       <section id="contact" className=" w-full text-center sm:">
