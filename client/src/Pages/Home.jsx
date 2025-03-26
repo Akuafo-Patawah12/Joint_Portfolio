@@ -79,7 +79,7 @@ const [activeTab, setActiveTab] = useState("tab1");
       {displayedText}
       <span className="cursor">|</span>
     </motion.h1>
-        <p className="mt-4 text-lg md: text-gray-200">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
+        <p className="mt-4 text-lg md:text-md text-gray-200">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
         <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
