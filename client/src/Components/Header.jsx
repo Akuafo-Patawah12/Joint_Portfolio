@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Moon, Sun ,Menu, X} from "lucide-react";
+import { Moon, Sun , Menu , X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logoicon.svg"
 import Logowhite from "../assets/Logowhite.svg"
@@ -20,7 +20,7 @@ export default function Header({ dropdown}) {
           animate={{ opacity: 1, y: 0 }}
           className="text-2xl font-bold italic"
         >
-          <a href="/" className="flex">Techscr {darkMode ? <img src={Logowhite} alt="logo"/>: <img src={Logo} alt="logo"/>}ww</a>
+          <a href="/" className="flex text-blue-500">Techscr {darkMode ? <img src={Logowhite} alt="logo"/>: <img src={Logo} alt="logo"/>}ww</a>
         </motion.h2>
         
         <nav className="hidden gap-6 lg:flex">
