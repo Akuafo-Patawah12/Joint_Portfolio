@@ -79,7 +79,7 @@ const [activeTab, setActiveTab] = useState("tab1");
       {displayedText}
       <span className="cursor">|</span>
     </motion.h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-400">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
+        <p className="mt-4 text-lg md: text-gray-200">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
         <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-lg">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
@@ -100,7 +100,7 @@ const [activeTab, setActiveTab] = useState("tab1");
     </div>
 
        {/* About Section */}  
-    <div className="flex flex-col mt-4 lg:flex-row">
+    <div className="mx-auto flex flex-col mt-4 lg:flex-row">
       <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
       <img src="/me.jpg" alt="me" className=" w-full " />
         <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
