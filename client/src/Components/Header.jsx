@@ -13,7 +13,7 @@ export default function Header({ dropdown}) {
    const hideFooterOn = ["/contact", "/about"]
 
     return(
-        <header className={`p-6 ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"} ${hideFooterOn.includes(location.pathname) ? "border-b-8 border-gray-200 dark:border-gray-700" : ""}`}>
+        <header className={`py-6 px-[2.5%] ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"} ${hideFooterOn.includes(location.pathname) ? "border-b-8 border-gray-200 dark:border-gray-700" : ""}`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.h2 
           initial={{ opacity: 0, y: -10 }} 

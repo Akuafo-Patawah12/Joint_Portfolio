@@ -20,7 +20,18 @@ function App() {
     <main className={darkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"}>
       <Header  dropdown={[showDrop,setShowDrop]}/>
       
-      {showDrop && <div className="flex w-[95%] mx-auto relative top-[-18px] lg:hidden"><button className="w-[49%] bg-blue-100 py-3"><a href="/about">About</a></button><button className="w-[49%] border-l-2 border-stone-100 bg-blue-100 py-3"><a href="/contact">Contact</a></button> <div className="size-4 absolute top-[-8px] right-[3%] rotate-45 bg-blue-100"></div></div>}
+      {showDrop && (
+  <div className="relative w-[95%] rounded-lg border-[1px] border-stone-400 top-[-10px] isolate mx-auto lg:hidden">
+    <div className="absolute top-[-10px] right-[2%] w-4 h-4 rotate-45 bg-blue-100"></div>
+    <div className="flex w-full bg-blue-50 shadow-md rounded-lg overflow-hidden">
+      <button className="w-1/2 py-3 text-center border-r-[1px] border-stone-400 text-blue-900 font-semibold hover:bg-blue-200 transition">
+        <a href="/about">About</a>
+      </button>
+      <button className="w-1/2 py-3 text-center text-blue-900 font-semibold border-l-2 border-stone-200 hover:bg-blue-200 transition">
+        <a href="/contact">Contact</a>
+      </button>
+    </div>
+  </div>)}
 
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode}/>} />

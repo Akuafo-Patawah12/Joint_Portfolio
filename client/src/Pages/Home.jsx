@@ -128,15 +128,35 @@ const [activeTab, setActiveTab] = useState("tab1");
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center">Projects</h2>
           <div className="mt-8 grid md:grid-cols-2 gap-8">
-            <div className="project  p-8 rounded-lg">
-              <h3 className="text-xl font-semibold">Logistics Platform</h3>
-              <p className="text-gray-200 mt-2">Developed a logistics and third-party eCommerce platform with real-time tracking.</p>
-              <button><a href="https://sfghanalogistics.com" target="_blank">View</a></button>
-            </div>
-            <div className="project p-8 rounded-lg">
+          <motion.div
+      className="project p-8 rounded-lg bg-gray-800 "
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileHover={{ scale: 1.05 }}
+    >
+      <h3 className="text-xl font-semibold ">Logistics Platform</h3>
+      <p className="text-gray-200 mt-2">
+        Developed a logistics and third-party eCommerce platform with real-time tracking.
+      </p>
+      <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <a href="https://sfghanalogistics.com" target="_blank" rel="noopener noreferrer">
+          View
+        </a>
+      </button>
+    </motion.div>
+    <motion.div
+      className="project p-8 rounded-lg bg-gray-800 "
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileHover={{ scale: 1.05 }}
+    >
               <h3 className="text-xl font-semibold">Attendance App</h3>
               <p className="text-gray-200 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
