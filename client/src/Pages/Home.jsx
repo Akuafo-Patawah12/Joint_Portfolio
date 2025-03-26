@@ -102,7 +102,11 @@ const [activeTab, setActiveTab] = useState("tab1");
        {/* About Section */}  
     <div className="w-[95%] mx-auto flex flex-col mt-4 lg:flex-row">
       <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
+      <section className="w-full relative">
+      <div className="absolute top-0 left-0 w-full h-full z-4  bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl">Overview</div>
       <img src="/me.jpg" alt="me" className=" w-full " />
+      
+      </section>
         <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
           About us
         </button>
@@ -120,7 +124,7 @@ const [activeTab, setActiveTab] = useState("tab1");
      
 
       {/* Projects Section */}
-      <section id="projects" className={` ${darkMode ? "bg-gray-800" : "bg-stone-100" } py-20 px-6 rounded-2xl`}>
+      <section id="projects" className={` ${darkMode ? "bg-gray-800" : "bg-stone-100" } mt-[70px] py-20 px-6 rounded-2xl`}>
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center">Projects</h2>
           <div className="mt-8 grid md:grid-cols-2 gap-8">
