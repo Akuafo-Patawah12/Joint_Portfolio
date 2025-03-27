@@ -1,6 +1,18 @@
 import React from 'react';
 
 const About = () => {
+  const items = [
+    { title: "Innovation-Driven", description: "We leverage the latest technologies to build future-proof solutions." },
+    { title: "User-Centered Approach", description: "Every project is designed with the end user in mind, ensuring seamless experiences." },
+    { title: "Commitment to Excellence", description: "We are dedicated to delivering high-quality, scalable, and reliable solutions." },
+    { title: "Client-Focused", description: "Your success is our priority, and we work closely with you to achieve your vision." }
+  ];
+
+  const [openIndex, setOpenIndex] = React.useState(0);
+
+  const toggleItem = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
@@ -39,7 +51,7 @@ const About = () => {
     </p>
   </section>
   
-  <section className="mb-8">
+  <section className="mb-8 ">
     <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
     <ul className="list-disc pl-5 space-y-2">
       <li><strong>Custom Web Development</strong> – Crafting modern, scalable, and responsive web applications tailored to your business needs.</li>
@@ -52,13 +64,32 @@ const About = () => {
   
   <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-    <ul className="list-disc pl-5 space-y-2">
+    <ul className="list-disc pl-5 space-y-2 hidden lg:block">
       <li><strong>Innovation-Driven</strong> – We leverage the latest technologies to build future-proof solutions.</li>
       <li><strong>User-Centered Approach</strong> – Every project is designed with the end user in mind, ensuring seamless experiences.</li>
       <li><strong>Commitment to Excellence</strong> – We are dedicated to delivering high-quality, scalable, and reliable solutions.</li>
       <li><strong>Client-Focused</strong> – Your success is our priority, and we work closely with you to achieve your vision.</li>
     </ul>
   </section>
+
+  <ul className="space-y-2 lg:hidden">
+        {items.map((item, index) => (
+          <li key={index} className="border-b pb-2">
+            <button
+              onClick={() => toggleItem(index)}
+              className={`flex justify-between w-full text-left font-semibold text-lg p-2 ${index===openIndex ? "bg-blue-400":"bg-gray-200"} rounded-md hover:bg-blue-300 transition`}
+            >
+              {item.title}
+              <span className='text-stone-700'>{openIndex === index ? "▲" : "▼"}</span>
+            </button>
+            {openIndex === index && (
+              <p className="p-2 mt-1 text-gray-700 bg-white rounded-md shadow-md transition-all duration-300">
+                {item.description}
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
   
   <section className="text-center mt-10">
     <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
