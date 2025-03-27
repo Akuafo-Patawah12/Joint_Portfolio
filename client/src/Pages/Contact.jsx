@@ -105,7 +105,7 @@ const ContactPage = () => {
         </form>
         
         <div className="mt-3 mx-auto flex gap-3 w-fit">
-      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/AkuafoPatawah/" target="_blank" rel="noopener noreferrer">
         <Facebook className="w-6 h-6 text-blue-600 hover:text-blue-800" />
       </a>
 
