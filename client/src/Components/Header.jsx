@@ -32,7 +32,7 @@ export default function Header({ dropdown}) {
         </nav>
          
         <section className="flex gap-2 items-center">
-        <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+        <button  className="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <button className="lg:hidden" onClick={()=> setShowDrop(prev => !prev)}> {showDrop ?  <X/> : <Menu />}</button>
