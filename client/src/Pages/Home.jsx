@@ -146,7 +146,7 @@ const scrollTop = () => {
       whileHover={{ scale: 1.05 }}
     >
       <h3 className="text-xl font-semibold ">Logistics Platform</h3>
-      <p className="text-gray-200 mt-2">
+      <p className="text-gray-100 mt-2">
         Developed a logistics and third-party eCommerce platform with real-time tracking.
       </p>
       <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
@@ -164,7 +164,7 @@ const scrollTop = () => {
       whileHover={{ scale: 1.05 }}
     >
               <h3 className="text-xl font-semibold">Attendance App</h3>
-              <p className="text-gray-200 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
+              <p className="text-gray-100 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
             </motion.div>
           </div>
         </div>
@@ -176,14 +176,14 @@ const scrollTop = () => {
       <div className=" p-6 text-center bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800">Got an idea? Let’s bring it to life!</h2>
         <p className="text-gray-600 mt-3">
-          Whether you have a project in mind, a business proposal, or just want to say hello—I’d love to hear from you! 
-          I’m always open to collaboration and exciting new opportunities.
+          Whether you have a project in mind, a business proposal, or just want to say hello—We'd love to hear from you! 
+          We are always open for collaboration and exciting new opportunities.
         </p>
         
       <div className="flex items-center justify-center gap-2">
         
         <p className="mx-auto">
-          Connect with me on{" "}
+          Connect with us on{" "}
           <a
             href="https://github.com/Akuafo-Patawah12"
             target="_blank"
