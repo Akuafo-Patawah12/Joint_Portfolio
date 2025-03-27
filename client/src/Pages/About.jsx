@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const items = [
@@ -74,10 +75,10 @@ const About = () => {
 
   <ul className="space-y-2 lg:hidden">
         {items.map((item, index) => (
-          <li key={index} className="border-b pb-2">
+          <li key={index} className="border-b border-stone-400 pb-2">
             <button
               onClick={() => toggleItem(index)}
-              className={`flex justify-between w-full text-left font-semibold text-lg p-2 ${index===openIndex ? "bg-blue-400":"bg-gray-200"} rounded-md hover:bg-blue-300 transition`}
+              className={`flex justify-between w-full text-left font-medium text-md p-2 ${index===openIndex ? "bg-blue-400":"bg-gray-200"} rounded-md hover:bg-blue-300 transition`}
             >
               {item.title}
               <span className='text-stone-700'>{openIndex === index ? "▲" : "▼"}</span>
@@ -97,8 +98,8 @@ const About = () => {
 
   </section>
 
-                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-blue-700">
-                    <a href="/contact" className="text-blue-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</a>
+                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-blue-600">
+                    <Link to="/contact" className="text-blue-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
                 </div>
             </div>
         </div>
