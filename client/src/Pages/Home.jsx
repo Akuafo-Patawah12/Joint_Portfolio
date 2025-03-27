@@ -248,7 +248,7 @@ const scrollTop = () => {
 
           {/* Contact Button */}
           <Link to="/contact" >
-          <button className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+          <button onClick={scrollTop} className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
               Contact Now <img src={Linkicon} alt="link" className="w-5 "/>
           </button>
           </Link>

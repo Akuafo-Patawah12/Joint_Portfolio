@@ -64,7 +64,7 @@ const ContactPage = () => {
             <input
               type="text"
               name="name"
-              className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
+              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
               placeholder="Enter your name"
               value={emailData.name}
               onChange={handleChange}
@@ -76,7 +76,7 @@ const ContactPage = () => {
             <input
               type="email"
               name="email"
-              className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
+              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
               placeholder="Enter your email"
               value={emailData.email}
               onChange={handleChange}
@@ -88,7 +88,7 @@ const ContactPage = () => {
             <textarea
               rows="5"
               name="message"
-              className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
+              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
               placeholder="Write your message"
               value={emailData.message}
               onChange={handleChange}
@@ -96,7 +96,7 @@ const ContactPage = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-medium py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition duration-300"
             disabled={loading}
 
           >
