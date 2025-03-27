@@ -8,6 +8,7 @@ import About from "./Pages/About";
 import ContactPage from "./Pages/Contact";
 import Footer from "./Components/Footer";
 import useDarkMode from "./Components/Theme";
+import Errorpage from "./Pages/404page";
 
 function App() {
   const { darkMode} = useDarkMode();
@@ -38,6 +39,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About/> } />
           <Route path="/contact" element={<ContactPage/>} />
+          <Route path="*" element={<Errorpage />} />
         </Routes>
         <Footer/>
     </main>
