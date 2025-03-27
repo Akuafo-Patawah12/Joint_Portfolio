@@ -235,7 +235,7 @@ const [activeTab, setActiveTab] = useState("tab1");
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-700">
               <Phone className="w-5 h-5 text-blue-500" />
-              <span>+233021623251</span>
+              <span>+233201623251</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-gray-700">
               <MapPin className="w-5 h-5 text-blue-500" />
