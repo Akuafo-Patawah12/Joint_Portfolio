@@ -30,10 +30,10 @@ function App() {
   <div className="relative w-full rounded-lg border-[1px] border-stone-300 top-[-10px] isolate mx-auto lg:hidden">
     <div className="absolute border-t-[1px] border-l-[1px] border-stone-300 top-[-8px] right-[5px] w-3 h-3 rotate-45 bg-blue-50"></div>
     <div className="flex w-full bg-blue-50 shadow-md rounded-lg overflow-hidden">
-      <button className="w-1/2 py-3 text-center border-r-[1px] border-stone-300 text-blue-900 font-semibold hover:bg-blue-200 transition">
+      <button className="w-1/2 py-3 text-center cursor-pointer border-r-[1px] border-stone-300 text-blue-900 font-semibold hover:bg-blue-200 transition">
         <span onClick={()=> link("/about")} className="h-full w-full block">About</span>
       </button>
-      <button className="w-1/2 py-3 text-center text-blue-900 font-semibold border-l-2 border-stone-200 hover:bg-blue-200 transition">
+      <button className="w-1/2 py-3 cursor-pointer text-center text-blue-900 font-semibold border-l-2 border-stone-200 hover:bg-blue-200 transition">
         <span onClick={()=> link("/contact")} className="h-full w-full block">Contact</span>
       </button>
     </div>
