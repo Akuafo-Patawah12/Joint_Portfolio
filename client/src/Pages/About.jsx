@@ -59,6 +59,7 @@ const About = () => {
       <li><strong>Mobile App Development</strong> – Building intuitive and high-performance mobile apps for both iOS and Android.</li>
       <li><strong>API & Backend Development</strong> – Creating powerful and scalable backend solutions for seamless data handling.</li>
       <li><strong>UI/UX Design</strong> – Designing user-centric interfaces that provide exceptional digital experiences.</li>
+      <li><strong>System Administration</strong> – We manage and optimize IT systems for seamless business operations.</li>
       <li><strong>Tech Consultancy</strong> – Offering expert advice to help businesses leverage the right technologies for growth.</li>
     </ul>
   </section>
@@ -71,7 +72,7 @@ const About = () => {
       <li><strong>Commitment to Excellence</strong> – We are dedicated to delivering high-quality, scalable, and reliable solutions.</li>
       <li><strong>Client-Focused</strong> – Your success is our priority, and we work closely with you to achieve your vision.</li>
     </ul>
-  </section>
+  
 
   <ul className="space-y-2 lg:hidden">
         {items.map((item, index) => (
@@ -91,7 +92,8 @@ const About = () => {
           </li>
         ))}
       </ul>
-  
+      </section>
+      
   <section className="text-center mt-10">
     <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
     <p>Are you ready to transform your digital presence? Let’s work together to build something amazing.</p>
