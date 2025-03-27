@@ -32,13 +32,14 @@ const [activeTab, setActiveTab] = useState("tab1");
   const renderContent = () => {
     switch (activeTab) {
       case "tab1":
-        return <div className="mt-4 flex flex-col gap-10 items-center text-justify"> 
+        return <div className="mt-4 flex relative flex-col gap-10 items-center text-justify"> 
                 <h2 className="font-bold text-4xl">About us</h2>
-        I am a full-stack JavaScript developer and Rust developer, specializing in web solutions, building APIs, and mobile app development. With a strong foundation in modern web technologies, I design and develop scalable, high-performance applications that enhance user experience and drive business growth.
+                Techscroww is a forward-thinking technology startup dedicated to building cutting-edge digital solutions.
+      We specialize in web development, mobile applications, and API integrations that help businesses thrive
+      in an ever-evolving digital landscape. Our team is driven by innovation, creativity, and a passion for solving
+      complex problems through technology.
 
-        My expertise spans frontend and backend development, database management, and cloud infrastructure, ensuring seamless integration and efficient system architecture. I am passionate about writing clean, maintainable code, optimizing performance, and leveraging the latest frameworks and tools to build innovative digital solutions.
-        
-        Beyond coding, I thrive on solving complex technical challenges, collaborating with teams, and continuously learning to stay ahead in the ever-evolving tech landscape. Whether it's developing a dynamic web application, crafting robust APIs, or engineering scalable mobile solutions, I am committed to delivering excellence and pushing the boundaries of what technology can achieve.
+      <button className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
         
         
         
@@ -47,16 +48,19 @@ const [activeTab, setActiveTab] = useState("tab1");
         
         </div>;
       case "tab2":
-        return <div className="mt-4 flex flex-col gap-10 items-center text-justify">
+        return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                    <h2 className="font-bold text-4xl">Our mission</h2>
                   Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client's unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
+                  <button className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
               </div>;
       case "tab3":
-        return <div className="mt-4 flex flex-col gap-10 items-center text-justify">
+        return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                   <h2 className="font-bold text-4xl">Our vision</h2>
                   Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.
 
-        We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. Our commitment to quality, scalability, and adaptability ensures that we not only meet the evolving needs of businesses but also shape the future of technology with groundbreaking solutions.</div>;
+        We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. 
+        <button className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
+        </div>;
       default:
         return null;
     }
