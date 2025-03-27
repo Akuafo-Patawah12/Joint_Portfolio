@@ -64,7 +64,7 @@ const [activeTab, setActiveTab] = useState("tab1");
     
     return <div>
         <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
-      <section className="text-center py-[50px] flex flex-col justify-center items-center    font-sans  text-white  font-extrabold uppercase">
+      <section className="text-center py-[60px] flex flex-col justify-center items-center    font-sans  text-white  font-extrabold uppercase">
          <motion.h1
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -82,7 +82,7 @@ const [activeTab, setActiveTab] = useState("tab1");
       {index===text.length ? "" :<span className="cursor">|</span>}
     </motion.h1>
         <p className=" mt-4 text-lg  text-md text-gray-200 isolate w-[80%] lg:w-[300px]">We craft custom websites, web apps, and mobile apps—turning ideas into reality. Let’s build something great together!</p>
-        <a href="#projects" className="mt-6 inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-sm">View Projects</a>
+        <a href="#projects" className="mt-[70px] inline-block border-2 border-blue-500 hover:border-blue-400 text-white py-3 px-6 rounded-lg text-sm">View Projects</a>
       </section>
       <div><span class="dot"></span></div>
       <div><span class="dot"></span></div>
