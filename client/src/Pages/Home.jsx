@@ -28,18 +28,21 @@ const text = "Welcome to our portfolio.";
 }, [index, text]);
 
 const [activeTab, setActiveTab] = useState("tab1");
+const scrollTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
   const renderContent = () => {
     switch (activeTab) {
       case "tab1":
-        return <div className="mt-4 flex relative flex-col gap-6 items-center text-justify"> 
+        return <div className="mt-4 flex text-center relative flex-col gap-10 items-center "> 
                 <h2 className="font-bold text-4xl">About us</h2>
                 Techscroww is a forward-thinking technology startup dedicated to building cutting-edge digital solutions.
       We specialize in web development, mobile applications, and API integrations that help businesses thrive
       in an ever-evolving digital landscape. Our team is driven by innovation, creativity, and a passion for solving
       complex problems through technology.
 
-      <button onClick={()=> link("/about")} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0">See more...</button>
+      <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
         
         
         
@@ -48,27 +51,23 @@ const [activeTab, setActiveTab] = useState("tab1");
         
         </div>;
       case "tab2":
-        return <div className="relative mt-4 flex flex-col gap-6 items-center text-justify">
+        return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                    <h2 className="font-bold text-4xl">Our mission</h2>
                   Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client's unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
-                  <button onClick={()=> link("/about")} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0">See more...</button>
+                  <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
               </div>;
       case "tab3":
-        return <div className="relative mt-4 flex flex-col gap-6 items-center text-justify">
+        return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                   <h2 className="font-bold text-4xl">Our vision</h2>
                   Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.
 
         We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. 
-        <button onClick={()=> link("/about")} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0">See more...</button>
+        <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link to="/about" className="w-full h-full block">See more...</Link></button>
         </div>;
       default:
         return null;
     }
   };
-
-  const link =(path) =>{
-    window.location.href=path
-   }
     
     return <div>
         <div class={`wrapper ${darkMode ? "": "bg-gradient-to-b from-[#04fafd] via-[#119dff] to-[#030423]" }`}>
@@ -117,13 +116,13 @@ const [activeTab, setActiveTab] = useState("tab1");
       <img src="/code.jpg" alt="me" className=" w-full " />
       
       </section>
-        <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2 font-medium border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
+        <button onClick={() => setActiveTab("tab1")} className={`bg-stone-300 border-b-2  border-amber-100 py-4 ${activeTab === "tab1" ? "tab_active" : ""}`}>
           About us
         </button>
-        <button onClick={() => setActiveTab("tab2")} className={`bg-stone-300 border-b-2 font-medium border-amber-100 py-4 ${activeTab === "tab2" ? "tab_active" : ""}`}>
+        <button onClick={() => setActiveTab("tab2")} className={`bg-stone-300 border-b-2 border-amber-100 py-4 ${activeTab === "tab2" ? "tab_active" : ""}`}>
           Mission
         </button>
-        <button onClick={() => setActiveTab("tab3")} className={`bg-stone-300 font-medium py-4 ${activeTab === "tab3" ? "tab_active" : ""}`}>
+        <button onClick={() => setActiveTab("tab3")} className={`bg-stone-300 py-4 ${activeTab === "tab3" ? "tab_active" : ""}`}>
           Vision
         </button>
       </div>
@@ -248,11 +247,11 @@ const [activeTab, setActiveTab] = useState("tab1");
           </div>
 
           {/* Contact Button */}
-          
-          <button onClick={()=> link("/contact")} className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+          <Link to="/contact" >
+          <button className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
               Contact Now <img src={Linkicon} alt="link" className="w-5 "/>
           </button>
-          
+          </Link>
         </div>
       </section>
     </div>
