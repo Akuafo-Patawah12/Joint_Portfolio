@@ -33,7 +33,7 @@ const About = () => {
     </p>
   </section>
 
-  <img src="/code2.jpg" alt="code_2" className="w-full rounded-2xl my-9"/>
+  <img src="/code2.jpg" alt="code_2"    className="w-full rounded-2xl my-9"/>
   
   <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
