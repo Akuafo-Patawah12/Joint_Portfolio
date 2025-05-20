@@ -1,25 +1,30 @@
+"use client"
 import React,{useState} from "react";
 import { Facebook, MessageCircle } from "lucide-react";
 
 
-const ContactPage = () => {
+export default function contact (){
 
-    const [emailData, setEmailData] = useState({
+    const [emailData, setEmailData] = useState<{
+        name: string;
+        email: string;
+        message: string;
+        }>({
         name: "",
         email: "",
         message: "",
-      });
+        });
     
-      const [loading, setLoading] = useState(false);
-      const [responseMessage, setResponseMessage] = useState("");
+      const [loading, setLoading] = useState<boolean>(false);
+      const [responseMessage, setResponseMessage] = useState<string>("");
     
       // Handle input changes
-      const handleChange = (e) => {
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setEmailData({ ...emailData, [e.target.name]: e.target.value });
       };
     
       // Send email using fetch
-      const sendEmail = async (e) => {
+      const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setResponseMessage("");
@@ -35,7 +40,7 @@ const ContactPage = () => {
     
           if (result.success) {
             setResponseMessage("✅ Email sent successfully!");
-            setEmailData({ name: "", subject: "", message: "" });
+            setEmailData({ name: "", email: "", message: "" });
           } else {
             setResponseMessage("❌ Error: " + result.error);
           }
@@ -86,7 +91,7 @@ const ContactPage = () => {
           <div>
             <label className="block text-gray-700 font-medium">Message</label>
             <textarea
-              rows="5"
+              rows={5}
               name="message"
               className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
               placeholder="Write your message"
@@ -138,4 +143,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+

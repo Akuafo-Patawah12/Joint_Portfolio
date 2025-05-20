@@ -1,7 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+"use client"
 
-const About = () => {
+import {useState} from 'react';
+import  Link from 'next/link';
+
+export default function about () {
   const items = [
     { title: "Innovation-Driven", description: "We leverage the latest technologies to build future-proof solutions." },
     { title: "User-Centered Approach", description: "Every project is designed with the end user in mind, ensuring seamless experiences." },
@@ -9,9 +11,9 @@ const About = () => {
     { title: "Client-Focused", description: "Your success is our priority, and we work closely with you to achieve your vision." }
   ];
 
-  const [openIndex, setOpenIndex] = React.useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const toggleItem = (index) => {
+  const toggleItem = (index: number | null) => {
     setOpenIndex(openIndex === index ? null : index);
   };
     return (
@@ -103,11 +105,11 @@ const About = () => {
   </section>
 
                 <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-blue-600">
-                    <Link to="/contact" className="text-blue-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
+                    <Link href="/contact" className="text-blue-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default About;
+
