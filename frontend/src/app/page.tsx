@@ -18,19 +18,7 @@ export default function Home() {
      console.log("theme changed")
    },[darkMode])
   
-   const [displayedText, setDisplayedText] = useState<string>("");
-    const [index, setIndex] = useState(0);
-  const text = "Welcome to our portfolio.";
-   useEffect(() => {
-    if (index < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[index]);
-        setIndex(index + 1);
-      }, 150); // Typing speed (adjust as needed)
-  
-      return () => clearTimeout(timeout);
-    }
-  }, [index, text]);
+ 
   
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const scrollTop = () => {
