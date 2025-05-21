@@ -1,15 +1,17 @@
 "use client"
 import React,{useState} from "react";
-import { Facebook, MessageCircle } from "lucide-react";
+import { Facebook } from "lucide-react";
 
 
-export default function contact (){
-
-    const [emailData, setEmailData] = useState<{
+interface formData{
         name: string;
         email: string;
         message: string;
-        }>({
+        }
+
+const  Contact: React.FC =()=>{
+
+    const [emailData, setEmailData] = useState<formData>({
         name: "",
         email: "",
         message: "",
@@ -142,5 +144,5 @@ export default function contact (){
     </div>
   );
 };
-
+export default Contact;
 

@@ -2,8 +2,9 @@
 
 import {useState} from 'react';
 import  Link from 'next/link';
+import Image from "next/image"
 
-export default function about () {
+export default function About () {
   const items = [
     { title: "Innovation-Driven", description: "We leverage the latest technologies to build future-proof solutions." },
     { title: "User-Centered Approach", description: "Every project is designed with the end user in mind, ensuring seamless experiences." },
@@ -35,7 +36,7 @@ export default function about () {
     </p>
   </section>
 
-  <img src="/code2.jpg" alt="code_2"    className="w-full rounded-2xl my-9"/>
+  <Image src="/code2.jpg" alt="code_2" width={300} height={300} className="w-full rounded-2xl my-9"/>
   
   <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
