@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState,useEffect } from "react";
-import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool } from "lucide-react";
+import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
 
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
@@ -35,7 +35,7 @@ export default function Home() {
         in an ever-evolving digital landscape. Our team is driven by innovation, creativity, and a passion for solving
         complex problems through technology.
   
-        <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
+        <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
           
           
           
@@ -47,7 +47,7 @@ export default function Home() {
           return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                      <h2 className="font-bold text-4xl">Our mission</h2>
                     Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client’s unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
-                    <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
+                    <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
                 </div>;
         case "tab3":
           return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
@@ -55,7 +55,7 @@ export default function Home() {
                     Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.
   
           We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. 
-          <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
+          <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
           </div>;
         default:
           return null;
@@ -98,30 +98,32 @@ export default function Home() {
 
           <div className=" hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
            <Image src={code_bg} alt="bg" width={300} height={300} className="mx-auto"/>
-           <div className="flex justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
-              {/* Icon Buttons */}
-              <div className="flex items-center gap-3">
-                <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
-                  <span className="text-sm font-bold text-green-600">1</span>
-                </button>
-                <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
-                  <Code className="w-5 h-5 text-green-600" />
-                </button>
-                <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
-                  <PenTool className="w-5 h-5 text-green-600" />
-                </button>
-                <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
-                  <Server className="w-5 h-5 text-green-600" />
-                </button>
-                <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
-                  <Cloud className="w-5 h-5 text-green-600" />
-                </button>
-              </div>
-              {/* CTA Button */}
-                <button className="px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
-                  Get in Touch
-                </button>
-              </div>
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
+  {/* Icon Buttons */}
+  <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
+    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+      <span className="text-sm font-bold text-green-600">1</span>
+    </button>
+    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+      <Code className="w-5 h-5 text-green-600" />
+    </button>
+    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+      <PenTool className="w-5 h-5 text-green-600" />
+    </button>
+    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+      <Server className="w-5 h-5 text-green-600" />
+    </button>
+    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+      <Cloud className="w-5 h-5 text-green-600" />
+    </button>
+  </div>
+
+  {/* CTA Button */}
+  <button className="w-full sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
+    Get in Touch
+  </button>
+</div>
+
           </div>
        </section>
       
@@ -192,7 +194,7 @@ export default function Home() {
             <p className="text-gray-100 mt-2">
               Developed a logistics and third-party eCommerce platform with real-time tracking.
             </p>
-            <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
               <a href="https://sfghanalogistics.com" target="_blank" rel="noopener noreferrer">
                 View
               </a>
@@ -231,7 +233,7 @@ export default function Home() {
                   href="https://github.com/Akuafo-Patawah12"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-green-500 hover:underline"
                 >
                   GitHub
                 </a>{" "}
@@ -240,7 +242,7 @@ export default function Home() {
                   href="https://gitlab.com/Akuafo-Patawah12"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-green-500 hover:underline"
                 >
                   GitLab
                 </a>
@@ -252,8 +254,8 @@ export default function Home() {
               <p className="mx-auto">Or drop me a message anytime!</p>
             </div>
       
-            <p className="text-xl font-semibold text-blue-600 mt-5">
-              Let’s build something amazing together. 🚀
+            <p className="text-xl font-semibold flex flex-col items-center text-green-600 mt-5">
+              Let’s build something amazing together. <Rocket />
             </p>
           </div>
       
@@ -269,7 +271,7 @@ export default function Home() {
                   src="/me.jpg"
                   alt="Profile"
                   height={300} width={300}
-                  className="w-24 h-24 rounded-full border-4 border-blue-600 shadow-md"
+                  className="w-24 h-24 rounded-full border-4 border-green-600 shadow-md"
                 />
                 <h2 className="text-xl font-semibold text-gray-800 mt-4">Akuafo Patawah</h2>
                 <p className="text-gray-500">Tech/Customer Support</p>
@@ -277,22 +279,22 @@ export default function Home() {
                 {/* Contact Details */}
                 <div className="mt-4 space-y-2 w-full text-center ">
                   <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <Mail className="w-5 h-5 text-blue-500" />
+                    <Mail className="w-5 h-5 text-green-500" />
                     <span>burxells873@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <Phone className="w-5 h-5 text-blue-500" />
+                    <Phone className="w-5 h-5 text-green-500" />
                     <span>+233201623251</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <MapPin className="w-5 h-5 text-blue-500" />
+                    <MapPin className="w-5 h-5 text-green-500" />
                     <span>Tema, Ghana</span>
                   </div>
                 </div>
       
                 {/* Contact Button */}
                 <Link href="/contact" >
-                <button onClick={scrollTop} className="mt-5 flex gap-2 bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                <button onClick={scrollTop} className="mt-5 flex gap-2 bg-green-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300">
                     Contact Now <Image src={Linkicon} height={300} width={300} alt="link" className="w-5 "/>
                 </button>
                 </Link>

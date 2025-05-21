@@ -12,7 +12,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
-            <Github size={24}  className=" text-blue-500"/>
+            <Github size={24}  className=" text-green-500"/>
           </a>
           <a
             href="https://gitlab.com/Akuafo-Patawah12"
@@ -20,7 +20,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
-            <Gitlab size={24}  className=" text-blue-500"/>
+            <Gitlab size={24}  className=" text-green-500"/>
           </a>
         </div>
         <p className="text-gray-400 text-sm">
