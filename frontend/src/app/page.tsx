@@ -10,6 +10,7 @@ import code_bg from "./assets/code_bg.svg"
 import { motion } from "framer-motion";
 
 import Linkicon from "./assets/Linkicon.svg"
+import wavy from "./assets/wavy.svg"
 
 export default function Home() {
 
@@ -65,14 +66,14 @@ export default function Home() {
     <main className=" min-h-screen pb-20  sm:font-[family-name:var(--font-geist-sans)]">
        {/* Hero Section */}
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
-          <div className="h-auto w-full bg-white rounded-2xl border border-green-400 lg:w-1/2 p-6 shadow-xl space-y-4">
+          <div className="h-auto w-full relative bg-white rounded-2xl border border-green-400 lg:w-1/2 p-6 shadow-xl space-y-4">
   <h1 className="text-2xl font-bold text-green-700 whitespace-nowrap">Parcch <code>&lt;Tech Solutions/&gt;</code></h1>
       <div style={{marginBlock:"15px"}} className="w-full  h-[1px] rounded-full bg-gradient-to-r from-white via-stone-300 to-white"></div>
   <p className="text-gray-600">
     We provide end-to-end tech services tailored to your business — from product design to scalable system architecture.
   </p>
 
-  <ul className="space-y-3 relative">
+  <ul className="space-y-3 relative bg-white isolate">
     <li className="absolute bg-stone-400 bottom-0 w-[2px] z-0 left-2.5 top-0">
 
     </li>
@@ -94,11 +95,13 @@ export default function Home() {
     </li>
   </ul>
 
-  <button className="mt-4 px-5 relative overflow-hidden py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
+  <button className="mt-4 px-5 relative overflow-hidden isolate py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
    <div className="absolute -bottom-7 left-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
    <div className="absolute -bottom-5 right-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
     <p className="isolate">Get in Touch</p>
   </button>
+
+  <Image src={wavy} alt="wavy" width={300} height={300} className="absolute w-full   left-0  bottom-0"/>
 </div>
 
           <div className=" hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
@@ -124,7 +127,7 @@ export default function Home() {
   </div>
 
   {/* CTA Button */}
-  <button className="w-full sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
+  <button className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
     Get in Touch
   </button>
 </div>
