@@ -20,7 +20,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
-            <Gitlab size={24} title="Gitlab" className=" text-blue-500"/>
+            <Gitlab size={24}  className=" text-blue-500"/>
           </a>
         </div>
         <p className="text-gray-400 text-sm">
