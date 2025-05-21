@@ -72,21 +72,24 @@ export default function Home() {
     We provide end-to-end tech services tailored to your business — from product design to scalable system architecture.
   </p>
 
-  <ul className="space-y-3">
-    <li className="flex items-center gap-3">
-      <Code className="text-green-600" />
-      <span className="text-gray-700">Custom Software Development</span>
+  <ul className="space-y-3 relative">
+    <li className="absolute bg-stone-400 bottom-0 w-[2px] z-0 left-2.5 top-0">
+
     </li>
-    <li className="flex items-center gap-3">
-      <PenTool className="text-green-600" />
-      <span className="text-gray-700">UI/UX Design & Prototyping</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <Cloud className="text-green-600" />
+    <li className="flex  items-center gap-3">
+      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Code className="text-green-600 isolate" size={17}/></div>
       <span className="text-gray-700">System Design & Architecture</span>
     </li>
-    <li className="flex items-center gap-3">
-      <Cloud className="text-green-600" />
+    <li className="flex  items-center gap-3">
+      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><PenTool className="text-green-600 " size={17}/></div>
+      <span className="text-gray-700">UI/UX Design & Prototyping</span>
+    </li>
+    <li className="flex  items-center gap-3">
+      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Cloud className="text-green-600 " size={17}/></div>
+      <span className="text-gray-700">Custom Software Development</span>
+    </li>
+    <li className="flex  items-center gap-3">
+      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Cloud className="text-green-600 " size={17}/></div>
       <span className="text-gray-700">Cloud Hosting & DevOps</span>
     </li>
   </ul>
@@ -183,7 +186,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-center">Projects</h2>
                 <div className="mt-8 grid md:grid-cols-2 gap-8">
                 <motion.div
-            className="project p-8 rounded-lg bg-gray-800 "
+            className="project p-8 rounded-lg bg-gray-200 "
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -201,7 +204,7 @@ export default function Home() {
             </button>
           </motion.div>
           <motion.div
-            className="project p-8 rounded-lg bg-gray-800 "
+            className="project p-8 rounded-lg bg-gray-200 "
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
