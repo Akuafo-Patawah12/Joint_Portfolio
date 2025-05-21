@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import {  Sun , Menu } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image"
+import logo from "../assets/logo.svg"
 
 
 export default function Header() {
@@ -18,7 +20,10 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           className="text-2xl font-bold italic"
         >
-          <Link href="/" className="flex text-stone-500">Parcch</Link>
+          
+          <Link href="/" className="flex text-stone-500">
+            <Image src={logo} alt="parcch logo" width={100} height={100} className="h-full"/>
+          </Link>
         </motion.h2>
         
         <nav className="hidden gap-6 lg:flex">
