@@ -46,7 +46,7 @@ export default function Home() {
         case "tab2":
           return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
                      <h2 className="font-bold text-4xl">Our mission</h2>
-                    Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client's unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
+                    Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client’s unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
                     <button onClick={scrollTop} className="  lg:absolute border-2 border-blue-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
                 </div>;
         case "tab3":
@@ -219,7 +219,7 @@ export default function Home() {
             <div className=" p-6 text-center bg-white shadow-lg rounded-lg">
               <h2 className="text-2xl font-bold text-gray-800">Got an idea? Let’s bring it to life!</h2>
               <p className="text-gray-600 mt-3">
-                Whether you have a project in mind, a business proposal, or just want to say hello—We'd love to hear from you! 
+                Whether you have a project in mind, a business proposal, or just want to say hello—We’d love to hear from you! 
                 We are always open for collaboration and exciting new opportunities.
               </p>
               
