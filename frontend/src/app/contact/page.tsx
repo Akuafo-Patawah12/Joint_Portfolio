@@ -1,148 +1,157 @@
 "use client"
-import React,{useState} from "react";
-import { Facebook } from "lucide-react";
+import React from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Youtube
+} from "lucide-react";
+import { toast } from "react-toastify";
 
+const Contact = () => {
+ const [name, setName] = React.useState<string>("");
+ const [email, setEmail] = React.useState<string>("");
+ const [message, setMessage] = React.useState<string>("");
+  const [error, setError] = React.useState<string | null>(null);
 
-interface formData{
-        name: string;
-        email: string;
-        message: string;
-        }
-
-const  Contact: React.FC =()=>{
-
-    const [emailData, setEmailData] = useState<formData>({
-        name: "",
-        email: "",
-        message: "",
-        });
-    
-      const [loading, setLoading] = useState<boolean>(false);
-      const [responseMessage, setResponseMessage] = useState<string>("");
-    
-      // Handle input changes
-      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setEmailData({ ...emailData, [e.target.name]: e.target.value });
-      };
-    
-      // Send email using fetch
-      const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setLoading(true);
-        setResponseMessage("");
-    
-        try {
-          const response = await fetch("http://localhost:5000/send-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(emailData),
-          });
-    
-          const result = await response.json();
-    
-          if (result.success) {
-            setResponseMessage("✅ Email sent successfully!");
-            setEmailData({ name: "", email: "", message: "" });
-          } else {
-            setResponseMessage("❌ Error: " + result.error);
-          }
-        } catch (error) {
-            console.log(error)
-          setResponseMessage("❌ Failed to send email. Please try again.");
-        } finally {
-          setLoading(false);
-        }
-
-        
-      };
-
-      
-
+  const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try{
+    const response= await fetch("http://localhost:4000/send-mail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message })
+    })
+    const data= await response.json()
+    if(!response.ok){
+      setError(data.error || "Something went wrong. Please try again.");
+      return;
+    }
+    setName("");
+    setEmail("");
+    setMessage("");
+    toast.success("Message sent successfully!");
+  }catch(err){
+    console.error("Error sending message:", err);
+    setError("Failed to send message. Please try again later.");
+  }
+  }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
-          Contact Us
-        </h2>
-        <form className="space-y-4" onSubmit={sendEmail}>
-          <div>
-            <label className="block text-gray-700 font-medium">Name</label>
-            <input
-              type="text"
-              name="name"
-              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
-              placeholder="Enter your name"
-              value={emailData.name}
-              onChange={handleChange}
+    <div  className="bg-green-50 py-[50px] ">
 
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
-              placeholder="Enter your email"
-              value={emailData.email}
-              onChange={handleChange}
+       
 
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium">Message</label>
-            <textarea
-              rows={5}
-              name="message"
-              className="w-full text-sm mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:outline-none"
-              placeholder="Write your message"
-              value={emailData.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-            disabled={loading}
+            <div style={{marginInline:" auto"}} className="container  p-6 max-w-[90%] bg-white shadow-xl border border-purple-300 rounded-2xl lg:max-w-3xl ">
+  <h1 className="text-3xl font-bold text-center text-[var(--purple)] ">
+    Contact Parcch
+  </h1>
+ 
+    <div style={{marginTop:"10px"}} className="w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
 
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
-        
-        <div className="mt-3 mx-auto flex gap-3 w-fit">
-      <a href="https://www.facebook.com/AkuafoPatawah/" target="_blank" rel="noopener noreferrer">
-        <Facebook className="w-6 h-6 text-blue-600 hover:text-blue-800" />
-      </a>
+  <p style={{marginBlock:"24px"}} className="text-center font-bold text-gray-600 mb-8">
+    Reach out for inquiries or logistics support. We’re here to help!
+  </p>
 
-      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-      <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="w-6 h-6 text-green-500 hover:text-green-700"
-  >
-    <path d="M12 2a10 10 0 0 0-10 10 10 10 0 0 0 1.5 5.2L2 22l5.3-1.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2zm4.5 13.8c-.3.8-1.5 1.5-2.1 1.4-.6-.1-1.3-.5-2.8-1.3-2.3-1.3-3.8-3-4.1-3.3-.4-.5-.9-1.2-.9-2s.3-1.4.6-1.9c.3-.5.7-.6.9-.6h.7c.3 0 .5 0 .7.5.3.6.9 2 .9 2.1s.2.3 0 .6c-.2.3-.4.5-.6.7s-.3.4-.1.8c.2.3.8 1.4 1.7 2.2 1.2 1 2.1 1.3 2.4 1.4.3.1.5 0 .7-.3.2-.3.8-.9.9-1.1.1-.2.2-.2.4-.1.2.1 1 .5 1.2.6.2.1.4.2.5.3s.2.3.2.4c0 .2-.3 1.2-.7 1.9z" />
-  </svg>
-      </a>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Contact Form */}
+    <div>
+      <h2 style={{marginBlock:"16px"}} className="text-xl font-semibold text-gray-800 mb-4">Send Us a Message</h2>
+      <form className="space-y-5" onSubmit={handleSubmit}>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+        <div>
+          <label style={{marginBlock:"4px"}} className="block text-sm font-medium text-gray-700 mb-1">
+            Full Name
+          </label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+          />
+        </div>
+        <div>
+          <label style={{marginBlock:"4px"}} className="block text-sm font-medium text-gray-700 mb-1">
+            Email
+          </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+          />
+        </div>
+        <div>
+          <label style={{marginBlock:"4px"}} className="block text-sm font-medium text-gray-700 mb-1">
+            Message
+          </label>
+          <textarea
+            placeholder="Type your message here..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+            rows={4}
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-700 transition text-sm font-semibold"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
 
-    <div className="mt-3 text-center text-gray-600">
-          <p>Phone: +233201623251</p>
-          <p>Email: burxells873@gmail.com</p>
-          
+    {/* Contact Info */}
+    <div>
+      <h2 style={{marginBlock:"16px"}} className="text-xl font-semibold text-gray-800 mb-4">Contact Details</h2>
+      <p style={{marginBlock:"24px"}} className="text-gray-600 text-sm mb-6">
+        Prefer direct contact? Reach us with the info below:
+      </p>
+      <ul className="space-y-4 text-sm text-gray-700">
+        <li className="flex items-center gap-3">
+          <span className="p-2 rounded-full bg-gray-100 text-green-500">
+            <Phone size={18} />
+          </span>
+          <span>020 162 3251</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <span className="p-2 rounded-full bg-gray-100 text-green-500">
+            <Mail size={18} />
+          </span>
+          <span>burxells873@gmail.com</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <span className="p-2 rounded-full bg-gray-100 text-green-500">
+            <MapPin size={18} />
+          </span>
+          <span>Segico flat, Community 4, Tema-Ghana</span>
+        </li>
+      </ul>
+
+      <div style={{marginBlock:"24px"}} className="mt-6">
+        <h3 style={{marginBlock:"12px"}} className="text-sm font-semibold text-gray-700 mb-2">Follow Us:</h3>
+        <div className="flex gap-4">
+          <a href="https://www.facebook.com/AkuafoPatawah" target="_blank" className=" hover:text-purple-800 transition">
+            <Facebook size={20} />
+          </a>
+          <a href="/" target="_blank" className=" hover:text-purple-800 transition">
+            <Twitter size={20} />
+          </a>
+          <a href="/" target="_blank" className=" hover:text-purple-800 transition">
+            <Youtube size={20} />
+          </a>
         </div>
       </div>
-      {responseMessage && (
-        
-      <div className="bg-white p-6 rounded-lg text-center border-[1px] border-stone-300 fixed top-[80px] shadow-2xl left-[50%] translate-x-[-50%] translate-y-[-50%] animate-fadeIn">
-        <p className="mt-2 text-gray-600">{responseMessage}</p>
-      </div>
-   
-      )}
+    </div>
+  </div>
+</div>
     </div>
   );
 };
-export default Contact;
 
+export default Contact;
