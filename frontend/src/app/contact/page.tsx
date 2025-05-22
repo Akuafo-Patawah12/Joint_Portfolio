@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { toast } from "react-toastify";
 
-const Contact = () => {
+export default function Contact() {
  const [name, setName] = React.useState<string>("");
  const [email, setEmail] = React.useState<string>("");
  const [message, setMessage] = React.useState<string>("");
@@ -154,4 +154,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+
