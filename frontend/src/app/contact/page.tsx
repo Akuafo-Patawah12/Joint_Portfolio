@@ -45,7 +45,7 @@ export default function Contact() {
        
 
             <div style={{marginInline:" auto"}} className="container  p-6 max-w-[90%] bg-white shadow-xl border border-purple-300 rounded-2xl lg:max-w-3xl ">
-  <h1 className="text-3xl font-bold text-center text-[var(--purple)] ">
+  <h1 className="text-3xl font-bold text-center  ">
     Contact Parcch
   </h1>
  
@@ -70,7 +70,7 @@ export default function Contact() {
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 text-sm"
           />
         </div>
         <div>
@@ -82,7 +82,7 @@ export default function Contact() {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 text-sm"
           />
         </div>
         <div>
@@ -93,7 +93,7 @@ export default function Contact() {
             placeholder="Type your message here..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--purple)] text-sm"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green text-sm"
             rows={4}
           ></textarea>
         </div>
