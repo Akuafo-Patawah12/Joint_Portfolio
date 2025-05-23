@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 
 import Linkicon from "./assets/Linkicon.svg"
 import wavy from "./assets/wavy.svg"
+import ui from "./assets/ui.svg"
 
 export default function Home() {
 
@@ -222,7 +223,9 @@ export default function Home() {
                 </div>
               </div>
             </section>
-      
+            <div className="w-[90%] mx-auto">
+            <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
+            </div>
             {/* Contact Section */}
             <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-center gap-8">
             {/* Idea Section */}
