@@ -308,9 +308,9 @@ export default function Home() {
             {/* Contact Section */}
             <section
       id="contact"
-      className="w-full py-20 px-6 bg-gradient-to-br from-white via-green-100 to-gray-200"
+      className="w-full py-20  bg-gradient-to-br from-white via-green-100 to-gray-200"
     >
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="w-[95%] mx-auto text-center">
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-800 mb-10">
           <Link href="/contact" className="hover:underline">Contact Us</Link>
         </h2>
