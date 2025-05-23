@@ -20,11 +20,7 @@ export default function Home() {
      console.log("theme changed")
    },[darkMode])
   
- const contributors = [
-  { name: 'Parrch', image: '/me.jpg' },
-  { name: 'Royal CEO', image: '/me.jpg' },
-  { name: 'Jay Poundz', image: '/me.jpg' },
-];
+
   
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const scrollTop = () => {
