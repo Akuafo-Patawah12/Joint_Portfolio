@@ -45,7 +45,7 @@ export default function Contact() {
 
        
 
-            <div style={{marginInline:" auto"}} className="container  p-6 max-w-[90%] bg-white shadow-xl border border-purple-300 rounded-2xl lg:max-w-3xl ">
+            <div style={{marginInline:" auto"}} className="container  p-6 max-w-[90%] bg-white shadow-xl border border-green-300 rounded-2xl lg:max-w-3xl ">
   <h1 className="text-3xl font-bold text-center  ">
     Contact Parcch
   </h1>

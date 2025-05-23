@@ -79,24 +79,30 @@ export default function About () {
     </ul>
   
 
-  <ul className="space-y-2 lg:hidden">
-        {items.map((item, index) => (
-          <li key={index} className="border-b border-stone-400 pb-2">
-            <button
-              onClick={() => toggleItem(index)}
-              className={`flex justify-between w-full text-left font-medium text-md p-2 ${index===openIndex ? "bg-blue-400":"bg-gray-200"} rounded-md hover:bg-blue-300 transition`}
+  
+       <div className="flex flex-col gap-3">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="border border-gray-300 rounded-lg overflow-hidden"
             >
-              {item.title}
-              <span className='text-stone-700'>{openIndex === index ? "▲" : "▼"}</span>
-            </button>
-            {openIndex === index && (
-              <p className="p-2 mt-1 text-gray-700 bg-white rounded-md shadow-md transition-all duration-300">
-                {item.description}
-              </p>
-            )}
-          </li>
-        ))}
-      </ul>
+              <button
+                className="w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100"
+                onClick={() => toggleItem(index)}
+              >
+                <span className="text-gray-700 text-sm font-bold">
+                  {item.title}
+                </span>
+                <span className="text-ggreen-600">
+                  {openIndex === index ? "−" : "+"}
+                </span>
+              </button>
+              {openIndex === index && (
+                <div className="p-4 bg-white text-sm text-gray-600">{item.description}</div>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
       
   <section className="text-center mt-10">
@@ -105,8 +111,8 @@ export default function About () {
 
   </section>
 
-                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-blue-600">
-                    <Link href="/contact" className="text-blue-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
+                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-green-600">
+                    <Link href="/contact" className="text-green-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
                 </div>
             </div>
         </div>
