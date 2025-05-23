@@ -19,7 +19,7 @@ export default function Contact() {
   const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try{
-    const response= await fetch("/send-mail", {
+    const response= await fetch("/api/send-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, message })
@@ -32,6 +32,7 @@ export default function Contact() {
     setName("");
     setEmail("");
     setMessage("");
+    setError("");
     toast.success("Message sent successfully!");
   }catch(err){
     console.error("Error sending message:", err);
