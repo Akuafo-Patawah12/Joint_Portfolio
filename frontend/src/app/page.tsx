@@ -20,12 +20,18 @@ export default function Home() {
      console.log("theme changed")
    },[darkMode])
   
- 
+ const contributors = [
+  { name: 'Parrch', image: '/me.jpg' },
+  { name: 'Royal CEO', image: '/me.jpg' },
+  { name: 'Jay Poundz', image: '/me.jpg' },
+];
   
   const [activeTab, setActiveTab] = useState<string>("tab1");
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+
+
   
     const renderContent = () => {
       switch (activeTab) {
@@ -226,6 +232,39 @@ export default function Home() {
             <div className="w-[90%] mx-auto">
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
+             
+             <div className="bg-white shadow-md rounded-xl p-4 max-w-md mx-auto">
+      <h2 className="text-lg font-semibold mb-5 text-gray-700">Contributors</h2>
+      <div className="relative h-9 w-36">
+        
+          <div  className="flex items-center gap-3">
+            <Image
+              src="/favicon.png"
+              alt="parcch"
+              width={30}
+              height={30}
+              className="size-8 border-2 border-green-500 rounded-full absolute left-0 z-10"
+            />
+            <Image
+              src="/me.jpg"
+              alt="jay poundz"
+              width={30}
+              height={30}
+              className="size-8 border-2 border-white rounded-full absolute left-6 z-10"
+            />
+            <Image
+              src="/me.jpg"
+              alt="royal ceo"
+              width={30}
+              height={30}
+              className="size-8 border-2 border-white rounded-full absolute left-12 z-10"
+            />
+          </div>
+          
+      </div>
+      <p>Parcch,Royal Empire CEO & Jay Poundz</p>
+    </div>
+
             {/* Contact Section */}
             <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-center gap-8">
             {/* Idea Section */}
@@ -271,46 +310,76 @@ export default function Home() {
           </div>
       
             {/* Contact Section */}
-            <section id="contact" className=" w-full text-center sm:">
-              <h2 className="text-3xl font-bold mb-4">
-                <Link href="/contact" className="hover:underline">Contact Us</Link>
-              </h2>
-      
-              {/* Contact Card */}
-              <div className="w-full  bg-white shadow-lg rounded-xl p-6 flex flex-col items-center ">
-                <Image
-                  src="/me.jpg"
-                  alt="Profile"
-                  height={300} width={300}
-                  className="w-24 h-24 rounded-full border-4 border-green-600 shadow-md"
-                />
-                <h2 className="text-xl font-semibold text-gray-800 mt-4">Akuafo Patawah</h2>
-                <p className="text-gray-500">Tech/Customer Support</p>
-      
-                {/* Contact Details */}
-                <div className="mt-4 space-y-2 w-full text-center ">
-                  <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <Mail className="w-5 h-5 text-green-500" />
-                    <span>burxells873@gmail.com</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <Phone className="w-5 h-5 text-green-500" />
-                    <span>+233201623251</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-gray-700">
-                    <MapPin className="w-5 h-5 text-green-500" />
-                    <span>Tema, Ghana</span>
-                  </div>
-                </div>
-      
-                {/* Contact Button */}
-                <Link href="/contact" >
-                <button onClick={scrollTop} className="mt-5 flex gap-2 bg-green-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300">
-                    Contact Now <Image src={Linkicon} height={300} width={300} alt="link" className="w-5 "/>
-                </button>
-                </Link>
+            <section
+      id="contact"
+      className="w-full py-20 px-6 bg-gradient-to-br from-white via-green-100 to-gray-200"
+    >
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-2xl font-extrabold tracking-tight text-gray-800 mb-10">
+          <Link href="/contact" className="hover:underline">Contact Us</Link>
+        </h2>
+
+        <div className="relative bg-white/80 backdrop-blur-md shadow-2xl rounded-2xl px-8 py-10 transition hover:scale-[1.01] duration-300 border border-gray-200">
+          {/* Profile Image & Name */}
+          <div className="flex flex-col items-center text-center space-y-4">
+            <Image
+              src="/me.jpg"
+              alt="Profile"
+              width={96}
+              height={96}
+              className="rounded-full border-4 border-green-500 object-cover shadow-md"
+            />
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900">Akuafo Patawah</h3>
+              <p className="text-sm text-gray-500">Tech & Customer Support</p>
+            </div>
+          </div>
+
+          {/* Contact Details */}
+          <div className="mt-8 space-y-6 text-gray-700 text-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+                <Phone size={18} />
               </div>
-            </section>
+              <span>020 162 3251</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+                <Mail size={18} />
+              </div>
+              <span>burxells873@gmail.com</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+                <MapPin size={18} />
+              </div>
+              <span>Segico Flat, Community 4, Tema - Ghana</span>
+            </div>
+          </div>
+
+          {/* Contact Button */}
+          <div className="mt-10">
+            <Link href="/contact">
+              <button
+                onClick={scrollTop}
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg flex justify-center items-center gap-2 transition duration-300 shadow-lg"
+              >
+                Contact Now
+                <Image
+                  src={Linkicon}
+                  width={20}
+                  height={20}
+                  alt="link"
+                  className="inline-block"
+                />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
           </div>
           </main>
      
