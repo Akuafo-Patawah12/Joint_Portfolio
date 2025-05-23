@@ -29,7 +29,7 @@ export default function About () {
                 <section className="mb-8">
     
     <p>
-      Techscroww is a forward-thinking technology startup dedicated to building cutting-edge digital solutions.
+      Parcch is a forward-thinking technology startup dedicated to building cutting-edge digital solutions.
       We specialize in web development, mobile applications, and API integrations that help businesses thrive
       in an ever-evolving digital landscape. Our team is driven by innovation, creativity, and a passion for solving
       complex problems through technology.
