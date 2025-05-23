@@ -53,7 +53,7 @@ export default function Contact() {
     <div style={{marginTop:"10px"}} className="w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
 
   <p style={{marginBlock:"24px"}} className="text-center font-bold text-gray-600 mb-8">
-    Reach out for inquiries or logistics support. We’re here to help!
+    We’re here to help with anything tech reach out and let’s create something amazing.
   </p>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

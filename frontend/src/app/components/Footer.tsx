@@ -3,7 +3,7 @@ import { Github, Gitlab } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-4 px-3 mt-10 text-center">
+    <footer className="bg-gray-900 text-white py-4 px-3  text-center">
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex space-x-6 mb-2">
           <a
@@ -26,7 +26,7 @@ const Footer = () => {
         <p className="text-gray-400 text-sm">
           You can follow us on GitHub or GitLab. We are always open for business and project collaborations.
         </p>
-        <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Techscroww. All rights reserved.</p>
+        <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Parcch. All rights reserved.</p>
       </div>
     </footer>
   );

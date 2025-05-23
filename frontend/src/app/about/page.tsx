@@ -18,7 +18,7 @@ export default function About () {
     setOpenIndex(openIndex === index ? null : index);
   };
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="min-h-screen pb-10 bg-gray-100 flex items-center justify-center">
             <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
 
                 
@@ -111,7 +111,7 @@ export default function About () {
 
   </section>
 
-                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-green-600">
+                <div className="text-center mt-6 h-10 w-full] rounded-2xl border-2 border-green-500">
                     <Link href="/contact" className="text-green-500 leading-loose  block  w-full h-[40px] hover:underline">Contact us today!</Link>
                 </div>
             </div>
