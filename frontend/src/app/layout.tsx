@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   openGraph: {
         type: "website",
         url: "https://www.parcch.com",
-        title: "Parcch portfolio website",
-        description: "My Website Description",
-        siteName: "Parcch portfolio website",
-        images: [{ url: "https://www.parcch.com/favicon.png" }]
+        title: "Parcch Tech Solutions",
+        description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
+        siteName: "Parcch",
+        images: [{ url: "https://www.parcch.com/favicon.ico" }]
       }
 };
 
