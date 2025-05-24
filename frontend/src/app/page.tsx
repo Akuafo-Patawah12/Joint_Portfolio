@@ -175,59 +175,52 @@ export default function Home() {
        </section>
       
              {/* About Section */}  
-          <section className="w-full px-4 py-10 md:px-8 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center justify-between">
-        {/* Left side */}
-        <div className="w-full lg:w-2/5 space-y-6">
-          <div className="relative rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src="/code.jpg"
-              alt="Overview image"
-              width={800}
-              height={600}
-              className="w-full object-cover h-72"
-            />
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <span className="text-white text-2xl font-semibold italic">
-                Overview
-              </span>
+          <div className="w-[95%] mx-auto flex justify-between flex-col mt-4 lg:flex-row">
+            <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
+            <section className="w-full relative">
+            <div className="absolute top-0 left-0 w-full h-full z-4 rounded-2xl bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl italic">Overview</div>
+            <Image src="/code.jpg" alt="me" height={300} width={300} className=" w-full rounded-2xl" />
+            
+            </section>
+              <div className="flex justify-center items-center gap-2 p-2 bg-green-100 rounded-3xl shadow-md w-fit mx-auto">
+  <button
+    onClick={() => setActiveTab("tab1")}
+    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+      activeTab === "tab1"
+        ? "bg-green-600 text-white shadow-md"
+        : "bg-white text-green-700 hover:bg-green-200"
+    }`}
+  >
+    About Us
+  </button>
+
+  <button
+    onClick={() => setActiveTab("tab2")}
+    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+      activeTab === "tab2"
+        ? "bg-green-600 text-white shadow-md"
+        : "bg-white text-green-700 hover:bg-green-200"
+    }`}
+  >
+    Mission
+  </button>
+
+  <button
+    onClick={() => setActiveTab("tab3")}
+    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+      activeTab === "tab3"
+        ? "bg-green-600 text-white shadow-md"
+        : "bg-white text-green-700 hover:bg-green-200"
+    }`}
+  >
+    Vision
+  </button>
+</div>
+
             </div>
+            <div className="w-full px-[2.5%] flex  justify-center lg:w-[55%]">{renderContent()}</div>
           </div>
-
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 bg-green-100 p-3 rounded-3xl shadow-md">
-            {["tab1", "tab2", "tab3"].map((tab, idx) => {
-              const labels = {
-                tab1: "About Us",
-                tab2: "Mission",
-                tab3: "Vision",
-              };
-              return (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    activeTab === tab
-                      ? "bg-green-600 text-white shadow-md"
-                      : "bg-white text-green-700 hover:bg-green-200"
-                  }`}
-                  aria-label={`Switch to ${labels[tab]}`}
-                >
-                  {labels[tab]}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Right side */}
-        <div className="w-full lg:w-3/5">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md text-center lg:text-left">
-            {renderContent()}
-          </div>
-        </div>
-      </div>
-    </section>
+      
            
            
       
