@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         title: "Parcch Tech Solutions",
         description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
         siteName: "Parcch",
-        images: [{ url: "https://www.parcch.com/favicon.ico" }]
+        images: [{ url: "https://www.parcch.com/favicon.png" }]
       }
 };
 
