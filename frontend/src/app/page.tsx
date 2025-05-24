@@ -243,7 +243,7 @@ export default function Home() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 shadow hover:shadow-lg transition"
+              className="rounded-2xl border border-stone-200 bg-gray-50 dark:bg-gray-800 p-6 shadow hover:shadow-lg transition"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
