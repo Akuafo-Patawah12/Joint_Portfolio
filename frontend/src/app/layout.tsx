@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   title: "Parcch portfolio website",
   description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
   icons: {
-    icon: "/favicon.png", // or .ico, .svg
+    icon:"/favicon.ico",
+    shortcut: "/favicon.icon",
   },
   openGraph: {
         type: "website",
