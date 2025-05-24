@@ -7,7 +7,7 @@ import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-re
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
 
-import { motion } from "framer-motion";
+
 
 import Linkicon from "./assets/Linkicon.svg"
 import wavy from "./assets/wavy.svg"
@@ -65,6 +65,42 @@ export default function Home() {
           return null;
       }
     };
+
+  const services = [
+    {
+      title: "Web Development",
+      description:
+        "Custom websites, portals, and web apps built for performance and scalability.",
+      icon: "🌐",
+    },
+    {
+      title: "Mobile App Development",
+      description: "iOS and Android apps with stunning UI and seamless UX.",
+      icon: "📱",
+    },
+    {
+      title: "UI/UX Design",
+      description: "User-first product design that converts and engages.",
+      icon: "🎨",
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud architecture and DevOps pipelines.",
+      icon: "☁️",
+    },
+    {
+      title: "E-commerce Development",
+      description: "Custom online stores and third-party integrations.",
+      icon: "🛒",
+    },
+    {
+      title: "Technical Consulting",
+      description:
+        "Guidance on digital transformation and modern tech stack decisions.",
+      icon: "💼",
+    },
+  ];
+
   return (
     <main className=" min-h-screen pb-20  sm:font-[family-name:var(--font-geist-sans)]">
        {/* Hero Section */}
@@ -139,92 +175,97 @@ export default function Home() {
        </section>
       
              {/* About Section */}  
-          <div className="w-[95%] mx-auto flex justify-between flex-col mt-4 lg:flex-row">
-            <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
-            <section className="w-full relative">
-            <div className="absolute top-0 left-0 w-full h-full z-4 rounded-2xl bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl italic">Overview</div>
-            <Image src="/code.jpg" alt="me" height={300} width={300} className=" w-full rounded-2xl" />
-            
-            </section>
-              <div className="flex justify-center items-center gap-2 p-2 bg-green-100 rounded-3xl shadow-md w-fit mx-auto">
-  <button
-    onClick={() => setActiveTab("tab1")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab1"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    About Us
-  </button>
-
-  <button
-    onClick={() => setActiveTab("tab2")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab2"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    Mission
-  </button>
-
-  <button
-    onClick={() => setActiveTab("tab3")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab3"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    Vision
-  </button>
-</div>
-
+          <section className="w-full px-4 py-10 md:px-8 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center justify-between">
+        {/* Left side */}
+        <div className="w-full lg:w-2/5 space-y-6">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/code.jpg"
+              alt="Overview image"
+              width={800}
+              height={600}
+              className="w-full object-cover h-72"
+            />
+            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <span className="text-white text-2xl font-semibold italic">
+                Overview
+              </span>
             </div>
-            <div className="w-full px-[2.5%] flex  justify-center lg:w-[55%]">{renderContent()}</div>
           </div>
-      
+
+          {/* Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 bg-green-100 p-3 rounded-3xl shadow-md">
+            {["tab1", "tab2", "tab3"].map((tab, idx) => {
+              const labels = {
+                tab1: "About Us",
+                tab2: "Mission",
+                tab3: "Vision",
+              };
+              return (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    activeTab === tab
+                      ? "bg-green-600 text-white shadow-md"
+                      : "bg-white text-green-700 hover:bg-green-200"
+                  }`}
+                  aria-label={`Switch to ${labels[tab]}`}
+                >
+                  {labels[tab]}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right side */}
+        <div className="w-full lg:w-3/5">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md text-center lg:text-left">
+            {renderContent()}
+          </div>
+        </div>
+      </div>
+    </section>
            
            
       
-            {/* Projects Section */}
-            <section id="projects" className={` ${darkMode ? "bg-gray-800" : "bg-stone-100" } mt-[70px] py-20 px-6 rounded-2xl`}>
-              <div className="container mx-auto">
-                <h2 className="text-3xl font-bold text-center">Projects</h2>
-                <div className="mt-8 grid md:grid-cols-2 gap-8">
-                <motion.div
-            className="project p-8 rounded-lg bg-gray-200 "
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3 className="text-xl font-semibold ">Logistics Platform</h3>
-            <p className="text-gray-100 mt-2">
-              Developed a logistics and third-party eCommerce platform with real-time tracking.
-            </p>
-            <button className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-              <a href="https://sfghanalogistics.com" target="_blank" rel="noopener noreferrer">
-                View
-              </a>
-            </button>
-          </motion.div>
-          <motion.div
-            className="project p-8 rounded-lg bg-gray-200 "
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-          >
-                    <h3 className="text-xl font-semibold">Attendance App</h3>
-                    <p className="text-gray-100 mt-2">Designed an attendance system for managing shifts and tracking worker sign-ins.</p>
-                  </motion.div>
-                </div>
-              </div>
-            </section>
+            {/* Services Section */}
+               
+              <section
+      id="services"
+      className="w-full bg-white dark:bg-gray-900 py-16 px-4 sm:px-8"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">
+          Our Services
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+          Parcch Tech Solutions builds products and tools that drive innovation,
+          enhance user experience, and deliver results.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-6 shadow hover:shadow-lg transition"
+            >
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
             <div className="w-[90%] mx-auto">
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
@@ -330,7 +371,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">Tech & Customer Support</p>
             </div>
           </div>
-          
+
            <div style={{marginTop:"10px"}} className="w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
           {/* Contact Details */}
           <div className="mt-8 space-y-6 text-gray-700 text-sm">
