@@ -39,9 +39,6 @@ export const metadata: Metadata = {
     follow: true,
     nocache: false,
     noimageindex: false,
-    maxSnippet: -1,
-    maxVideoPreview: -1,
-    maxImagePreview: "large",
   },
   authors: [{ name: "Parcch", url: "https://www.parcch.com" }],
   openGraph: {
