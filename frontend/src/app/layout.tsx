@@ -18,12 +18,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Parcch portfolio website",
+  title: "Parcch Tech Solutions",
   description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
   icons: {
     icon:"/favicon.ico",
     shortcut: "/favicon.icon",
   },
+  keywords: [
+    "Parcch",
+    "Tech Solutions",
+    "Web Development",
+    "Mobile Applications",
+    "API Integrations",
+    "Digital Solutions",
+    "Innovation",
+    "Technology Startup"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    noimageindex: false,
+    maxSnippet: -1,
+    maxVideoPreview: -1,
+    maxImagePreview: "large",
+  },
+  authors: [{ name: "Parcch", url: "https://www.parcch.com" }],
   openGraph: {
         type: "website",
         url: "https://www.parcch.com",
