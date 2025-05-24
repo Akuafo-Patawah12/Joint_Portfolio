@@ -23,6 +23,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png", // or .ico, .svg
   },
+  openGraph: {
+        type: "website",
+        url: "https://www.parcch.com",
+        title: "Parcch portfolio website",
+        description: "My Website Description",
+        siteName: "Parcch portfolio website",
+        images: [{ url: "https://www.parcch.com/favicon.png" }]
+      }
 };
 
 export default function RootLayout({
@@ -32,6 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

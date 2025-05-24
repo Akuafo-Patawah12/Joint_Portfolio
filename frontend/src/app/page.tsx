@@ -230,7 +230,7 @@ export default function Home() {
             </div>
              
              <div className="bg-white shadow-md rounded-xl p-4 max-w-md mx-auto">
-      <h2 className="text-lg font-semibold mb-5 text-gray-700">Contributors</h2>
+      <h2 className="text-md font-semibold mb-5 text-gray-700">Contributors</h2>
       <div className="relative h-9 w-36">
         
           <div  className="flex items-center gap-3">
@@ -258,7 +258,7 @@ export default function Home() {
           </div>
           
       </div>
-      <p>Parcch,Royal Empire CEO & Jay Poundz</p>
+      <p>Parcch, Royal Empire CEO & Jay Poundz</p>
     </div>
 
             {/* Contact Section */}
@@ -330,7 +330,8 @@ export default function Home() {
               <p className="text-sm text-gray-500">Tech & Customer Support</p>
             </div>
           </div>
-
+          
+           <div style={{marginTop:"10px"}} className="w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
           {/* Contact Details */}
           <div className="mt-8 space-y-6 text-gray-700 text-sm">
             <div className="flex items-center gap-3">

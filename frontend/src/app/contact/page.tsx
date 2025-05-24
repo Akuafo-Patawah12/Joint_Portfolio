@@ -14,31 +14,58 @@ export default function Contact() {
  const [name, setName] = React.useState<string>("");
  const [email, setEmail] = React.useState<string>("");
  const [message, setMessage] = React.useState<string>("");
+ const [loading,setLoading] = React.useState<boolean>(false);
   const [error, setError] = React.useState<string | null>(null);
 
-  const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try{
-    const response= await fetch("/api/send-mail", {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  // Clear previous error and set loading
+  setError(null);
+  setLoading(true);
+
+  // Basic validation
+  if (!name || !email || !message) {
+    setError("All fields are required.");
+    setLoading(false);
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/send-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message })
-    })
-    const data= await response.json()
-    if(!response.ok){
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
       setError(data.error || "Something went wrong. Please try again.");
       return;
     }
+
+    // Reset form fields on success
     setName("");
     setEmail("");
     setMessage("");
-    setError("");
+
     toast.success("Message sent successfully!");
-  }catch(err){
+  } catch (err) {
     console.error("Error sending message:", err);
     setError("Failed to send message. Please try again later.");
+  } finally {
+    setLoading(false);
+
+    // Optional: Clear error message after delay
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 5000);
+    }
   }
-  }
+};
+
 
   return (
     <div  className="bg-green-50 py-[50px] ">
@@ -102,7 +129,7 @@ export default function Contact() {
           type="submit"
           className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-700 transition text-sm font-semibold"
         >
-          Send Message
+          {loading? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>

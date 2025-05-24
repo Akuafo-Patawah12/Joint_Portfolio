@@ -1,0 +1,11 @@
+# robots.txt for yoursite.com
+
+User-agent: *
+Disallow:
+
+# Allow all bots to crawl everything
+# To block certain parts of your site, add lines like:
+# Disallow: /private/
+# Disallow: /admin/
+
+Sitemap: https://www.parcch.com/sitemap.xml
