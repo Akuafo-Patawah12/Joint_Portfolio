@@ -105,33 +105,33 @@ export default function Home() {
     <main className=" min-h-screen pb-20  sm:font-[family-name:var(--font-geist-sans)]">
        {/* Hero Section */}
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
-          <div className="h-auto w-full relative bg-white rounded-2xl border border-green-400 lg:w-1/2 p-6 shadow-xl space-y-4">
-  <h1 className="text-2xl font-bold text-green-700 whitespace-nowrap">Parcch <code>&lt;Tech Solutions/&gt;</code></h1>
-      <div style={{marginBlock:"15px"}} className="w-full  h-[1px] rounded-full bg-gradient-to-r from-white via-stone-300 to-white"></div>
-  <p className="text-gray-600">
+      <div className="relative w-full lg:w-1/2 h-auto bg-white border border-green-400 rounded-2xl shadow-2xl p-6 space-y-6 overflow-hidden">
+  <h1 className="text-2xl font-bold text-green-700">
+    Parcch <code className="text-base text-green-600">&lt;Tech Solutions/&gt;</code>
+  </h1>
+
+  <div className="w-full h-[1px] bg-gradient-to-r from-white via-stone-300 to-white rounded-full" />
+
+  <p className="text-gray-600 text-sm lg:text-base">
     We provide end-to-end tech services tailored to your business — from product design to scalable system architecture.
   </p>
 
-  <ul className="space-y-3 relative bg-white isolate">
-    <li className="absolute bg-stone-400 bottom-0 w-[2px] z-0 left-2.5 top-0">
+  <ul className="relative space-y-4 isolate bg-white">
+    <li className="absolute left-4 top-0 bottom-0 w-[2px] bg-stone-400 z-0"></li>
 
-    </li>
-    <li className="flex  items-center gap-3">
-      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Code className="text-green-600 isolate" size={17}/></div>
-      <span className="text-gray-700">System Design & Architecture</span>
-    </li>
-    <li className="flex  items-center gap-3">
-      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><PenTool className="text-green-600 " size={17}/></div>
-      <span className="text-gray-700">UI/UX Design & Prototyping</span>
-    </li>
-    <li className="flex  items-center gap-3">
-      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Cloud className="text-green-600 " size={17}/></div>
-      <span className="text-gray-700">Custom Software Development</span>
-    </li>
-    <li className="flex  items-center gap-3">
-      <div className="grid place-items-center size-7 rounded-[50%] shadow bg-white isolate"><Cloud className="text-green-600 " size={17}/></div>
-      <span className="text-gray-700">Cloud Hosting & DevOps</span>
-    </li>
+    {[
+      { icon: <Code size={18} />, label: "System Design & Architecture" },
+      { icon: <PenTool size={18} />, label: "UI/UX Design & Prototyping" },
+      { icon: <Cloud size={18} />, label: "Custom Software Development" },
+      { icon: <Cloud size={18} />, label: "Cloud Hosting & DevOps" },
+    ].map((item, idx) => (
+      <li key={idx} className="relative z-10 flex items-center gap-3">
+        <div className="grid place-items-center size-8 rounded-full shadow bg-white text-green-600">
+          {item.icon}
+        </div>
+        <span className="text-gray-700 text-sm lg:text-base">{item.label}</span>
+      </li>
+    ))}
   </ul>
 
   <button className="mt-4 px-5 z-4 relative overflow-hidden isolate py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
@@ -140,8 +140,15 @@ export default function Home() {
     <p className="isolate">Get in Touch</p>
   </button>
 
-  <Image src={wavy} alt="wavy" width={300} height={300} className="absolute w-full   left-0  bottom-0"/>
+  <Image
+    src={wavy}
+    alt="wavy"
+    width={300}
+    height={300}
+    className="absolute left-0 bottom-0 w-full pointer-events-none select-none"
+  />
 </div>
+
 
           <div className=" hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
            <Image src={code_bg} alt="bg" width={300} height={300} className="mx-auto"/>
@@ -182,7 +189,7 @@ export default function Home() {
             <Image src="/code.jpg" alt="me" height={300} width={300} className=" w-full rounded-2xl" />
             
             </section>
-              <div className="flex justify-center items-center gap-2 p-2 bg-green-100 rounded-3xl shadow-md w-fit mx-auto">
+              <div className="flex justify-center items-center gap-2 p-2 bg-green-100 rounded-3xl shadow-md w-full mt-3 mx-auto">
   <button
     onClick={() => setActiveTab("tab1")}
     className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
@@ -267,17 +274,18 @@ export default function Home() {
             </div>
              
              <div className="bg-white  rounded-2xl p-6 w-[90%] mt-5  mx-auto border border-green-200">
-  <h2 className="text-lg font-bold text-gray-800 mb-4">Contributors</h2>
-  
+  <h2 className="text-lg font-bold text-gray-800 ">Contributors</h2>
+   {/* Divider */}
+        <div className="my-3 w-full h-[1.5px] bg-gradient-to-r from-white via-green-300 to-white"></div>
   {/* Overlapping Avatars */}
-  <div className="relative h-10 w-40 mb-3">
+  <div className="relative h-10 w-40 mb-3 mt-8">
     <div className="flex items-center">
       <Image
         src="/favicon.png"
         alt="Parcch"
         width={40}
         height={40}
-        className="border-2 border-green-500 rounded-full absolute left-0 z-30 shadow-md"
+        className="border-2 border-green-500 rounded-full absolute left-0 z-21 shadow-md"
       />
       <Image
         src="/me.jpg"
