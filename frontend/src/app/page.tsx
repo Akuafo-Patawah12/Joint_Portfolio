@@ -221,7 +221,7 @@ export default function Home() {
             <div className="w-full px-[2.5%] flex  justify-center lg:w-[55%]">{renderContent()}</div>
           </div>
       
-           
+           <div className="h-2 bg-stone-200 w-full  mx-auto mt-9"></div>
            
       
             {/* Services Section */}
@@ -231,9 +231,12 @@ export default function Home() {
       className="w-full bg-white dark:bg-gray-900 py-16 px-4 sm:px-8"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">
-          Our Services
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+          Our <span className="text-green-600">Services</span>
         </h2>
+        
+        <div className="h-1 bg-stone-600 w-[120px] rounded-2xl mx-auto mt-3 mb-5"></div>
+
         <p className="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
           Parcch Tech Solutions builds products and tools that drive innovation,
           enhance user experience, and deliver results.
