@@ -263,155 +263,164 @@ export default function Home() {
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
              
-             <div className="bg-white shadow-md rounded-xl p-4 max-w-md mx-auto">
-      <h2 className="text-md font-semibold mb-5 text-gray-700">Contributors</h2>
-      <div className="relative h-9 w-36">
-        
-          <div  className="flex items-center gap-3">
-            <Image
-              src="/favicon.png"
-              alt="parcch"
-              width={30}
-              height={30}
-              className="size-8 border-2 border-green-500 rounded-full absolute left-0 z-10"
-            />
-            <Image
-              src="/me.jpg"
-              alt="jay poundz"
-              width={30}
-              height={30}
-              className="size-8 border-2 border-white rounded-full absolute left-6 z-10"
-            />
-            <Image
-              src="/me.jpg"
-              alt="royal ceo"
-              width={30}
-              height={30}
-              className="size-8 border-2 border-white rounded-full absolute left-12 z-10"
-            />
-          </div>
-          
-      </div>
-      <p>Parcch, Royal Empire CEO & Jay Poundz</p>
+             <div className="bg-white  rounded-2xl p-6 w-[90%] mt-5  mx-auto border border-green-200">
+  <h2 className="text-lg font-bold text-gray-800 mb-4">Contributors</h2>
+  
+  {/* Overlapping Avatars */}
+  <div className="relative h-10 w-40 mb-3">
+    <div className="flex items-center">
+      <Image
+        src="/favicon.png"
+        alt="Parcch"
+        width={40}
+        height={40}
+        className="border-2 border-green-500 rounded-full absolute left-0 z-30 shadow-md"
+      />
+      <Image
+        src="/me.jpg"
+        alt="Jay Poundz"
+        width={40}
+        height={40}
+        className="border-2 border-white rounded-full absolute left-7 z-20 shadow-md"
+      />
+      <Image
+        src="/me.jpg"
+        alt="Royal CEO"
+        width={40}
+        height={40}
+        className="border-2 border-white rounded-full absolute left-14 z-10 shadow-md"
+      />
     </div>
+  </div>
+
+  {/* Names */}
+  <p className="text-gray-600 text-sm">
+    <span className="font-medium text-gray-800">Parcch</span>,{" "}
+    <span className="font-medium text-gray-800">Royal Empire CEO</span> &{" "}
+    <span className="font-medium text-gray-800">Jay Poundz</span>
+  </p>
+</div>
+
 
             {/* Contact Section */}
-            <div className="container mx-auto p-6 flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Idea Section */}
-            <div className=" p-6 text-center bg-white shadow-lg rounded-lg">
-              <h2 className="text-2xl font-bold text-gray-800">Got an idea? Let’s bring it to life!</h2>
-              <p className="text-gray-600 mt-3">
-                Whether you have a project in mind, a business proposal, or just want to say hello—We’d love to hear from you! 
-                We are always open for collaboration and exciting new opportunities.
-              </p>
-              
-            <div className="flex items-center justify-center gap-2">
-              
-              <p className="mx-auto">
-                Connect with us on{" "}
-                <a
-                  href="https://github.com/Akuafo-Patawah12"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-500 hover:underline"
-                >
-                  GitHub
-                </a>{" "}
-                &{" "}
-                <a
-                  href="https://gitlab.com/Akuafo-Patawah12"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-500 hover:underline"
-                >
-                  GitLab
-                </a>
-              </p>
-            </div>
-      
-            <div className="flex items-center gap-2 mt-2">
-              
-              <p className="mx-auto">Or drop me a message anytime!</p>
-            </div>
-      
-            <p className="text-xl font-semibold flex flex-col items-center text-green-600 mt-5">
-              Let’s build something amazing together. <Rocket />
-            </p>
-          </div>
-      
-            {/* Contact Section */}
-            <section
-      id="contact"
-      className="w-full py-20  bg-gradient-to-br from-white via-green-100 to-gray-200"
-    >
-      <div className="w-[95%] mx-auto text-center">
-        <h2 className="text-2xl font-extrabold tracking-tight text-gray-800 mb-10">
-          <Link href="/contact" className="hover:underline">Contact Us</Link>
-        </h2>
+            <div className="container mx-auto px-6 py-10 flex flex-col gap-10 md:flex-row items-start justify-center">
+  {/* Idea Section */}
+  <section className="w-full md:w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-green-300 rounded-3xl shadow-xl text-white py-10 px-6">
+    <div className="bg-white text-gray-800 shadow-md rounded-xl p-6 text-center">
+      <h2 className="text-3xl font-extrabold">Got an idea? Let’s bring it to life!</h2>
+      <p className="text-gray-600 mt-4">
+        Whether you have a project in mind, a business proposal, or just want to say hello—
+        We’d love to hear from you! We are always open for collaboration and exciting new opportunities.
+      </p>
 
-        <div className="relative bg-white/80 backdrop-blur-md shadow-2xl rounded-2xl px-8 py-10 transition hover:scale-[1.01] duration-300 border border-gray-200">
-          {/* Profile Image & Name */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <Image
-              src="/me.jpg"
-              alt="Profile"
-              width={96}
-              height={96}
-              className="rounded-full border-4 border-green-500 object-cover shadow-md"
-            />
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900">Akuafo Patawah</h3>
-              <p className="text-sm text-gray-500">Tech & Customer Support</p>
-            </div>
-          </div>
+      <div className="mt-6 text-sm text-gray-700">
+        <p>
+          Connect with us on{" "}
+          <a
+            href="https://github.com/Akuafo-Patawah12"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 hover:underline font-semibold"
+          >
+            GitHub
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://gitlab.com/Akuafo-Patawah12"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 hover:underline font-semibold"
+          >
+            GitLab
+          </a>
+        </p>
+        <p className="mt-4">Or drop me a message anytime!</p>
+      </div>
 
-           <div style={{marginTop:"10px"}} className="w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
-          {/* Contact Details */}
-          <div className="mt-8 space-y-6 text-gray-700 text-sm">
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
-                <Phone size={18} />
-              </div>
-              <span>020 162 3251</span>
-            </div>
+      <p className="mt-6 text-xl font-semibold text-green-700">
+        Let’s build something amazing together. <Rocket className="inline ml-1" />
+      </p>
+    </div>
+  </section>
 
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
-                <Mail size={18} />
-              </div>
-              <span>burxells873@gmail.com</span>
-            </div>
+  {/* Contact Section */}
+  <section
+    id="contact"
+    className="w-full md:w-1/2 bg-gradient-to-br from-white via-green-100 to-gray-200 rounded-3xl shadow-xl py-10"
+  >
+    <div className="w-full text-center">
+      <h2 className="text-3xl font-bold text-gray-800 mb-8">
+        <Link href="/contact" className="hover:underline">
+          Contact Us
+        </Link>
+      </h2>
 
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
-                <MapPin size={18} />
-              </div>
-              <span>Segico Flat, Community 4, Tema - Ghana</span>
-            </div>
-          </div>
-
-          {/* Contact Button */}
-          <div className="mt-10">
-            <Link href="/contact">
-              <button
-                onClick={scrollTop}
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg flex justify-center items-center gap-2 transition duration-300 shadow-lg"
-              >
-                Contact Now
-                <Image
-                  src={Linkicon}
-                  width={20}
-                  height={20}
-                  alt="link"
-                  className="inline-block"
-                />
-              </button>
-            </Link>
+      <div className="bg-white/80 backdrop-blur-md mx-auto w-[95%] shadow-lg rounded-2xl px-8 py-10 border border-gray-200 transition-transform duration-300 hover:scale-[1.01]">
+        {/* Profile */}
+        <div className="flex flex-col items-center space-y-4">
+          <Image
+            src="/me.jpg"
+            alt="Profile"
+            width={96}
+            height={96}
+            className="rounded-full border-4 border-green-500 object-cover shadow-md"
+          />
+          <div>
+            <h3 className="text-xl font-semibold">Akuafo Patawah</h3>
+            <p className="text-sm text-gray-500">Tech & Customer Support</p>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Divider */}
+        <div className="my-6 w-full h-[2px] bg-gradient-to-r from-white via-green-300 to-white"></div>
+
+        {/* Contact Info */}
+        <div className="space-y-5 text-left text-gray-700 text-sm">
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+              <Phone size={18} />
+            </div>
+            <span>020 162 3251</span>
           </div>
+
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+              <Mail size={18} />
+            </div>
+            <span>burxells873@gmail.com</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
+              <MapPin size={18} />
+            </div>
+            <span>Segico Flat, Community 4, Tema - Ghana</span>
+          </div>
+        </div>
+
+        {/* Button */}
+        <div className="mt-8">
+          <Link href="/contact">
+            <button
+              onClick={scrollTop}
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-xl flex justify-center items-center gap-2 transition duration-300 shadow-md"
+            >
+              Contact Now
+              <Image
+                src={Linkicon}
+                width={20}
+                height={20}
+                alt="link"
+                className="inline-block"
+              />
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
           </main>
      
     
