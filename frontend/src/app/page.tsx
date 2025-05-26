@@ -32,35 +32,86 @@ export default function Home() {
     const renderContent = () => {
       switch (activeTab) {
         case "tab1":
-          return <div className="mt-4 flex text-center relative flex-col gap-10 items-center "> 
-                  <h2 className="font-bold text-4xl">About us</h2>
-                  Parcch is a forward-thinking technology startup dedicated to building cutting-edge digital solutions.
-        We specialize in web development, mobile applications, and API integrations that help businesses thrive
-        in an ever-evolving digital landscape. Our team is driven by innovation, creativity, and a passion for solving
-        complex problems through technology.
-  
-        <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
-          
-          
-          
-          
-          
-          
-          </div>;
+          return  <div className="relative mt-10 px-4 py-12 w-full max-w-5xl border-2 border-white backdrop-blur-2xl mx-auto flex flex-col gap-6 items-center text-center bg-white/80 shadow-xl rounded-3xl">
+      {/* Heading */}
+      <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight">
+        About Us
+      </h2>
+
+      {/* Description */}
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl">
+        <span className="font-semibold text-green-600">Parcch</span> is a forward-thinking technology startup dedicated to building cutting-edge digital solutions. We specialize in web development, mobile applications, and API integrations that empower businesses in an ever-evolving digital landscape.
+      </p>
+
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl">
+        Our team thrives on <span className="text-green-600 font-medium">innovation</span>, <span className="text-green-600 font-medium">creativity</span>, and a passion for solving complex problems through technology.
+      </p>
+
+      {/* Button */}
+      <Link href="/about" passHref>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+        >
+          See more...
+        </button>
+      </Link>
+    </div>;
         case "tab2":
-          return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
-                     <h2 className="font-bold text-4xl">Our mission</h2>
-                    Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that drive growth and success. By leveraging the latest advancements in technology, we aim to streamline processes, enhance user engagement, and deliver scalable solutions tailored to each client’s unique needs. Our commitment to quality, creativity, and continuous improvement ensures that we stay ahead of industry trends, helping businesses adapt, thrive, and achieve their long-term goals in an ever-evolving digital landscape.   
-                    <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
-                </div>;
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white shadow-xl rounded-3xl">
+      {/* Heading */}
+      <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
+        Our Mission
+      </h2>
+
+      {/* Mission Text */}
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+        We harness technology to deliver <span className="text-green-600 font-medium">innovative</span>, <span className="text-green-600 font-medium">efficient</span>, and <span className="text-green-600 font-medium">user-friendly</span> solutions — empowering businesses with custom apps and seamless digital experiences that fuel growth.
+      </p>
+
+
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+        We use cutting-edge tech to streamline workflows, boost engagement, and build scalable solutions tailored to each client. Our focus on <span className="text-green-600 font-medium">quality</span>, <span className="text-green-600 font-medium">creativity</span>, and <span className="text-green-600 font-medium">growth</span> keeps us ahead—helping businesses adapt and succeed.
+      </p>
+
+
+      {/* Button */}
+      <Link href="/about" passHref>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="mt-6 border-2 border-white text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+        >
+          See more...
+        </button>
+      </Link>
+    </div>;
         case "tab3":
-          return <div className="relative mt-4 flex flex-col gap-10 items-center text-justify">
-                    <h2 className="font-bold text-4xl">Our vision</h2>
-                    Our vision is to become a leading tech startup recognized for innovation, reliability, and cutting-edge solutions. We aim to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies, and delivering impactful solutions that transform businesses and industries.
-  
-          We envision a future where technology seamlessly enhances every aspect of life and business, fostering growth, efficiency, and sustainability. By staying ahead of industry trends, fostering a culture of creativity, and prioritizing user-centric design, we strive to set new standards in digital excellence. 
-          <button onClick={scrollTop} className="  lg:absolute border-2 border-green-500 rounded-2xl font-medium italic leading-8  w-[140px] h-[40px] bottom-6  right-0"><Link href="/about" className="w-full h-full block">See more...</Link></button>
-          </div>;
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white shadow-xl rounded-3xl">
+      {/* Heading */}
+      <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
+        Our Vision
+      </h2>
+
+      {/* Vision Text */}
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+        Our vision is to be a <span className="text-green-600 font-medium">leading tech startup</span>, known for <span className="text-green-600 font-medium">innovation</span>, <span className="text-green-600 font-medium">reliability</span>, and <span className="text-green-600 font-medium">cutting-edge solutions</span>. We’re redefining the digital space by pushing boundaries and delivering transformative technologies.
+      </p>
+
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+        We see a future where technology <span className="text-green-600 font-medium">enhances life and business</span>, driving <span className="text-green-600 font-medium">growth</span>, <span className="text-green-600 font-medium">efficiency</span>, and <span className="text-green-600 font-medium">sustainability</span>. Through innovation and user-first design, we aim to lead in digital excellence.
+      </p>
+
+
+      {/* Button */}
+      <Link href="/about" passHref>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+        >
+          See more...
+        </button>
+      </Link>
+    </div>;
         default:
           return null;
       }
@@ -182,53 +233,53 @@ export default function Home() {
        </section>
       
              {/* About Section */}  
-          <div className="w-[95%] mx-auto flex justify-between flex-col mt-4 lg:flex-row">
-            <div style={{ display: "flex",flexDirection:"column", marginBottom: "10px"}} className="w-full lg:w-2/5 ">
-            <section className="w-full relative">
-            <div className="absolute top-0 left-0 w-full h-full z-4 rounded-2xl bg-black opacity-60 text-white flex justify-center items-center font-bold text-2xl italic">Overview</div>
-            <Image src="/code.jpg" alt="me" height={300} width={300} className=" w-full rounded-2xl" />
-            
-            </section>
-              <div className="flex justify-center items-center gap-2 p-2 bg-green-100 rounded-3xl shadow-md w-full mt-3 mx-auto">
-  <button
-    onClick={() => setActiveTab("tab1")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab1"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    About Us
-  </button>
+          <div className="w-full mt-6 mx-auto px-[2.5%] py-20 rounded-2xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row gap-6 shadow-lg">
+  {/* Left Section */}
+  <div className="w-full lg:w-2/5 flex flex-col">
+    {/* Image with Overlay */}
+    <section className="relative w-full rounded-2xl overflow-hidden shadow-lg">
+      <Image
+        src="/code.jpg"
+        alt="overview"
+        height={300}
+        width={300}
+        className="w-full h-full object-cover rounded-2xl"
+      />
+      <div className="absolute inset-0 bg-black/50 bg-opacity-60 text-white flex justify-center items-center text-2xl font-bold italic z-10">
+        Overview
+      </div>
+    </section>
 
-  <button
-    onClick={() => setActiveTab("tab2")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab2"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    Mission
-  </button>
+    {/* Tab Buttons */}
+    <div className="flex justify-center items-center gap-2 mt-4 bg-green-100 p-3 rounded-3xl shadow-md w-full">
+      {[
+        { label: "About Us", tab: "tab1" },
+        { label: "Mission", tab: "tab2" },
+        { label: "Vision", tab: "tab3" },
+      ].map(({ label, tab }) => (
+        <button
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            activeTab === tab
+              ? "bg-green-600 text-white shadow"
+              : "bg-white text-green-700 hover:bg-green-200"
+          }`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
 
-  <button
-    onClick={() => setActiveTab("tab3")}
-    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-      activeTab === "tab3"
-        ? "bg-green-600 text-white shadow-md"
-        : "bg-white text-green-700 hover:bg-green-200"
-    }`}
-  >
-    Vision
-  </button>
+  {/* Right Section */}
+  <div className="w-full lg:w-[50%] flex justify-center items-start px-[2.5%]">
+    {renderContent()}
+  </div>
 </div>
 
-            </div>
-            <div className="w-full px-[2.5%] flex  justify-center lg:w-[55%]">{renderContent()}</div>
-          </div>
       
-           <div className="h-2 bg-stone-200 w-full  mx-auto mt-9"></div>
+           
            
       
             {/* Services Section */}
