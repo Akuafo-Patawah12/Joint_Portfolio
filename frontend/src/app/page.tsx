@@ -369,7 +369,7 @@ export default function Home() {
   {/* Idea Section */}
   <section className="w-full md:w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-green-300 rounded-3xl shadow-xl text-white py-10 px-6">
     <div className="bg-white text-gray-800 shadow-md rounded-xl p-6 text-center">
-      <h2 className="text-3xl font-extrabold">Got an idea? Let’s bring it to life!</h2>
+      <h2 className="text-3xl font-extrabold border-2 py-5 border-stone-300 rounded-xl bg-stone-100">Got an idea? Let’s bring it to life!</h2>
       <p className="text-gray-600 mt-4">
         Whether you have a project in mind, a business proposal, or just want to say hello—
         We’d love to hear from you! We are always open for collaboration and exciting new opportunities.
