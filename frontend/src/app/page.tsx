@@ -158,7 +158,7 @@ export default function Home() {
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
       <div className="relative w-full lg:w-1/2 h-auto bg-white border border-green-400 rounded-2xl shadow-2xl p-6 space-y-6 overflow-hidden">
   <h1 className="text-2xl font-bold text-green-700">
-    Parcch <code className="text-base text-green-600">&lt;Tech Solutions/&gt;</code>
+    Parcch Tech Solutions.
   </h1>
 
   <div className="w-full h-[1px] bg-gradient-to-r from-white via-stone-300 to-white rounded-full" />
