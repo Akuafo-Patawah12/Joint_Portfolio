@@ -58,7 +58,7 @@ export default function Home() {
       </Link>
     </div>;
         case "tab2":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white/80 border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Mission
@@ -86,7 +86,7 @@ export default function Home() {
       </Link>
     </div>;
         case "tab3":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white/80 border-2 border-white/80 backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Vision
