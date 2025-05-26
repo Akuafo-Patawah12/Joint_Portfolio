@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Parcch Tech Solutions",
   description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
   icons: {
-    icon:"/favicon.ico",
+    icon:"/favicon.svg",
     shortcut: "/favicon.icon",
   },
   keywords: [

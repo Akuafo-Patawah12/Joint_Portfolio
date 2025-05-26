@@ -235,7 +235,7 @@ export default function Home() {
              {/* About Section */}  
           <div className="w-full mt-6 mx-auto  px-[2.5%] py-20 rounded-2xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row justify-between gap-6 shadow-lg">
   {/* Left Section */}
-  <div className="w-full lg:w-2/5 flex flex-col">
+  <div className="w-[95%] mx-auto lg:w-2/5 flex flex-col">
     {/* Image with Overlay */}
     <section className="relative w-full rounded-2xl overflow-hidden shadow-lg">
       <Image
