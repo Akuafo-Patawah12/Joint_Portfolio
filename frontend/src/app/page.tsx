@@ -290,7 +290,7 @@ export default function Home() {
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
-          Our <span className="text-green-600">Services</span>
+          Our <span className="services_header text-white ">Services</span>
         </h2>
         
         <div className="h-1 bg-stone-600 w-[120px] rounded-2xl mx-auto mt-3 mb-5"></div>

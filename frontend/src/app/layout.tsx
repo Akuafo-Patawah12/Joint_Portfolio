@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
   icons: {
     icon:"/favicon.svg",
-    shortcut: "/favicon.icon",
+    shortcut: "/favicon.svg",
   },
   keywords: [
     "Parcch",
