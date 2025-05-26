@@ -365,7 +365,7 @@ export default function Home() {
 
 
             {/* Contact Section */}
-            <div className="container mx-auto px-6 py-10 flex flex-col gap-10 md:flex-row items-start justify-center">
+            <div className="container mx-auto px-4 py-10 flex flex-col gap-10 md:flex-row px-6 items-start justify-center">
   {/* Idea Section */}
   <section className="w-full md:w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-green-300 rounded-3xl shadow-xl text-white py-10 px-4">
     <div className="bg-white text-gray-800 shadow-md rounded-xl p-6 text-center">
