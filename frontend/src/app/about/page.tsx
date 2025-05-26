@@ -4,6 +4,7 @@ import {useState} from 'react';
 import  Link from 'next/link';
 import Image from "next/image"
 
+
 export default function About () {
   const items = [
     { title: "Innovation-Driven", description: "We leverage the latest technologies to build future-proof solutions." },

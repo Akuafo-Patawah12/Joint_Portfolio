@@ -4,11 +4,18 @@ import { motion } from "framer-motion";
 import {  Sun , Menu } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image"
+import { usePathname } from "next/navigation"; 
 import logo from "../assets/logo.svg"
 
 
 export default function Header() {
-  
+  const pathname = usePathname(); // For Next.js to detect current route
+
+  const tabs = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+  ];
 
    
 
@@ -26,13 +33,27 @@ export default function Header() {
           </Link>
         </motion.h2>
         
-        <nav className="hidden gap-6 lg:flex">
-          
-            <Link href="/about" className="hover:underline">About</Link>
-            <Link href="/projects" className="hover:underline">Projects</Link>
-            
-          
-        </nav>
+        <nav className="hidden lg:flex gap-2 p-1 rounded-full bg-stone-200">
+      {tabs.map((tab) => {
+        const isActive = pathname === tab.href;
+
+        return (
+          <Link
+            key={tab.name}
+            href={tab.href}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+              ${
+                isActive
+                  ? "bg-white text-green-600 border-2 border-green-300 shadow-sm"
+                  : "text-stone-600 hover:bg-white/60"
+              }`}
+          >
+            {tab.name}
+          </Link>
+        );
+      })}
+    </nav>
+
          
         <section className="flex gap-2 items-center">
         <button  className="p-2 rounded-full bg-gray-200 ">
