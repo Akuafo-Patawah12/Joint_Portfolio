@@ -51,14 +51,14 @@ export default function Home() {
       <Link href="/about" passHref>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
         >
           See more...
         </button>
       </Link>
     </div>;
         case "tab2":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Mission
@@ -79,14 +79,14 @@ export default function Home() {
       <Link href="/about" passHref>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="mt-6 border-2 border-white text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+          className="mt-6 border-2 border-white text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
         >
           See more...
         </button>
       </Link>
     </div>;
         case "tab3":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Vision
@@ -106,7 +106,7 @@ export default function Home() {
       <Link href="/about" passHref>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-2xl w-[140px] h-[40px] transition-all duration-200"
+          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
         >
           See more...
         </button>
