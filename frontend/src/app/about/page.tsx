@@ -41,14 +41,14 @@ export default function About () {
 
   <div className="flex flex-col md:flex-row gap-6 mb-12">
   {/* Mission Card */}
-  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
+  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl">
     <div className="flex items-center gap-3 px-6 py-4">
       <div className="w-10 h-10 bg-white/70 border-2 border-green-500 rounded-full flex items-center justify-center shadow-md">
         <span className="text-lg font-bold  text-green-900">M</span>
       </div>
       <h2 className="text-2xl font-bold text-white">Our Mission</h2>
     </div>
-    <div className="bg-white rounded-t-2xl p-6 border-t border-stone-300">
+    <div className="bg-white rounded-2xl p-6 border border-green-300">
       <p className="text-stone-700 leading-relaxed">
         Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital
         solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital
@@ -59,14 +59,14 @@ export default function About () {
   </section>
 
   {/* Vision Card */}
-  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
+  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl ">
     <div className="flex items-center gap-3 px-6 py-4">
       <div className="w-10 h-10 bg-white/70 border-2 border-green-500 rounded-full flex items-center justify-center shadow-md">
         <span className="text-lg font-bold  text-green-900">V</span>
       </div>
       <h2 className="text-2xl font-bold text-white">Our Vision</h2>
     </div>
-    <div className="bg-white rounded-t-2xl p-6 border-t border-stone-300">
+    <div className="bg-white rounded-2xl p-6 border border-green-300">
       <p className="text-stone-700 leading-relaxed">
         We envision becoming a leading tech startup recognized for innovation, reliability, and cutting-edge solutions.
         Our goal is to revolutionize the digital landscape by continuously pushing boundaries, embracing new
