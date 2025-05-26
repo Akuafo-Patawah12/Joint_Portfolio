@@ -43,8 +43,8 @@ export default function About () {
   {/* Mission Card */}
   <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
     <div className="flex items-center gap-3 px-6 py-4">
-      <div className="w-10 h-10 bg-white/70 rounded-full flex items-center justify-center shadow-md">
-        <span className="text-lg font-bold text-green-900">M</span>
+      <div className="w-10 h-10 bg-white/70 border-2 border-green-500 rounded-full flex items-center justify-center shadow-md">
+        <span className="text-lg font-bold  text-green-900">M</span>
       </div>
       <h2 className="text-2xl font-bold text-white">Our Mission</h2>
     </div>
@@ -61,8 +61,8 @@ export default function About () {
   {/* Vision Card */}
   <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
     <div className="flex items-center gap-3 px-6 py-4">
-      <div className="w-10 h-10 bg-white/70 rounded-full flex items-center justify-center shadow-md">
-        <span className="text-lg font-bold text-green-900">V</span>
+      <div className="w-10 h-10 bg-white/70 border-2 border-green-500 rounded-full flex items-center justify-center shadow-md">
+        <span className="text-lg font-bold  text-green-900">V</span>
       </div>
       <h2 className="text-2xl font-bold text-white">Our Vision</h2>
     </div>
