@@ -32,7 +32,7 @@ export default function Home() {
     const renderContent = () => {
       switch (activeTab) {
         case "tab1":
-          return  <div className="relative mt-10 px-6 py-12 w-full max-w-5xl border-2 border-white backdrop-blur-2xl mx-auto flex flex-col gap-6 items-center text-center bg-white/80 shadow-xl rounded-3xl">
+          return  <div className="relative  px-6 py-12 w-full  border-2 border-white backdrop-blur-2xl mx-auto flex flex-col gap-6 items-center text-center bg-white/80 shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight">
         About Us
@@ -58,7 +58,7 @@ export default function Home() {
       </Link>
     </div>;
         case "tab2":
-          return <div className="relative mt-10 px-6 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative  px-6 py-12 w-full  mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Mission
@@ -86,7 +86,7 @@ export default function Home() {
       </Link>
     </div>;
         case "tab3":
-          return <div className="relative mt-10 px-6 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white/80 backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative px-6 py-12 w-full  mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white/80 backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Vision
@@ -233,7 +233,7 @@ export default function Home() {
        </section>
       
              {/* About Section */}  
-          <div className="w-full mt-6 mx-auto px-[2.5%] py-20 rounded-2xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row gap-6 shadow-lg">
+          <div className="w-full mt-6 mx-auto  px-[2.5%] py-20 rounded-2xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row justify-between gap-6 shadow-lg">
   {/* Left Section */}
   <div className="w-full lg:w-2/5 flex flex-col">
     {/* Image with Overlay */}
@@ -273,7 +273,7 @@ export default function Home() {
   </div>
 
   {/* Right Section */}
-  <div className="w-full lg:w-[50%] flex justify-center items-start px-[2.5%]">
+  <div className="w-full lg:w-[50%]  flex justify-center items-center px-[2.5%]">
     {renderContent()}
   </div>
 </div>
@@ -411,12 +411,7 @@ export default function Home() {
     className="w-full md:w-1/2 bg-gradient-to-br from-white via-green-100 to-gray-200 rounded-3xl shadow-xl py-10"
   >
     <div className="w-full text-center">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8">
-        <Link href="/contact" className="hover:underline">
-          Contact Us
-        </Link>
-      </h2>
-
+      
       <div className="bg-white/80 backdrop-blur-md mx-auto w-[95%] shadow-lg rounded-2xl px-8 py-10 border border-gray-200 transition-transform duration-300 hover:scale-[1.01]">
         {/* Profile */}
         <div className="flex flex-col items-center space-y-4">
