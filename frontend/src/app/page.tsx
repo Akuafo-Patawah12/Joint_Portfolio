@@ -209,7 +209,7 @@ const characterAnimation = {
       { icon: <Cloud size={18} />, label: "Cloud Hosting & DevOps" },
     ].map((item, idx) => (
       <li key={idx} className="relative z-10 flex items-center gap-3">
-        <div className="grid place-items-center size-8 rounded-full shadow bg-white text-green-600">
+        <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
           {item.icon}
         </div>
         <span className="text-gray-700 text-sm lg:text-base">{item.label}</span>
@@ -322,7 +322,7 @@ const characterAnimation = {
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
-          Our <span className="services_header text-white ">Services</span>
+          Our <span className="services_header ">Services</span>
         </h2>
         
         <div className="h-1 bg-stone-600 w-[120px] rounded-2xl mx-auto mt-3 mb-5"></div>
