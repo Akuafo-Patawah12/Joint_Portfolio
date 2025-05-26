@@ -233,7 +233,7 @@ export default function Home() {
        </section>
       
              {/* About Section */}  
-          <div className="w-full mt-6 mx-auto  px-[2.5%] py-20 rounded-2xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row justify-between gap-6 shadow-lg">
+          <div className="w-full mt-6 mx-auto  px-[2.5%] py-20 rounded-3xl bg-gradient-to-br from-green-500 via-green-400 to-green-300 flex flex-col lg:flex-row justify-between gap-6 shadow-lg">
   {/* Left Section */}
   <div className="w-[95%] mx-auto lg:w-2/5 flex flex-col">
     {/* Image with Overlay */}
@@ -260,7 +260,7 @@ export default function Home() {
         <button
           key={tab}
           onClick={() => setActiveTab(tab)}
-          className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+          className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
             activeTab === tab
               ? "bg-green-600 text-white shadow"
               : "bg-white text-green-700 hover:bg-green-200"
