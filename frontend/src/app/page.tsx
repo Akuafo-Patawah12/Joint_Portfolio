@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState,useEffect } from "react";
 import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
-
+import { motion } from "framer-motion";
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
 
@@ -20,6 +20,29 @@ export default function Home() {
      console.log("theme changed")
    },[darkMode])
   
+  const text = "Parcch Tech Solutions.";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05, // Adjust the delay between characters
+    },
+  },
+};
+
+const characterAnimation = {
+  hidden: { y: -40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 500,
+      damping: 20,
+    },
+  },
+};
 
   
   const [activeTab, setActiveTab] = useState<string>("tab1");
@@ -157,14 +180,23 @@ export default function Home() {
        {/* Hero Section */}
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
       <div className="relative w-full lg:w-1/2 h-auto bg-white border border-green-400 rounded-2xl shadow-2xl p-6 space-y-6 overflow-hidden">
-  <h1 className="text-2xl font-bold text-green-700">
-    Parcch Tech Solutions.
-  </h1>
+  <motion.h1
+      className="text-2xl font-bold text-green-700 flex flex-wrap"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
+      {text.split("").map((char, index) => (
+        <motion.span key={index} variants={characterAnimation}>
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+    </motion.h1>
 
   <div className="w-full h-[1px] bg-gradient-to-r from-white via-stone-300 to-white rounded-full" />
 
-  <p className="text-gray-600 text-sm lg:text-base">
-    We provide end-to-end tech services tailored to your business — from product design to scalable system architecture.
+  <p className="text-gray-600 text-sm font-semibold md:text-base md:font-medium">
+    We provide end-to-end tech services tailored to your business from product design to scalable system architecture.
   </p>
 
   <ul className="relative space-y-4 isolate bg-white">

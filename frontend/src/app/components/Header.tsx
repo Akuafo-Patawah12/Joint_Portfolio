@@ -41,7 +41,7 @@ export default function Header() {
           <Link
             key={tab.name}
             href={tab.href}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+            className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300
               ${
                 isActive
                   ? "bg-white text-green-600 border-2 border-green-300 shadow-sm"
