@@ -38,24 +38,44 @@ export default function About () {
 
   <Image src="/code2.jpg" alt="code_2" width={300} height={300} className="w-full rounded-2xl my-9"/>
   
-  <section className="mb-8">
-    <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-    <p>
-      Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital solutions.
-      We strive to empower businesses with custom web applications, mobile apps, and seamless digital experiences that
-      drive growth and success. Through a blend of expertise and forward-thinking strategies, we aim to deliver solutions
-      that make a real impact.
-    </p>
+
+  <div className="flex flex-col md:flex-row gap-6 mb-12">
+  {/* Mission Card */}
+  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
+    <div className="flex items-center gap-3 px-6 py-4">
+      <div className="w-10 h-10 bg-white/70 rounded-full flex items-center justify-center shadow-md">
+        <span className="text-lg font-bold text-green-900">M</span>
+      </div>
+      <h2 className="text-2xl font-bold text-white">Our Mission</h2>
+    </div>
+    <div className="bg-white rounded-t-2xl p-6 border-t border-stone-300">
+      <p className="text-stone-700 leading-relaxed">
+        Our mission is to harness the power of technology to create innovative, efficient, and user-friendly digital
+        solutions. We strive to empower businesses with custom web applications, mobile apps, and seamless digital
+        experiences that drive growth and success. Through a blend of expertise and forward-thinking strategies, we aim
+        to deliver solutions that make a real impact.
+      </p>
+    </div>
   </section>
-  
-  <section className="mb-8">
-    <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
-    <p>
-      We envision becoming a leading tech startup recognized for innovation, reliability, and cutting-edge solutions.
-      Our goal is to revolutionize the digital landscape by continuously pushing boundaries, embracing new technologies,
-      and delivering impactful solutions that transform businesses and industries.
-    </p>
+
+  {/* Vision Card */}
+  <section className="flex-1 bg-gradient-to-br from-green-400 via-green-300 to-green-200 rounded-2xl shadow-2xl overflow-hidden">
+    <div className="flex items-center gap-3 px-6 py-4">
+      <div className="w-10 h-10 bg-white/70 rounded-full flex items-center justify-center shadow-md">
+        <span className="text-lg font-bold text-green-900">V</span>
+      </div>
+      <h2 className="text-2xl font-bold text-white">Our Vision</h2>
+    </div>
+    <div className="bg-white rounded-t-2xl p-6 border-t border-stone-300">
+      <p className="text-stone-700 leading-relaxed">
+        We envision becoming a leading tech startup recognized for innovation, reliability, and cutting-edge solutions.
+        Our goal is to revolutionize the digital landscape by continuously pushing boundaries, embracing new
+        technologies, and delivering impactful solutions that transform businesses and industries.
+      </p>
+    </div>
   </section>
+</div>
+
   
   <section className="mb-8 ">
     <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
