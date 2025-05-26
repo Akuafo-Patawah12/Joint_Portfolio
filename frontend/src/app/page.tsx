@@ -32,7 +32,7 @@ export default function Home() {
     const renderContent = () => {
       switch (activeTab) {
         case "tab1":
-          return  <div className="relative mt-10 px-4 py-12 w-full max-w-5xl border-2 border-white backdrop-blur-2xl mx-auto flex flex-col gap-6 items-center text-center bg-white/80 shadow-xl rounded-3xl">
+          return  <div className="relative mt-10 px-6 py-12 w-full max-w-5xl border-2 border-white backdrop-blur-2xl mx-auto flex flex-col gap-6 items-center text-center bg-white/80 shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight">
         About Us
@@ -58,19 +58,19 @@ export default function Home() {
       </Link>
     </div>;
         case "tab2":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white/80 border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-6 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Mission
       </h2>
 
       {/* Mission Text */}
-      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+      <p className="text-gray-700 text-center text-base sm:text-lg leading-relaxed max-w-4xl">
         We harness technology to deliver <span className="text-green-600 font-medium">innovative</span>, <span className="text-green-600 font-medium">efficient</span>, and <span className="text-green-600 font-medium">user-friendly</span> solutions — empowering businesses with custom apps and seamless digital experiences that fuel growth.
       </p>
 
 
-      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+      <p className="text-gray-700 text-center text-base sm:text-lg leading-relaxed max-w-4xl">
         We use cutting-edge tech to streamline workflows, boost engagement, and build scalable solutions tailored to each client. Our focus on <span className="text-green-600 font-medium">quality</span>, <span className="text-green-600 font-medium">creativity</span>, and <span className="text-green-600 font-medium">growth</span> keeps us ahead—helping businesses adapt and succeed.
       </p>
 
@@ -79,25 +79,25 @@ export default function Home() {
       <Link href="/about" passHref>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="mt-6 border-2 border-white text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
+          className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
         >
           See more...
         </button>
       </Link>
     </div>;
         case "tab3":
-          return <div className="relative mt-10 px-4 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center text-justify bg-white/80 border-2 border-white/80 backdrop-blur-2xl shadow-xl rounded-3xl">
+          return <div className="relative mt-10 px-6 py-12 w-full max-w-5xl mx-auto flex flex-col gap-6 items-center  bg-white/80 border-2 border-white/80 backdrop-blur-2xl shadow-xl rounded-3xl">
       {/* Heading */}
       <h2 className="text-4xl lg:text-5xl font-extrabold text-green-700 tracking-tight text-center">
         Our Vision
       </h2>
 
       {/* Vision Text */}
-      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+      <p className="text-gray-700 text-center text-base sm:text-lg leading-relaxed max-w-4xl">
         Our vision is to be a <span className="text-green-600 font-medium">leading tech startup</span>, known for <span className="text-green-600 font-medium">innovation</span>, <span className="text-green-600 font-medium">reliability</span>, and <span className="text-green-600 font-medium">cutting-edge solutions</span>. We’re redefining the digital space by pushing boundaries and delivering transformative technologies.
       </p>
 
-      <p className="text-gray-700 text-base sm:text-lg leading-relaxed max-w-4xl">
+      <p className="text-gray-700 text-center text-base sm:text-lg leading-relaxed max-w-4xl">
         We see a future where technology <span className="text-green-600 font-medium">enhances life and business</span>, driving <span className="text-green-600 font-medium">growth</span>, <span className="text-green-600 font-medium">efficiency</span>, and <span className="text-green-600 font-medium">sustainability</span>. Through innovation and user-first design, we aim to lead in digital excellence.
       </p>
 
