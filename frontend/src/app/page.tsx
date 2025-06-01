@@ -220,7 +220,7 @@ const characterAnimation = {
       <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-200" :""} rounded-2xl  z-10 flex items-center gap-3`}>
         {
          idx=== 2 && (
-          <Image src={cursor} alt="cursor" className="absolute right-[10px] top-1/2 -translate-y-1/2 w-3 h-3 " />
+          <Image src={cursor} alt="cursor" className="absolute right-[10px] bottom-1 -translate-y-1/2 w-5 h-5 " />
         ) 
         }
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
