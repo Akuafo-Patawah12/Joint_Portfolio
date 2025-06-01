@@ -217,10 +217,10 @@ const characterAnimation = {
       { icon: <Cloud size={18} />, label: "Custom Software Development" },
       { icon: <Cloud size={18} />, label: "Cloud Hosting & DevOps" },
     ].map((item, idx) => (
-      <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-200" :""} rounded-2xl  z-10 flex items-center gap-3`}>
+      <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-100" :""} rounded-2xl  z-10 flex items-center gap-3`}>
         {
          idx=== 2 && (
-          <Image src={cursor} alt="cursor" className="absolute right-[10px] bottom-1 -translate-y-1/2 w-5 h-5 " />
+          <Image src={cursor} alt="cursor" className="absolute right-[10px] top-9 -translate-y-1/2 w-5 h-5 " />
         ) 
         }
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
