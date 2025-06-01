@@ -179,7 +179,7 @@ const characterAnimation = {
   ];
 
   return (
-    <main className=" min-h-screen pb-20  sm:font-[family-name:var(--font-geist-sans)]">
+    <main className=" min-h-screen pb-7  sm:font-[family-name:var(--font-geist-sans)]">
        {/* Hero Section */}
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
       <div className="relative w-full lg:w-1/2 h-auto bg-white border border-green-400 rounded-2xl shadow-2xl p-6 space-y-6 overflow-hidden">
@@ -216,7 +216,7 @@ const characterAnimation = {
       { icon: <Cloud size={18} />, label: "Custom Software Development" },
       { icon: <Cloud size={18} />, label: "Cloud Hosting & DevOps" },
     ].map((item, idx) => (
-      <li key={idx} className="relative z-10 flex items-center gap-3">
+      <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-200" :""} rounded-2xl  z-10 flex items-center gap-3`}>
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
           {item.icon}
         </div>
