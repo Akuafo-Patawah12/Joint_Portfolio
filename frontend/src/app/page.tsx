@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState,useEffect } from "react";
+import { BadgeCheck } from 'lucide-react';
+
+
 import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import useDarkMode from "./components/Theme";
@@ -180,6 +183,7 @@ const characterAnimation = {
        {/* Hero Section */}
        <section className="bg-gradient-to-br from-green-200 to-white px-[2.5%] py-10 flex items-center flex-col gap-2 w-full lg:flex-row">
       <div className="relative w-full lg:w-1/2 h-auto bg-white border border-green-400 rounded-2xl shadow-2xl p-6 space-y-6 overflow-hidden">
+  <div className="flex justify-between items-center">
   <motion.h1
       className="text-2xl font-bold text-green-700 flex flex-wrap"
       variants={container}
@@ -192,6 +196,10 @@ const characterAnimation = {
         </motion.span>
       ))}
     </motion.h1>
+    <span title="Verified" className="absolute top-4 right-4 flex items-center gap-1 text-green-600 font-semibold">
+    <BadgeCheck className="text-blue-500" />
+    </span>
+    </div>
 
   <div className="w-full h-[1px] bg-gradient-to-r from-white via-stone-300 to-white rounded-full" />
 
