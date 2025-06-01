@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
 import cursor from "./assets/cursor.svg"
-
+import get_started from "./assets/get_started.svg"
 
 
 import Linkicon from "./assets/Linkicon.svg"
@@ -247,7 +247,8 @@ const characterAnimation = {
 </div>
 
 
-          <div className=" hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
+          <div className=" relative hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
+          <Image src={get_started} alt="get started"  className=" absolute top-5 right-10 size-7 z-4"/>
            <Image src={code_bg} alt="bg" width={300} height={300} className="mx-auto"/>
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
