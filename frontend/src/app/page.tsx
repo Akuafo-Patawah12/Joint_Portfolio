@@ -9,6 +9,7 @@ import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-re
 import { motion } from "framer-motion";
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
+import cursor from "./assets/cursor.svg"
 
 
 
@@ -217,6 +218,11 @@ const characterAnimation = {
       { icon: <Cloud size={18} />, label: "Cloud Hosting & DevOps" },
     ].map((item, idx) => (
       <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-200" :""} rounded-2xl  z-10 flex items-center gap-3`}>
+        {
+         idx=== 2 && (
+          <Image src={cursor} alt="cursor" className="absolute right-[10px] top-1/2 -translate-y-1/2 w-3 h-3 " />
+        ) 
+        }
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
           {item.icon}
         </div>
