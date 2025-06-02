@@ -151,7 +151,7 @@ export default function Contact() {
           <span className="p-2 rounded-full bg-gray-100 text-green-500">
             <Mail size={18} />
           </span>
-          <span>burxells873@gmail.com</span>
+          <span>parcch26@gmail.com</span>
         </li>
         <li className="flex items-center gap-3">
           <span className="p-2 rounded-full bg-gray-100 text-green-500">

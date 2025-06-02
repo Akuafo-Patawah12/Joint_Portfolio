@@ -491,7 +491,7 @@ const characterAnimation = {
             <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
               <Mail size={18} />
             </div>
-            <span>burxells873@gmail.com</span>
+            <span>parcch26@gmail.com</span>
           </div>
 
           <div className="flex items-center gap-3">
