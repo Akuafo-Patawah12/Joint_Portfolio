@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
 import cursor from "./assets/cursor.svg"
+import figma from "./assets/figma.svg"
 import get_started from "./assets/get_started.svg"
 
 
@@ -149,33 +150,33 @@ const characterAnimation = {
       title: "Web Development",
       description:
         "Custom websites, portals, and web apps built for performance and scalability.",
-      icon: "🌐",
+      icon: figma,
     },
     {
       title: "Mobile App Development",
       description: "iOS and Android apps with stunning UI and seamless UX.",
-      icon: "📱",
+      icon: figma,
     },
     {
       title: "UI/UX Design",
       description: "User-first product design that converts and engages.",
-      icon: "🎨",
+      icon: figma,
     },
     {
       title: "Cloud Solutions",
       description: "Scalable cloud architecture and DevOps pipelines.",
-      icon: "☁️",
+      icon: figma,
     },
     {
       title: "E-commerce Development",
       description: "Custom online stores and third-party integrations.",
-      icon: "🛒",
+      icon: figma,
     },
     {
       title: "Technical Consulting",
       description:
         "Guidance on digital transformation and modern tech stack decisions.",
-      icon: "💼",
+      icon: figma,
     },
   ];
 
@@ -351,13 +352,13 @@ const characterAnimation = {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-stone-200 bg-gray-50 dark:bg-gray-800 p-6 shadow hover:shadow-lg transition"
+              className="rounded-2xl border border-stone-200 bg-gray-50  p-6 shadow hover:shadow-lg transition"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              <Image src={service.icon} alt={"image" + index} className="text-4xl  mb-4 p-4 border-2 border-green-400 rounded-full" />
+              <h3 className="text-xl font-semibold text-gray-800  mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 ">
                 {service.description}
               </p>
             </div>
