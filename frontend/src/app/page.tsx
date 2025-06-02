@@ -14,6 +14,7 @@ import figma from "./assets/figma.svg"
 import code from "./assets/code.svg"
 import cloud from "./assets/cloud.svg"
 import get_started from "./assets/get_started.svg"
+import mobile_code from "./assets/mobile_code.svg"
 
 
 import Linkicon from "./assets/Linkicon.svg"
@@ -157,7 +158,7 @@ const characterAnimation = {
     {
       title: "Mobile App Development",
       description: "iOS and Android apps with stunning UI and seamless UX.",
-      icon: figma,
+      icon: mobile_code,
     },
     {
       title: "UI/UX Design",
