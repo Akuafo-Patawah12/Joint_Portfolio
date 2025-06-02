@@ -12,6 +12,7 @@ import code_bg from "./assets/code_bg.svg"
 import cursor from "./assets/cursor.svg"
 import figma from "./assets/figma.svg"
 import code from "./assets/code.svg"
+import cloud from "./assets/cloud.svg"
 import get_started from "./assets/get_started.svg"
 
 
@@ -166,7 +167,7 @@ const characterAnimation = {
     {
       title: "Cloud Solutions",
       description: "Scalable cloud architecture and DevOps pipelines.",
-      icon: figma,
+      icon: cloud,
     },
     {
       title: "E-commerce Development",
