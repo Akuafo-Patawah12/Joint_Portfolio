@@ -11,6 +11,7 @@ import useDarkMode from "./components/Theme";
 import code_bg from "./assets/code_bg.svg"
 import cursor from "./assets/cursor.svg"
 import figma from "./assets/figma.svg"
+import code from "./assets/code.svg"
 import get_started from "./assets/get_started.svg"
 
 
@@ -150,7 +151,7 @@ const characterAnimation = {
       title: "Web Development",
       description:
         "Custom websites, portals, and web apps built for performance and scalability.",
-      icon: figma,
+      icon: code,
     },
     {
       title: "Mobile App Development",
