@@ -376,7 +376,7 @@ const characterAnimation = {
             </div>
              
              <div className="bg-white  rounded-2xl p-6 w-[90%] mt-5  mx-auto border border-green-200">
-  <h2 className="text-lg font-bold text-gray-800 ">Contributors</h2>
+  <h2 className="text-lg font-bold text-gray-800 ">Our Experienced Team</h2>
    {/* Divider */}
         <div className="my-3 w-full h-[1.5px] bg-gradient-to-r from-white via-green-300 to-white"></div>
   {/* Overlapping Avatars */}
@@ -401,8 +401,9 @@ const characterAnimation = {
         alt="Royal CEO"
         width={40}
         height={40}
-        className="border-2 border-white rounded-full absolute left-14 z-10 shadow-md"
+        className="border-2 border-white rounded-full absolute left-14 z-11 shadow-md"
       />
+      <div className="border-2 border-white  flex items-center justify-center w-[40px] h-[40px] bg-green-200 rounded-full absolute left-21 z-10 shadow-md">9+</div>
     </div>
   </div>
 
