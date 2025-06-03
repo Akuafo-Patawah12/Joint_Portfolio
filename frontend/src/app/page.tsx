@@ -16,7 +16,7 @@ import cloud from "./assets/cloud.svg"
 import get_started from "./assets/get_started.svg"
 import mobile_code from "./assets/mobile_code.svg"
 import consult from "./assets/consult.svg"
-
+import ecommerce from "./assets/ecommerce.svg"
 import Linkicon from "./assets/Linkicon.svg"
 import wavy from "./assets/wavy.svg"
 import ui from "./assets/ui.svg"
@@ -173,7 +173,7 @@ const characterAnimation = {
     {
       title: "E-commerce Development",
       description: "Custom online stores and third-party integrations.",
-      icon: figma,
+      icon: ecommerce,
     },
     {
       title: "Technical Consulting",
