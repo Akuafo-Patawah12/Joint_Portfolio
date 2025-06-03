@@ -15,7 +15,7 @@ import code from "./assets/code.svg"
 import cloud from "./assets/cloud.svg"
 import get_started from "./assets/get_started.svg"
 import mobile_code from "./assets/mobile_code.svg"
-
+import consult from "./assets/consult.svg"
 
 import Linkicon from "./assets/Linkicon.svg"
 import wavy from "./assets/wavy.svg"
@@ -179,7 +179,7 @@ const characterAnimation = {
       title: "Technical Consulting",
       description:
         "Guidance on digital transformation and modern tech stack decisions.",
-      icon: figma,
+      icon: consult,
     },
   ];
 
