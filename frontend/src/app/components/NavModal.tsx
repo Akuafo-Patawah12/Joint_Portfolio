@@ -18,10 +18,13 @@ const NavModal = () => {
      };
     return(
         <div
-  className={`fixed top-[100px] left-0 px-[2.5%] w-full bg-white shadow-md z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
+  className={`fixed bottom-0 left-0  w-full h-4/5  shadow-md z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
     isSidebarCollapsed ? '-translate-x-full' : 'translate-x-0'
   }`}
 >
+
+<div className="absolute bottom-0 left-0 w-full h-1/2 bg-black opacity-50" onClick={toggleSidebar}></div>
+<div className="bg-white w-full px-[2.5%] h-1/2 rounded-t-2xl "> 
   <div className="flex items-center justify-between p-4 border-b">
     <h2 className="text-lg font-semibold">Menu</h2>
     <button onClick={toggleSidebar}>
@@ -39,6 +42,7 @@ const NavModal = () => {
       <Link href="/contact" onClick={toggleSidebar}>Contact</Link>
     </li>
   </ul>
+</div>
 </div>
 
     )
