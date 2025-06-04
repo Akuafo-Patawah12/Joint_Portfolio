@@ -167,7 +167,7 @@ export default function Contact() {
           <a href="https://www.facebook.com/AkuafoPatawah" target="_blank" className=" hover:text-purple-800 transition">
             <Facebook size={20} />
           </a>
-          <a href="/" target="_blank" className=" hover:text-purple-800 transition">
+          <a href="https://www.instagram.com/akuafopatawah/" target="_blank" className=" hover:text-purple-800 transition">
             <Twitter size={20} />
           </a>
           <a href="/" target="_blank" className=" hover:text-purple-800 transition">

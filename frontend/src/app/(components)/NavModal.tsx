@@ -39,21 +39,21 @@ const NavModal = () => {
   <div className="flex flex-col  sm:flex-row justify-between items-center gap-4">
     {/* Social Media Icons */}
     <div className="flex items-center gap-6">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">
-        <FacebookOutlined style={{ fontSize: '24px' }} />
+      <a href="https://facebook.com/AkuafoPatawah" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">
+        <FacebookOutlined style={{ fontSize: '20px' }} />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
-        <InstagramOutlined style={{ fontSize: '24px' }} />
+      <a href="https://www.instagram.com/akuafopatawah/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
+        <InstagramOutlined style={{ fontSize: '20px' }} />
       </a>
       <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
-        <WhatsAppOutlined style={{ fontSize: '24px' }} />
+        <WhatsAppOutlined style={{ fontSize: '20px' }} />
       </a>
     </div>
 
     {/* Copyright Info */}
     <div className="flex items-center gap-2 text-sm text-gray-300">
       <Copyright size={16} />
-      <span>2025 Your Company. All rights reserved.</span>
+      <span>{new Date().getFullYear()} Parcch. All rights reserved.</span>
     </div>
   </div>
 </div>
