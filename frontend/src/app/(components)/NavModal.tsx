@@ -75,7 +75,7 @@ const NavModal = () => {
             return (
               <li key={link.href} className="relative">
                 {isActive && (
-                  <div className="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-b-[8px] border-l-[10px] border-transparent border-l-green-500" />
+                  <div className="absolute -left-[12px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-b-[8px] border-l-[10px] border-transparent border-l-green-500" />
                 )}
                 <Link
                   href={link.href}
