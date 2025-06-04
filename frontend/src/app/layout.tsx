@@ -52,6 +52,11 @@ export const metadata: Metadata = {
       }
 };
 
+const isSidebarCollapsed = useAppSelector(
+    (state) => state.global.isSidebarCollapsed
+  );
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
