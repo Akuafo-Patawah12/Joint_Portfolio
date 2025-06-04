@@ -67,7 +67,7 @@ const NavModal = () => {
 
       <div className="relative pl-4 w-[90%] mx-auto ">
         {/* Vertical green line */}
-        <div className="absolute left-0 top-0 h-full w-[5px] bg-green-600 rounded" />
+        <div className="absolute left-0 top-0 h-full w-[3px] bg-green-500 rounded" />
 
         <ul className="flex flex-col gap-2 mt-5 text-base text-stone-600 relative z-10">
           {links.map((link) => {
@@ -75,14 +75,14 @@ const NavModal = () => {
             return (
               <li key={link.href} className="relative">
                 {isActive && (
-                  <div className="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-b-[8px] border-l-[10px] border-transparent border-l-green-600" />
+                  <div className="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-b-[8px] border-l-[10px] border-transparent border-l-green-500" />
                 )}
                 <Link
                   href={link.href}
                   onClick={toggleSidebar}
-                  className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
+                  className={`flex items-center gap-3 ml-1 p-2 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-green-100 text-green-700 font-semibold'
+                      ? 'bg-green-100 text-green-500 '
                       : 'hover:bg-gray-100'
                   }`}
                 >
