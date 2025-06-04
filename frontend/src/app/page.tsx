@@ -7,7 +7,7 @@ import { BadgeCheck } from 'lucide-react';
 
 import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
-import useDarkMode from "./components/Theme";
+import useDarkMode from "./(components)/Theme";
 import code_bg from "./assets/code_bg.svg"
 import cursor from "./assets/cursor.svg"
 import figma from "./assets/figma.svg"
