@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 import  { useAppDispatch,useAppSelector,RootState } from "../redux";
 import {  setIsSidebarCollapsed } from "@/state";
 import {XIcon,Copyright,Home, Info, Mail} from "lucide-react"
@@ -18,6 +19,15 @@ const NavModal = () => {
      const toggleSidebar = () => {
        dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
      };
+
+     const pathname = usePathname()
+
+  const links = [
+    { href: '/', label: 'Home', icon: <Home size={20} /> },
+    { href: '/about', label: 'About', icon: <Info size={20} /> },
+    { href: '/contact', label: 'Contact', icon: <Mail size={20} /> },
+  ]
+
     return(
         <div
   className={`fixed bottom-0 left-0  w-full h-4/5   shadow-md z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
@@ -47,45 +57,43 @@ const NavModal = () => {
     </div>
   </div>
 </div>
-<div className="bg-white border-t border-green-200 w-full px-[2.5%] h-4/5 rounded-t-2xl "> 
-  <div className="flex items-center justify-between p-4 border-b-4 border-gray-100">
-    <h2 className="text-lg font-semibold">Menu</h2>
-    <button onClick={toggleSidebar}>
-      <XIcon className="w-5 h-5" />
-    </button>
-  </div>
-  <ul className="flex flex-col gap-2 p-4 text-base text-stone-600">
-      <li>
-        <Link
-          href="/"
-          onClick={toggleSidebar}
-          className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors"
-        >
-          <Home size={20} />
-          <span>Home</span>
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/about"
-          onClick={toggleSidebar}
-          className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors"
-        >
-          <Info size={20} />
-          <span>About</span>
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/contact"
-          onClick={toggleSidebar}
-          className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors"
-        >
-          <Mail size={20} />
-          <span>Contact</span>
-        </Link>
-      </li>
-    </ul>
+<div className="bg-white border-t border-green-200 w-full px-[2.5%] h-4/5 rounded-t-2xl">
+      <div className="flex items-center justify-between p-4 border-b-4 border-gray-100">
+        <h2 className="text-lg font-semibold">Menu</h2>
+        <button onClick={toggleSidebar}>
+          <XIcon className="w-5 h-5" />
+        </button>
+      </div>
+
+      <div className="relative pl-4 w-[90%] mx-auto ">
+        {/* Vertical green line */}
+        <div className="absolute left-0 top-0 h-full w-[5px] bg-green-600 rounded" />
+
+        <ul className="flex flex-col gap-2 mt-5 text-base text-stone-600 relative z-10">
+          {links.map((link) => {
+            const isActive = pathname === link.href
+            return (
+              <li key={link.href} className="relative">
+                {isActive && (
+                  <div className="absolute -left-[9px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-b-[8px] border-l-[10px] border-transparent border-l-green-600" />
+                )}
+                <Link
+                  href={link.href}
+                  onClick={toggleSidebar}
+                  className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
+                    isActive
+                      ? 'bg-green-100 text-green-700 font-semibold'
+                      : 'hover:bg-gray-100'
+                  }`}
+                >
+                  {link.icon}
+                  <span>{link.label}</span>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
 </div>
 </div>
 
