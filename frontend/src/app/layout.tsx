@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import NavModal from "./components/NavModal"
 import { ToastContainer } from "react-toastify";
-import StoreProvider, { useAppSelector } from "./redux";
+import StoreProvider from "./redux";
+
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
@@ -52,9 +54,7 @@ export const metadata: Metadata = {
       }
 };
 
-const isSidebarCollapsed = useAppSelector(
-    (state) => state.global.isSidebarCollapsed
-  );
+
 
 
 export default function RootLayout({
@@ -62,6 +62,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  
   return (
     <html lang="en">
       
@@ -70,6 +73,7 @@ export default function RootLayout({
       >
         <StoreProvider>
         <Header />
+         <NavModal />
         {children}
         <ToastContainer position="top-right" autoClose={3000} />
         <Footer />

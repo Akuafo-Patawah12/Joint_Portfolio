@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import {  Sun , Menu } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image"
+import  { useAppDispatch,useAppSelector } from "../redux";
+import {  setIsSidebarCollapsed } from "@/state";
 import { usePathname } from "next/navigation"; 
 import logo from "../assets/logo.svg"
 
@@ -17,6 +19,15 @@ export default function Header() {
     { name: "Projects", href: "/projects" },
   ];
 
+ const isSidebarCollapsed = useAppSelector(
+     
+     (state) => state.global.isSidebarCollapsed
+   );
+
+  const dispatch = useAppDispatch();
+  const toggleSidebar = () => {
+    dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
+  };
    
 
     return(
@@ -56,10 +67,10 @@ export default function Header() {
 
          
         <section className="flex gap-2 items-center">
-        <button  className="p-2 rounded-full bg-gray-200 ">
+        <button  className="p-2 rounded-full bg-gray-200 " aria-label="Theme">
            <Sun size={20} /> 
         </button>
-        <button className="lg:hidden" >  <Menu /></button>
+        <button className="lg:hidden" onClick={()=> toggleSidebar()} aria-label="Menu">  <Menu /></button>
         </section>
       </div>
     </header>
