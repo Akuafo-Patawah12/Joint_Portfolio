@@ -25,7 +25,7 @@ const NavModal = () => {
   }`}
 >
 
-<div className="absolute bottom-0 left-0 w-full bg-black opacity-50 backdrop-blur-2xl text-white py-4 px-6 z-50">
+<div className="absolute bottom-0 left-0 w-full bg-black/50 backdrop-blur-2xl text-white h-1/5 py-4 px-6 z-50">
   <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
     {/* Social Media Icons */}
     <div className="flex items-center gap-6">
@@ -47,8 +47,8 @@ const NavModal = () => {
     </div>
   </div>
 </div>
-<div className="bg-white w-full px-[2.5%] h-1/2 rounded-t-2xl "> 
-  <div className="flex items-center justify-between p-4 border-b">
+<div className="bg-white w-full px-[2.5%] h-4/5 rounded-t-2xl "> 
+  <div className="flex items-center justify-between p-4 border-b border-gray-200">
     <h2 className="text-lg font-semibold">Menu</h2>
     <button onClick={toggleSidebar}>
       <XIcon className="w-5 h-5" />
