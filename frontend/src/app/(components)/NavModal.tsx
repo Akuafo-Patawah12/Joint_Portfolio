@@ -69,7 +69,7 @@ const NavModal = () => {
         {/* Vertical green line */}
         <div className="absolute left-0 top-0 h-full w-[3px] bg-green-500 rounded" />
 
-        <ul className="flex flex-col gap-2 mt-5 text-base text-stone-600 relative z-10">
+        <ul className="flex flex-col gap-2 mt-5  text-sm text-stone-600 relative z-10">
           {links.map((link) => {
             const isActive = pathname === link.href
             return (
