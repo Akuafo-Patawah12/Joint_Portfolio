@@ -163,15 +163,15 @@ export default function Contact() {
 
       <div style={{marginBlock:"24px"}} className="mt-6">
         <h3 style={{marginBlock:"12px"}} className="text-sm font-semibold text-gray-700 mb-2">Follow Us:</h3>
-        <div className="flex gap-4">
-          <a href="https://www.facebook.com/AkuafoPatawah" target="_blank" className="flex gap-2 p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
-            <Facebook size={20} color="blue"/> facebook
+        <div className="flex gap-4 flex-wrap">
+          <a href="https://www.facebook.com/AkuafoPatawah" target="_blank" className="flex gap-2 justify-center items-center text-sm p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
+            <Facebook size={16} color="blue"/> facebook
           </a>
-          <a href="https://www.instagram.com/akuafopatawah/" target="_blank" className="flex gap-2 p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
-            <Twitter size={20} color="blue"/> Instagram
+          <a href="https://www.instagram.com/akuafopatawah/" target="_blank" className="flex gap-2 justify-center items-center text-sm p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
+            <Twitter size={16} color="blue"/> Instagram
           </a>
-          <a href="/" target="_blank" className="flex gap-2 p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
-            <Youtube size={20} color="red"/> Youtube
+          <a href="/" target="_blank" className="flex gap-2 justify-center items-center text-sm p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
+            <Youtube size={16} color="red"/> Youtube
           </a>
         </div>
       </div>
