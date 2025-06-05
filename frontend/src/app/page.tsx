@@ -358,7 +358,7 @@ const characterAnimation = {
               key={index}
               className="rounded-2xl overflow-hidden relative border border-stone-200 bg-gray-50  p-6 shadow hover:shadow-lg transition"
             >
-              <Image src={cloud_stars} alt={"cloud_stars"} width={80} height={80} className="absolute top-0 right-0 l" />
+              <Image src={cloud_stars} alt={"cloud_stars"} width={100} height={100} className="absolute top-0 right-0 l" />
               <Image src={service.icon} alt={"image" + index} className="text-4xl  mb-4 p-4 border-2 border-green-400 rounded-full" />
               <h3 className="text-xl font-semibold text-gray-800  mb-2">
                 {service.title}
