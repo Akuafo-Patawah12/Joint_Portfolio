@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Parcch Tech Solutions",
   description: "Innovative startup building modern web & mobile solutions that solve real-world problems through design, technology, and user-first thinking.",
-  viewport: "width=device-width, initial-scale=1.0",
+  
   icons: {
     icon:"/favicon.svg",
     shortcut: "/favicon.svg",

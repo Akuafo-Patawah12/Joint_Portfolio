@@ -35,6 +35,9 @@ const NavModal = () => {
   }`}
 >
 
+
+
+
 <div className="absolute bottom-0 left-0 w-full bg-black/50 backdrop-blur-2xl text-white h-1/5 py-4 px-6 z-50">
   <div className="flex flex-col  sm:flex-row justify-between items-center gap-4">
     {/* Social Media Icons */}

@@ -5,7 +5,7 @@ import {
   Mail,
   MapPin,
   Facebook,
-  Twitter,
+  Instagram,
   Youtube
 } from "lucide-react";
 import { toast } from "react-toastify";
@@ -168,7 +168,7 @@ export default function Contact() {
             <Facebook size={16} color="blue"/> facebook
           </a>
           <a href="https://www.instagram.com/akuafopatawah/" target="_blank" className="flex gap-2 justify-center items-center text-sm p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
-            <Twitter size={16} color="blue"/> Instagram
+            <Instagram size={16} color="#E1306C" /> Instagram
           </a>
           <a href="/" target="_blank" className="flex gap-2 justify-center items-center text-sm p-[6px] border border-stone-200 rounded-2xl hover:text-purple-800 transition">
             <Youtube size={16} color="red"/> Youtube
