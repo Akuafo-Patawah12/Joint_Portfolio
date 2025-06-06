@@ -377,7 +377,9 @@ const characterAnimation = {
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
 
-            <h2>Why Choose Us</h2>
+            <h2></h2>
+            <h2 className="text-4xl mt-20 font-bold text-slate-900 text-center relative pb-2 after:content-[''] after:block after:w-16 after:h-1 after:mx-auto after:mt-2 after:bg-gradient-to-r after:from-indigo-500 after:to-blue-500 after:rounded">Why Choose Us</h2>
+
 
             <div className="relative">
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
