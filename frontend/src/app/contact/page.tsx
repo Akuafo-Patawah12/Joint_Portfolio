@@ -145,7 +145,7 @@ export default function Contact() {
           <span className="p-2 rounded-full bg-gray-100 text-green-500">
             <Phone size={18} />
           </span>
-          <span>020 162 3251</span>
+          <span>+233201623251</span>
         </li>
         <li className="flex items-center gap-3">
           <span className="p-2 rounded-full bg-gray-100 text-green-500">

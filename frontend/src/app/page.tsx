@@ -508,7 +508,7 @@ const characterAnimation = {
             <div className="p-3 rounded-xl bg-gray-100 text-green-600 shadow-sm">
               <Phone size={18} />
             </div>
-            <span>020 162 3251</span>
+            <span>+233201623251</span>
           </div>
 
           <div className="flex items-center gap-3">
