@@ -380,7 +380,7 @@ const characterAnimation = {
             <h2>Why Choose Us</h2>
 
             <div className="relative">
-              <section className="w-[90%] border border-green-400 rounded-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
+              <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
               <section className="glowing-border">
                 <h4 className="text-xl font-semibold mb-3">Innovative Solutions</h4>
@@ -392,7 +392,7 @@ const characterAnimation = {
               </section>
             </div>
              
-             <div className="bg-white  rounded-2xl p-6 w-[90%] mt-5  mx-auto border border-green-200">
+             <div className="bg-white  rounded-b-2xl p-6 w-[90%]   mx-auto border-2 border-green-400">
   <h2 className="text-lg font-bold text-gray-800 ">Our Experienced Team</h2>
    {/* Divider */}
         <div className="my-3 w-full h-[1.5px] bg-gradient-to-r from-white via-green-300 to-white"></div>
