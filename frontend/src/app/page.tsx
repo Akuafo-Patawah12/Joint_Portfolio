@@ -376,6 +376,19 @@ const characterAnimation = {
             <div className="w-[90%] mx-auto">
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
+
+            <h2>Why Choose Us</h2>
+
+            <div>
+              <section className="glowing-border">
+                <h4>Fast & Reliable</h4>
+                <p></p>
+              </section>
+              <section className="glowing-border">
+                <h4>Fast & Reliable</h4>
+                <p></p>
+              </section>
+            </div>
              
              <div className="bg-white  rounded-2xl p-6 w-[90%] mt-5  mx-auto border border-green-200">
   <h2 className="text-lg font-bold text-gray-800 ">Our Experienced Team</h2>
