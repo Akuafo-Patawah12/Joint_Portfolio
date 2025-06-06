@@ -39,14 +39,16 @@ body {
   font-weight: bold;
 }
 
-.glowing-border:first-child{
+.border1{
    border-radius: 0 100vw 100vw 0;
+   border-left: none;
 }
 
 .glowing-border:last-child{
   
   border-radius:  100vw 0 0 100vw;
   margin-left: auto;
+  border-right: 0;
  
 }
 .glowing-border{

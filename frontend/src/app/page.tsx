@@ -382,7 +382,7 @@ const characterAnimation = {
             <div className="relative">
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
-              <section className="glowing-border">
+              <section className="glowing-border border1">
                 <h4 className="text-xl font-semibold mb-3">Innovative Solutions</h4>
                 <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
               </section>
