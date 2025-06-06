@@ -381,12 +381,12 @@ const characterAnimation = {
 
             <div>
               <section className="glowing-border">
-                <h4>Fast & Reliable</h4>
-                <p></p>
+                <h4 className="text-xl font-semibold mb-3">Innovative Solutions</h4>
+                <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
               </section>
               <section className="glowing-border">
-                <h4>Fast & Reliable</h4>
-                <p></p>
+                <h4 className="text-xl font-semibold mb-3">Client-Centric Approach</h4>
+                <p>Your vision drives our development. We collaborate closely with you to understand your goals and exceed your expectations.</p>
               </section>
             </div>
              
