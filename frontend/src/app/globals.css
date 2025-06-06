@@ -38,9 +38,11 @@ body {
   color: transparent;
   font-weight: bold;
 }
+
 .glowing-border:first-child{
    border-radius: 0 100vw 100vw 0;
 }
+
 .glowing-border:last-child{
   
   border-radius:  100vw 0 0 100vw;
@@ -53,7 +55,7 @@ body {
   position: relative;
   padding: 8rem 3rem;
   border: 5px solid transparent;
-  width: 90%;
+  width: 91%;
   margin-block: 3rem;
  
   background: 

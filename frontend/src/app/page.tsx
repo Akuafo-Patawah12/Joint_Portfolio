@@ -379,7 +379,9 @@ const characterAnimation = {
 
             <h2>Why Choose Us</h2>
 
-            <div>
+            <div className="relative">
+              <section className="w-[90%] border border-green-400 rounded-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
+              
               <section className="glowing-border">
                 <h4 className="text-xl font-semibold mb-3">Innovative Solutions</h4>
                 <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
