@@ -248,6 +248,7 @@ const characterAnimation = {
     alt="wavy"
     width={300}
     height={300}
+    priority
     className="absolute left-0 bottom-0 w-full pointer-events-none select-none"
   />
 </div>
@@ -277,7 +278,7 @@ const characterAnimation = {
   </div>
 
   {/* CTA Button */}
-  <button aria-label="Get in touch" className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-500 text-gray-900 text-sm font-semibold hover:bg-green-600 transition">
+  <button aria-label="Get in touch" className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-gray-900 text-sm font-semibold hover:bg-green-600 transition">
     Get in Touch
   </button>
 </div>

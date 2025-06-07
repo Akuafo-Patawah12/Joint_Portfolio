@@ -37,7 +37,7 @@ export default function About () {
     </p>
   </section>
 
-  <Image src="/code2.jpg" alt="code_2" width={300} height={300} className="w-full rounded-2xl my-9"/>
+  <Image src="/code2.jpg" alt="code_2" width={300} height={300} priority className="w-full rounded-2xl my-9"/>
   
 
   <div className="flex flex-col md:flex-row gap-6 mb-12">
