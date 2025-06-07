@@ -54,7 +54,7 @@ const NavModal = () => {
     </div>
 
     {/* Copyright Info */}
-    <div className="flex items-center gap-2 text-sm text-gray-300">
+    <div className="flex items-center gap-2 text-sm text-gray-50">
       <Copyright size={16} />
       <span>{new Date().getFullYear()} Parcch. All rights reserved.</span>
     </div>
