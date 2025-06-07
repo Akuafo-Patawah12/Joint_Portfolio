@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 
     // Configure transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or 'hotmail', 'yahoo', or use `host` for custom SMTP
+      service: 'gmail', 
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
