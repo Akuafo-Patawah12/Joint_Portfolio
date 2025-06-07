@@ -137,6 +137,7 @@ const characterAnimation = {
       {/* Button */}
       <Link href="/about" passHref>
         <button
+          aria-label="see more"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="mt-6 border-2 border-green-500 text-green-700 hover:bg-green-500 hover:text-white font-medium italic rounded-lg w-[140px] h-[40px] transition-all duration-200"
         >
@@ -236,7 +237,7 @@ const characterAnimation = {
     ))}
   </ul>
 
-  <button className="mt-4 px-5 z-4 relative overflow-hidden isolate py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
+  <button aria-label="Get in touch" className="mt-4 px-5 z-4 relative overflow-hidden isolate py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
    <div className="absolute -bottom-7 left-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
    <div className="absolute -bottom-5 right-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
     <p className="isolate">Get in Touch</p>
@@ -258,25 +259,25 @@ const characterAnimation = {
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
-    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+    <button aria-label="Graphic design" className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
       <span className="text-sm font-bold text-green-600">1</span>
     </button>
-    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+    <button aria-label="Web dev" className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
       <Code className="w-5 h-5 text-green-600" />
     </button>
-    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+    <button aria-label="ui design" className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
       <PenTool className="w-5 h-5 text-green-600" />
     </button>
-    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+    <button aria-label="server" className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
       <Server className="w-5 h-5 text-green-600" />
     </button>
-    <button className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
+    <button aria-label="Cloud services" className="size-10 flex items-center justify-center bg-white rounded-full shadow-xl border-2 border-green-300 hover:bg-green-100 transition">
       <Cloud className="w-5 h-5 text-green-600" />
     </button>
   </div>
 
   {/* CTA Button */}
-  <button className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
+  <button aria-label="Get in touch" className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
     Get in Touch
   </button>
 </div>
@@ -310,6 +311,7 @@ const characterAnimation = {
         { label: "Vision", tab: "tab3" },
       ].map(({ label, tab }) => (
         <button
+          aria-label="tabs"
           key={tab}
           onClick={() => setActiveTab(tab)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
@@ -377,7 +379,7 @@ const characterAnimation = {
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
 
-            <h2></h2>
+            
             <h2 className="text-4xl mt-20 font-bold text-slate-900 text-center relative pb-2 after:content-[''] after:block after:w-16 after:h-1 after:mx-auto after:mt-2 after:bg-gradient-to-r after:from-indigo-500 after:to-blue-500 after:rounded">Why Choose Us</h2>
 
 
@@ -385,11 +387,11 @@ const characterAnimation = {
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
               <section className="glowing-border border1">
-                <h4 className="text-xl font-semibold mb-3">Innovative Solutions</h4>
+                <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
                 <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
               </section>
               <section className="glowing-border">
-                <h4 className="text-xl font-semibold mb-3">Client-Centric Approach</h4>
+                <h3 className="text-xl font-semibold mb-3">Client-Centric Approach</h3>
                 <p>Your vision drives our development. We collaborate closely with you to understand your goals and exceed your expectations.</p>
               </section>
             </div>
@@ -530,8 +532,10 @@ const characterAnimation = {
         <div className="mt-8">
           <Link href="/contact">
             <button
+              aria-label="Contact Now"
+              type="button"
               onClick={scrollTop}
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-xl flex justify-center items-center gap-2 transition duration-300 shadow-md"
+              className="w-full bg-green-500 hover:bg-green-600  text-gray-900 font-medium py-3 px-6 rounded-xl flex justify-center items-center gap-2 transition duration-300 shadow-md"
             >
               Contact Now
               <Image

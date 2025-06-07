@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="flex space-x-6 mb-2">
           <a
             href="https://github.com/Akuafo-Patawah12"
+            aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
@@ -16,6 +17,7 @@ const Footer = () => {
           </a>
           <a
             href="https://gitlab.com/Akuafo-Patawah12"
+            aria-label="GitLab"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
