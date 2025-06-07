@@ -63,7 +63,7 @@ const NavModal = () => {
 <div className="bg-white border-t border-green-200 w-full px-[2.5%] h-4/5 rounded-t-2xl">
       <div className="flex items-center justify-between p-4 border-b-4 border-gray-100">
         <h2 className="text-lg font-semibold">Quick Access</h2>
-        <button onClick={toggleSidebar}>
+        <button aria-label="close" onClick={toggleSidebar}>
           <XIcon className="w-5 h-5" />
         </button>
       </div>
@@ -85,7 +85,7 @@ const NavModal = () => {
                   onClick={toggleSidebar}
                   className={`flex items-center gap-3 ml-1 p-2 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-green-100 text-green-500 '
+                      ? 'bg-green-100 text-green-800 '
                       : 'hover:bg-gray-100'
                   }`}
                 >

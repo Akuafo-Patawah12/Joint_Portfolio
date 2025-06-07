@@ -237,7 +237,7 @@ const characterAnimation = {
     ))}
   </ul>
 
-  <button aria-label="Get in touch" className="mt-4 px-5 z-4 relative overflow-hidden isolate py-2 bg-green-600 text-white text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
+  <button aria-label="Get in touch" className="mt-4 px-5 z-4 relative overflow-hidden isolate py-2 bg-green-600 text-gray-900 text-sm font-medium rounded-xl before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-bottom-8 before:w-10 before:h-10 before:rounded-full before:bg-green-500 hover:bg-green-700 transition-all">
    <div className="absolute -bottom-7 left-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
    <div className="absolute -bottom-5 right-2 h-10 w-10 bg-green-400 rounded-[50%]"></div>
     <p className="isolate">Get in Touch</p>
@@ -255,7 +255,7 @@ const characterAnimation = {
 
           <div className=" relative hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
           <Image src={get_started} alt="get started"  className=" absolute top-5 right-10 size-7 z-4"/>
-           <Image src={code_bg} alt="bg" width={300} height={300} className="mx-auto"/>
+           <Image src={code_bg} alt="bg" width={300} height={300} priority className="mx-auto"/>
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
@@ -316,7 +316,7 @@ const characterAnimation = {
           onClick={() => setActiveTab(tab)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
             activeTab === tab
-              ? "bg-green-600 text-white shadow"
+              ? "bg-green-600 text-gray-900 shadow"
               : "bg-white text-green-700 hover:bg-green-200"
           }`}
         >
