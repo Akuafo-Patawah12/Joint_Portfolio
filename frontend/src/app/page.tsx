@@ -277,7 +277,7 @@ const characterAnimation = {
   </div>
 
   {/* CTA Button */}
-  <button aria-label="Get in touch" className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition">
+  <button aria-label="Get in touch" className="w-full  sm:w-auto px-4 py-2 rounded-xl bg-green-500 text-gray-900 text-sm font-semibold hover:bg-green-600 transition">
     Get in Touch
   </button>
 </div>
@@ -316,7 +316,7 @@ const characterAnimation = {
           onClick={() => setActiveTab(tab)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
             activeTab === tab
-              ? "bg-green-600 text-gray-900 shadow"
+              ? "bg-green-500 text-gray-900 shadow"
               : "bg-white text-green-700 hover:bg-green-200"
           }`}
         >
