@@ -9,21 +9,7 @@ import { BadgeCheck,Star } from 'lucide-react';
 import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 import useDarkMode from "./(components)/Theme";
-import code_bg from "./assets/code_bg.svg"
-import cursor from "./assets/cursor.svg"
-import figma from "./assets/figma.svg"
-import code from "./assets/code.svg"
-import cloud from "./assets/cloud.svg"
-import get_started from "./assets/get_started.svg"
-import mobile_code from "./assets/mobile_code.svg"
-import cloud_stars from "./assets/cloud_stars.svg"
-import consult from "./assets/consult.svg"
-import ecommerce from "./assets/ecommerce.svg"
-import Linkicon from "./assets/Linkicon.svg"
-import wavy from "./assets/wavy.svg"
-import ui from "./assets/ui.svg"
-import innovative_solutions from "./assets/innovative_solutions.svg";
-import client_centric from "./assets/client_centric.svg";
+
 
 export default function Home() {
 
@@ -158,33 +144,33 @@ const characterAnimation = {
       title: "Web Development",
       description:
         "Custom websites, portals, and web apps built for performance and scalability.",
-      icon: code,
+      icon: "/assets/code.svg",
     },
     {
       title: "Mobile App Development",
       description: "iOS and Android apps with stunning UI and seamless UX.",
-      icon: mobile_code,
+      icon: "/assets/mobile_code.svg",
     },
     {
       title: "UI/UX Design",
       description: "User-first product design that converts and engages.",
-      icon: figma,
+      icon: "/assets/figma.svg",
     },
     {
       title: "Cloud Solutions",
       description: "Scalable cloud architecture and DevOps pipelines.",
-      icon: cloud,
+      icon: "/assets/cloud.svg",
     },
     {
       title: "E-commerce Development",
       description: "Custom online stores and third-party integrations.",
-      icon: ecommerce,
+      icon: "/assets/ecommerce.svg",
     },
     {
       title: "Technical Consulting",
       description:
         "Guidance on digital transformation and modern tech stack decisions.",
-      icon: consult,
+      icon: "/assets/consult.svg",
     },
   ];
 
@@ -229,7 +215,7 @@ const characterAnimation = {
       <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-100" :""} rounded-2xl  z-10 flex items-center gap-3`}>
         {
          idx=== 2 && (
-          <Image src={cursor} alt="cursor" className="absolute right-[10px] top-9 -translate-y-1/2 w-5 h-5 " />
+          <Image src="/assets/cursor.svg" alt="cursor" className="absolute right-[10px] top-9 -translate-y-1/2 w-5 h-5 " />
         ) 
         }
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
@@ -247,7 +233,7 @@ const characterAnimation = {
   </button>
 
   <Image
-    src={wavy}
+    src="/assets/wavy.svg"
     alt="wavy"
     width={100}
     height={300}
@@ -258,8 +244,8 @@ const characterAnimation = {
 
 
           <div className=" relative hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
-          <Image src={get_started} alt="get started"  className=" absolute top-5 right-10 size-7 z-4"/>
-           <Image src={code_bg} alt="bg" width={300} height={300} priority className="mx-auto"/>
+          <Image src="/assets/get_started.svg" alt="get started"  className=" absolute top-5 right-10 size-7 z-4"/>
+           <Image src="/assets/code_bg.svg" alt="bg" width={300} height={300} priority className="mx-auto"/>
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
@@ -364,7 +350,7 @@ const characterAnimation = {
               key={index}
               className="rounded-2xl overflow-hidden relative border border-stone-200 bg-gray-50  p-6 shadow hover:shadow-lg transition"
             >
-              <Image src={cloud_stars} alt={"cloud_stars"} width={100} height={100} className="absolute top-0 right-0 l" />
+              <Image src="/assets/cloud_stars.svg" alt={"cloud_stars"} width={100} height={100} className="absolute top-0 right-0 l" />
               <Image src={service.icon} alt={"image" + index} className="text-4xl  mb-4 p-4 border-2 border-green-400 rounded-full" />
               <h3 className="text-xl font-semibold text-gray-800  mb-2">
                 {service.title}
@@ -380,7 +366,7 @@ const characterAnimation = {
 
 
             <div className="w-[90%] mx-auto">
-            <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
+            <Image src="/assets/ui.svg" alt="ui" width={300} height={300} className="w-full"/>
             </div>
 
             <div className="flex w-[90%] mx-auto gap-4 mt-20 mb-30 items-center">
@@ -396,12 +382,12 @@ const characterAnimation = {
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
               <section className="glowing-border border1">
-                <Image src={innovative_solutions} alt="innovative solutions" width={100} height={100} className="w-30 h-30 mx-auto mb-3" />
+                <Image src="/assets/innovative_solutions.svg" alt="innovative solutions" width={100} height={100} className="w-30 h-30 mx-auto mb-3" />
                 <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
                 <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
               </section>
               <section className="glowing-border">
-                <Image src={client_centric} alt="client centric" width={100} height={100} className="w-30 h-30 mx-auto mb-3" />
+                <Image src="/assets/client_centric.svg" alt="client centric" width={100} height={100} className="w-30 h-30 mx-auto mb-3" />
                 <h3 className="text-xl font-semibold mb-3">Client-Centric Approach</h3>
                 <p>Your vision drives our development. We collaborate closely with you to understand your goals and exceed your expectations.</p>
               </section>
@@ -550,7 +536,7 @@ const characterAnimation = {
             >
               Contact Now
               <Image
-                src={Linkicon}
+                src="/assets/Linkicon.svg"
                 width={20}
                 height={20}
                 alt="link"

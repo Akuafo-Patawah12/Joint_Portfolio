@@ -7,7 +7,7 @@ import Image from "next/image"
 import  { useAppDispatch,useAppSelector } from "../redux";
 import {  setIsSidebarCollapsed } from "@/state";
 import { usePathname } from "next/navigation"; 
-import logo from "../assets/logo.svg"
+
 
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
         >
           
           <Link href="/" className="flex text-stone-500">
-            <Image src={logo} alt="parcch logo" width={100} height={100} className="h-full"/>
+            <Image src="/assets/logo.svg" alt="parcch logo" width={100} height={100} className="h-full"/>
           </Link>
         </motion.h2>
         
