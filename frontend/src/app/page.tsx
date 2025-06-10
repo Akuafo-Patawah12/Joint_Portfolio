@@ -21,6 +21,8 @@ import ecommerce from "./assets/ecommerce.svg"
 import Linkicon from "./assets/Linkicon.svg"
 import wavy from "./assets/wavy.svg"
 import ui from "./assets/ui.svg"
+import innovative_solutions from "./assets/innovative_solutions.svg";
+import client_centric from "./assets/client_centric.svg";
 
 export default function Home() {
 
@@ -388,10 +390,12 @@ const characterAnimation = {
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
               <section className="glowing-border border1">
+                <Image src={innovative_solutions} alt="innovative solutions" width={100} height={100} className="w-20 h-20 mx-auto mb-3" />
                 <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
                 <p>We harness cutting-edge technologies to deliver scalable, secure, and future-ready software tailored to your business needs.</p>
               </section>
               <section className="glowing-border">
+                <Image src={client_centric} alt="client centric" width={100} height={100} className="w-20 h-20 mx-auto mb-3" />
                 <h3 className="text-xl font-semibold mb-3">Client-Centric Approach</h3>
                 <p>Your vision drives our development. We collaborate closely with you to understand your goals and exceed your expectations.</p>
               </section>
