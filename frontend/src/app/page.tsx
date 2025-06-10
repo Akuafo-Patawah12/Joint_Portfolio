@@ -215,7 +215,7 @@ const characterAnimation = {
       <li key={idx} className={`relative ${idx=== 2 ? "bg-stone-100" :""} rounded-2xl  z-10 flex items-center gap-3`}>
         {
          idx=== 2 && (
-          <Image src="/assets/cursor.svg" alt="cursor" className="absolute right-[10px] top-9 -translate-y-1/2 w-5 h-5 " />
+          <Image src="/assets/cursor.svg" alt="cursor" width={100} height={300} className="absolute right-[10px] top-9 -translate-y-1/2 w-5 h-5 " />
         ) 
         }
         <div className="grid place-items-center size-8 rounded-full shadow border border-green-300 bg-green-50 text-green-600">
