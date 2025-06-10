@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./(components)/Header"
 import Footer from "./(components)/Footer"
@@ -68,6 +67,20 @@ export default function RootLayout({
   
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Parcch",
+              alternateName: "Parcch Tech Solutions",
+              url: "https://www.parcch.com",
+            }),
+          }}
+        />
+      </head>
       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
