@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState,useEffect } from "react";
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck,Star } from 'lucide-react';
+
 
 
 import { Mail, Phone,Server, MapPin,Cloud,Code,PenTool, Rocket } from "lucide-react";
@@ -382,10 +383,15 @@ const characterAnimation = {
             <Image src={ui} alt="ui" width={300} height={300} className="w-full"/>
             </div>
 
-            
-            <h2 className="text-4xl mt-20 font-bold text-slate-900 mb-10  text-center relative pb-2 after:content-[''] after:block after:w-16 after:h-1 after:mx-auto after:mt-2 after:bg-gradient-to-r after:from-indigo-500 after:to-blue-500 after:rounded">Why Choose Parcch</h2>
-
-
+            <div className="flex w-[90%] mx-auto gap-4 mt-20 mb-30 items-center">
+            <section className="w-[90%] mx-auto text-center">
+              <h2 className="text-xl  font-bold text-slate-900 mb-2  text-center relative pb-2 ">Why Choose Parcch</h2>
+              <p className="text-slate-700">We deliver smart, user-focused digital solutions with modern tech and a commitment to real results.</p>
+            </section>
+            <section>
+               <Star size={25} className="text-yellow-500" />
+            </section>
+            </div>
             <div className="relative">
               <section className="w-[90%] border-2 border-green-400 rounded-t-2xl absolute h-[110%] left-1/2 top-1/2 -translate-1/2"></section>
               
