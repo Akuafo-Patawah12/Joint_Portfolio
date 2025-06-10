@@ -385,7 +385,7 @@ const characterAnimation = {
 
             <div className="flex w-[90%] mx-auto gap-4 mt-20 mb-30 items-center">
             <section className="w-[90%] mx-auto text-center">
-              <h2 className="text-xl  font-bold text-slate-900 mb-2  text-center relative pb-2 ">Why Choose Parcch</h2>
+              <h2 className="text-xl  font-bold text-slate-900 mb-2  text-center relative pb-2 ">Why Choose Parcch..?</h2>
               <p className="text-slate-700">We deliver smart, user-focused digital solutions with modern tech and a commitment to real results.</p>
             </section>
             <section>
