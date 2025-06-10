@@ -249,7 +249,7 @@ const characterAnimation = {
   <Image
     src={wavy}
     alt="wavy"
-    width={300}
+    width={100}
     height={300}
     priority
     className="absolute left-0 bottom-0 w-full pointer-events-none select-none"
