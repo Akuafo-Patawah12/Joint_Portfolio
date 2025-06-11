@@ -56,7 +56,7 @@ body {
   --surface: white;
   position: relative;
   padding: 8rem 3rem;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   width: 91%;
   margin-block: 3rem;
  
