@@ -244,8 +244,8 @@ const characterAnimation = {
 
 
           <div className=" relative hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
-          <Image src="/assets/get_started.svg" alt="get started" width={100} height={300}  className=" absolute top-5 w-4/5 right-10 size-7 z-4"/>
-           <Image src="/assets/code_bg.svg" alt="bg" width={200} height={300} priority className="mx-auto w-4/5 aspect-video"/>
+          <Image src="/assets/get_started.svg" alt="get started" width={100} height={300}  className=" absolute top-5 right-10 size-7 z-4"/>
+           <Image src="/assets/code_bg.svg" alt="bg" width={200} height={300} priority className="mx-auto w-full aspect-video"/>
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
@@ -350,7 +350,7 @@ const characterAnimation = {
               key={index}
               className="rounded-2xl overflow-hidden relative border border-stone-200 bg-gray-50  p-6 shadow hover:shadow-lg transition"
             >
-              <Image src="/assets/cloud_stars.svg" alt={"cloud_stars"} width={100} height={100} className="absolute top-0 right-0 l" />
+              <Image src="/assets/cloud_stars.svg" alt={"cloud_stars"} width={60} height={60} className="absolute top-0 right-0 l" />
               <Image src={service.icon} alt={"image" + index} width={100} height={100} className="text-4xl  mb-4 p-4 border-2 border-green-400 rounded-full" />
               <h3 className="text-xl font-semibold text-gray-800  mb-2">
                 {service.title}
