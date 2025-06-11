@@ -244,8 +244,8 @@ const characterAnimation = {
 
 
           <div className=" relative hero h-10 w-full flex flex-col gep-4 items-center justify-center lg:w-1/2">
-          <Image src="/assets/get_started.svg" alt="get started" width={100} height={300}  className=" absolute top-5 right-10 size-7 z-4"/>
-           <Image src="/assets/code_bg.svg" alt="bg" width={100} height={300} priority className="mx-auto"/>
+          <Image src="/assets/get_started.svg" alt="get started" width={100} height={300}  className=" absolute top-5 w-4/5 right-10 size-7 z-4"/>
+           <Image src="/assets/code_bg.svg" alt="bg" width={200} height={300} priority className="mx-auto w-4/5 aspect-video"/>
           <div className="flex flex-col sm:flex-row sm:justify-between items-center bg-white p-4 w-[95%] max-w-2xl shadow-2xl border border-green-300 rounded-2xl gap-4">
   {/* Icon Buttons */}
   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 w-full sm:w-auto">
