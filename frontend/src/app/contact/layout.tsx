@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact – Parcch Tech Solutions",
   description: "Get in touch with Parcch Tech Solutions. We’re here to help with your web, mobile, and tech solution needs.",
+  alternates: {
+    canonical: "https://parcch.com/contact",
+  },
   openGraph: {
     title: "Contact – Parcch Tech Solutions",
     description: "Reach out to Parcch Tech Solutions for inquiries, support, or partnerships.",

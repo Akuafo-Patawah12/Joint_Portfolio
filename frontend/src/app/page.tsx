@@ -235,7 +235,7 @@ const characterAnimation = {
   <Image
     src="/assets/wavy.svg"
     alt="wavy"
-    width={100}
+    width={90}
     height={300}
     priority
     className="absolute left-0 bottom-0 w-full pointer-events-none select-none"
