@@ -30,7 +30,7 @@ export default function About () {
                          
 
 
-                <h1 className="text-4xl font-bold text-center mb-6">About us</h1>
+                <h1 className="text-4xl max-w-[90%] mx-auto font-bold text-center mb-6">About Parcch – Web & Mobile Solutions Experts</h1>
                 <section className="mb-8">
     
     <p>
