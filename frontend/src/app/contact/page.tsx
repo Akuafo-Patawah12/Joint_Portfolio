@@ -63,7 +63,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-9">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-15 mb-9">
             Let&apos;s Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
