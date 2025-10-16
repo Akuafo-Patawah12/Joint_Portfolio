@@ -17,15 +17,15 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(null);
+  const [isError, setIsError] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit =  async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(null);
+    setIsError("");
     setLoading(true);
 
     if (!name || !email || !message) {
-      setError("All fields are required.");
+      setIsError("All fields are required.");
       setLoading(false);
       return;
     }
@@ -40,7 +40,7 @@ export default function Contact() {
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.error || "Something went wrong. Please try again.");
+        setIsError(data.error || "Something went wrong. Please try again.");
         return;
       }
 
@@ -52,7 +52,7 @@ export default function Contact() {
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       console.error("Error sending message:", err);
-      setError("Failed to send message. Please try again later.");
+      setIsError("Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -68,11 +68,11 @@ export default function Contact() {
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Let's Create Something
+            Let&apos;s Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're here to help with anything tech. Reach out and let's turn your ideas into reality.
+            We&apos;re here to help with anything tech. Reach out and let&apos;s turn your ideas into reality.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
-              <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you shortly.</p>
+              <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
 
               {success && (
                 <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
@@ -161,9 +161,9 @@ export default function Contact() {
                 </div>
               )}
 
-              {error && (
+              {isError && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
-                  <p className="text-red-800 text-sm">{error}</p>
+                  <p className="text-red-800 text-sm">{isError}</p>
                 </div>
               )}
 
@@ -208,7 +208,7 @@ export default function Contact() {
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  onClick={(e)=>handleSubmit(e)}
                   disabled={loading}
                   className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >

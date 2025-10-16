@@ -35,11 +35,15 @@ export default function About() {
     { icon: <Lightbulb className="w-6 h-6" />, title: "Tech Consultancy", desc: "Expert advice for technology growth" }
   ];
 
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const toggleItem = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+
+
+  const toggleItem = (index: number | null) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-slate-50">
@@ -179,7 +183,7 @@ export default function About() {
                 Ready to Transform Your Digital Presence?
               </h2>
               <p className="text-green-50 text-lg mb-8">
-                Let's work together to build something amazing.
+                Let&apos;s work together to build something amazing.
               </p>
               <a 
                 href="/contact"

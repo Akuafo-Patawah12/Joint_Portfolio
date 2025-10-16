@@ -315,10 +315,10 @@ export default function Home() {
           {/* Left CTA */}
           <div className="text-white space-y-8">
             <h2 className="text-5xl font-black leading-tight">
-              Got an idea?<br />Let's bring it to life!
+              Got an idea?<br />Let&apos;s bring it to life!
             </h2>
             <p className="text-xl text-white/90 leading-relaxed">
-              Whether you have a project in mind, a business proposal, or just want to say hello—we'd love to hear from you!
+              Whether you have a project in mind, a business proposal, or just want to say hello—we&apos;d love to hear from you!
             </p>
             <div className="flex gap-4">
               <button className="px-8 py-4 bg-white text-emerald-600 rounded-2xl font-bold hover:bg-slate-100 transition-all duration-300 hover:scale-105 shadow-xl">
