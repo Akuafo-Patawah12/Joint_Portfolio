@@ -7,23 +7,25 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouseMove);
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+ useEffect(() => {
+  const handleScroll = () => setScrollY(window.scrollY);
+
+  const handleMouseMove = (e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("mousemove", handleMouseMove);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("mousemove", handleMouseMove);
+  };
+}, []);
+
 
   const renderContent = () => {
-    const content = {
+    const content: Record<string, { title: string; text: string }> = {
       tab1: {
         title: "About Us",
         text: "Parcch is a forward-thinking technology startup dedicated to building cutting-edge digital solutions. We specialize in web development, mobile applications, and API integrations that empower businesses in an ever-evolving digital landscape."

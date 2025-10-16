@@ -208,7 +208,7 @@ export default function Contact() {
                 </div>
 
                 <button
-                  onClick={(e)=>handleSubmit(e)}
+                  onClick={(e)=>handleSubmit}
                   disabled={loading}
                   className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
