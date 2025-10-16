@@ -1,17 +1,10 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BadgeCheck, Star, Mail, Phone, MapPin, Cloud, Code, PenTool, Rocket, Server, ArrowRight, Sparkles, Zap, Shield, Users, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("tab1");
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const renderContent = () => {
     const content: Record<string, { title: string; text: string }> = {
@@ -25,7 +18,7 @@ export default function Home() {
       },
       tab3: {
         title: "Our Vision",
-        text: "Our vision is to be a leading tech startup, known for innovation, reliability, and cutting-edge solutions. We're redefining the digital space by pushing boundaries and delivering transformative technologies."
+        text: "Our vision is to be a leading tech startup, known for innovation, reliability, and cutting-edge solutions. We&apos;re redefining the digital space by pushing boundaries and delivering transformative technologies."
       }
     };
 
@@ -262,7 +255,7 @@ export default function Home() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Whether you have a project in mind, a business proposal, or just want to say hello—we'd love to hear from you.
+                Whether you have a project in mind, a business proposal, or just want to say hello—we&apos;d love to hear from you.
               </p>
               <div className="flex gap-4">
                 <button className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors">
