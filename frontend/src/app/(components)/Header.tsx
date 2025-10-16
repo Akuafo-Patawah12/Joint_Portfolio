@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const [isDark, setIsDark] = useState(false);
+  
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
   
@@ -144,19 +144,7 @@ export default function Header() {
               <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-white" />
             </button>
 
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className="p-2.5 rounded-xl bg-gradient-to-br from-amber-100 to-orange-100 hover:from-amber-200 hover:to-orange-200 text-amber-600 transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm"
-              aria-label="Toggle theme"
-            >
-              <motion.div
-                initial={false}
-                animate={{ rotate: isDark ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {isDark ? <Moon size={18} /> : <Sun size={18} />}
-              </motion.div>
-            </button>
+            
 
             <button
               className="lg:hidden p-2.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-600 transition-all duration-300 hover:scale-105 active:scale-95"

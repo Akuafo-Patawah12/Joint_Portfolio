@@ -62,12 +62,8 @@ export default function Contact() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="bg-emerald-100 text-emerald-700 text-sm font-semibold px-4 py-2 rounded-full">
-              Get In Touch
-            </span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-9">
             Let&apos;s Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
