@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import { BadgeCheck, Star, Mail, Phone, MapPin, Cloud, Code, PenTool, Rocket, Server, ArrowRight, Sparkles, Zap, Shield, Users } from "lucide-react";
-
+import Image from "next/image";
 export default function Home() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [scrollY, setScrollY] = useState(0);
@@ -335,7 +335,15 @@ export default function Home() {
           {/* Right Contact Card */}
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <div className="text-center mb-8">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 mx-auto mb-4 shadow-xl"></div>
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 mx-auto mb-4 shadow-xl">
+                <Image
+                  src="/me.jpg"
+                  alt="Picture of me"
+                  width={200}
+                  height={200}
+                  className="rounded-xl"
+                />
+              </div>
               <h3 className="text-2xl font-bold text-slate-900">Akuafo Patawah</h3>
               <p className="text-slate-600">Tech & Customer Support</p>
             </div>
