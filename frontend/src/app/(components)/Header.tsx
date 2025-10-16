@@ -1,6 +1,6 @@
 'use client';
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Sun, Moon, Menu, Search, Bell } from "lucide-react";
+import {  Menu, Search, Bell } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useAppDispatch, useAppSelector } from "../redux";
