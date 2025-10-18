@@ -64,7 +64,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
             Let us Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
@@ -195,7 +195,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Akuafo Patawah"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
@@ -208,7 +208,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="patawah@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
