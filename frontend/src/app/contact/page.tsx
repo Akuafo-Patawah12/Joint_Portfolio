@@ -250,10 +250,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-16 text-center">
-          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Parcch. All rights reserved.</p>
-        </div>
+        
       </div>
     </div>
   );
