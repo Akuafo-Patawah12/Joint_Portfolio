@@ -61,19 +61,13 @@ export default function Contact() {
     <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        
-
-        <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
-            Let&apos;s Create Something
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Get in Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We&apos;re here to help with anything tech. Reach out and let&apos;s turn your ideas into reality.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have a question or want to work together? We'd love to hear from you.
           </p>
-        </div>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">
@@ -175,7 +169,7 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
               <h2 className="text-2xl font-semibold text-gray-900 mb-2">Send us a Message</h2>
-              <p className="text-gray-600 mb-8 text-sm">Fill out the form and we'll get back to you within 24 hours.</p>
+              <p className="text-gray-600 mb-8 text-sm">Fill out the form and we&apos;ll get back to you within 24 hours.</p>
 
               {success && (
                 <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center gap-3">
@@ -252,7 +246,10 @@ export default function Contact() {
           </div>
         </div>
 
-        
+        {/* Footer */}
+        <div className="mt-16 text-center">
+          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Parcch. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
