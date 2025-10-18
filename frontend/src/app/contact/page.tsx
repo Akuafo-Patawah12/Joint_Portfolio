@@ -64,7 +64,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
             Let us Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
 
             {/* Dark Social Card */}
-            <div className="bg-gray-900 rounded-xl p-6 shadow-sm text-white">
+            <div className="bg-gray-800 rounded-xl p-6 shadow-sm text-white">
               <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
               <p className="text-gray-400 mb-6 text-sm">Follow us on social media for updates</p>
               <div className="flex flex-col gap-3">
@@ -171,26 +171,26 @@ export default function Contact() {
 
           {/* Right Column - Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">Send us a Message</h2>
-              <p className="text-gray-600 mb-8 text-sm">Fill out the form and we will get back to you within 24 hours.</p>
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
+              <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
 
               {success && (
-                <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center gap-3">
+                <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
                   <CheckCircle2 className="text-emerald-600" size={20} />
-                  <p className="text-emerald-800 text-sm font-medium">Message sent successfully!</p>
+                  <p className="text-emerald-800 font-medium">Message sent successfully!</p>
                 </div>
               )}
 
               {isError && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
                   <p className="text-red-800 text-sm">{isError}</p>
                 </div>
               )}
 
-              <div className="space-y-5">
+              <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Full Name
                   </label>
                   <input
@@ -198,12 +198,12 @@ export default function Contact() {
                     placeholder="John Doe"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all text-gray-900"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Email Address
                   </label>
                   <input
@@ -211,27 +211,27 @@ export default function Contact() {
                     placeholder="john@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all text-gray-900"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Your Message
                   </label>
                   <textarea
-                    placeholder="Tell us about your project or inquiry..."
+                    placeholder="Tell us about your project..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all resize-none text-gray-900"
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 resize-none text-gray-900"
                   />
                 </div>
 
                 <button
                   onClick={handleSubmit}
                   disabled={loading}
-                  className="w-full bg-gray-900 text-white py-3.5 rounded-lg font-medium hover:bg-gray-800 active:bg-gray-950 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <>
@@ -240,14 +240,15 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      <Send size={18} />
+                      <Send size={20} />
                       Send Message
                     </>
                   )}
                 </button>
               </div>
             </div>
-          </div>
+            </div>
+          
         </div>
 
         
