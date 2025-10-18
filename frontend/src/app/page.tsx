@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
       <div className="bg-white border border-slate-200 rounded-lg p-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">{current.title}</h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">{current.title}</h2>
         <p className="text-slate-600 text-lg leading-relaxed">{current.text}</p>
       </div>
     );
@@ -56,12 +56,12 @@ export default function Home() {
                 <span className="text-sm font-medium text-emerald-400">Trusted Technology Partner</span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl lg:text-6xl font-bold leading-tight">
                 Building Digital Solutions That Drive Growth
               </h1>
               
-              <p className="text-xl text-slate-300 leading-relaxed">
-                End-to-end technology services tailored to your business—from product design to scalable system architecture.
+              <p className="text-lg text-slate-300 leading-relaxed">
+                End-to-end technology services tailored to your business from product design to scalable system architecture.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -147,7 +147,7 @@ export default function Home() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2.5 rounded-lg font-medium transition-all ${
+                className={`px-4 py-2.5 rounded-lg font-medium transition-all lg:px-6 ${
                   activeTab === tab
                     ? "bg-slate-900 text-white"
                     : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
@@ -314,11 +314,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-sm text-slate-400">© 2024 Parcch. All rights reserved.</p>
-        </div>
-      </footer>
+      
     </main>
   );
 }
