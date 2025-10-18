@@ -19,8 +19,7 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [isError, setIsError] = useState("");
 
-  const handleSubmit =  async () => {
-    
+  const handleSubmit = async () => {
     setIsError("");
     setLoading(true);
 
@@ -59,11 +58,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        
+
+        <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-15 mb-9">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mt-13 mb-9">
             Let&apos;s Create Something
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600"> Amazing</span>
           </h1>
@@ -71,101 +74,125 @@ export default function Contact() {
             We&apos;re here to help with anything tech. Reach out and let&apos;s turn your ideas into reality.
           </p>
         </div>
+        </div>
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">
+          {/* Left Column - Contact Info */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Details</h2>
+            {/* Contact Details Card */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+              <h2 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h2>
               
-              <div className="space-y-6">
-                <div className="group flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                    <Phone size={20} className="text-white" />
+              <div className="space-y-5">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-11 h-11 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <Phone size={18} className="text-gray-700" strokeWidth={2} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-500 mb-1">Phone</p>
-                    <p className="text-gray-900 font-semibold">+233 201 623 251</p>
+                    <p className="text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide">Phone</p>
+                    <p className="text-gray-900 font-medium">+233 201 623 251</p>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                    <Mail size={20} className="text-white" />
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-11 h-11 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <Mail size={18} className="text-gray-700" strokeWidth={2} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-500 mb-1">Email</p>
-                    <p className="text-gray-900 font-semibold">parcch26@gmail.com</p>
+                    <p className="text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide">Email</p>
+                    <p className="text-gray-900 font-medium">parcch26@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                    <MapPin size={20} className="text-white" />
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-11 h-11 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <MapPin size={18} className="text-gray-700" strokeWidth={2} />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-500 mb-1">Location</p>
-                    <p className="text-gray-900 font-semibold">Segico Flat, Community 4<br />Tema, Ghana</p>
+                    <p className="text-xs font-medium text-gray-500 mb-1 uppercase tracking-wide">Location</p>
+                    <p className="text-gray-900 font-medium">Segico Flat, Community 4<br />Tema, Ghana</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-8 shadow-lg text-white">
-              <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-              <p className="text-emerald-50 mb-6 text-sm">Stay connected on social media</p>
-              <div className="flex flex-wrap gap-3">
+            {/* Dark Social Card */}
+            <div className="bg-gray-900 rounded-xl p-6 shadow-sm text-white">
+              <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
+              <p className="text-gray-400 mb-6 text-sm">Follow us on social media for updates</p>
+              <div className="flex flex-col gap-3">
                 <a 
                   href="https://www.facebook.com/AkuafoPatawah" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-sm font-medium"
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-3 rounded-lg transition-colors border border-white/10"
                 >
-                  <Facebook size={18} className="text-blue-600" />
-                  Facebook
+                  <Facebook size={18} className="text-blue-500" />
+                  <span className="text-sm font-medium">Facebook</span>
                 </a>
                 <a 
                   href="https://www.instagram.com/akuafopatawah/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-sm font-medium"
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-3 rounded-lg transition-colors border border-white/10"
                 >
-                  <Instagram size={18} className="text-pink-600" />
-                  Instagram
+                  <Instagram size={18} className="text-pink-500" />
+                  <span className="text-sm font-medium">Instagram</span>
                 </a>
                 <a 
                   href="/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-sm font-medium"
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 px-4 py-3 rounded-lg transition-colors border border-white/10"
                 >
-                  <Youtube size={18} className="text-red-600" />
-                  YouTube
+                  <Youtube size={18} className="text-red-500" />
+                  <span className="text-sm font-medium">YouTube</span>
                 </a>
+              </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Monday - Friday</span>
+                  <span className="text-gray-900 font-medium">9:00 AM - 6:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Saturday</span>
+                  <span className="text-gray-900 font-medium">10:00 AM - 4:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Sunday</span>
+                  <span className="text-gray-900 font-medium">Closed</span>
+                </div>
               </div>
             </div>
           </div>
 
+          {/* Right Column - Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
-              <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-2">Send us a Message</h2>
+              <p className="text-gray-600 mb-8 text-sm">Fill out the form and we'll get back to you within 24 hours.</p>
 
               {success && (
-                <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
+                <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center gap-3">
                   <CheckCircle2 className="text-emerald-600" size={20} />
-                  <p className="text-emerald-800 font-medium">Message sent successfully!</p>
+                  <p className="text-emerald-800 text-sm font-medium">Message sent successfully!</p>
                 </div>
               )}
 
               {isError && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <p className="text-red-800 text-sm">{isError}</p>
                 </div>
               )}
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
                   </label>
                   <input
@@ -173,12 +200,12 @@ export default function Contact() {
                     placeholder="John Doe"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all text-gray-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
                   <input
@@ -186,27 +213,27 @@ export default function Contact() {
                     placeholder="john@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all text-gray-900"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
                     Your Message
                   </label>
                   <textarea
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about your project or inquiry..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-colors duration-300 resize-none text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all resize-none text-gray-900"
                   />
                 </div>
 
                 <button
                   onClick={handleSubmit}
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gray-900 text-white py-3.5 rounded-lg font-medium hover:bg-gray-800 active:bg-gray-950 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                 >
                   {loading ? (
                     <>
@@ -215,7 +242,7 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      <Send size={20} />
+                      <Send size={18} />
                       Send Message
                     </>
                   )}
@@ -225,13 +252,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 text-gray-500 text-sm">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-gray-300"></div>
-            <span>Powered by Parcch</span>
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-gray-300"></div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

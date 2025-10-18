@@ -255,7 +255,7 @@ export default function Home() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Whether you have a project in mind, a business proposal, or just want to say hello—we&apos;d love to hear from you.
+                Whether you have a project in mind, a business proposal, or just want to say hello we&apos;d love to hear from you.
               </p>
               <div className="flex gap-4">
                 <button className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors">

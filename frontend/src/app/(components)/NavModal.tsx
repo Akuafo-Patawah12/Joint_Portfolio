@@ -42,7 +42,7 @@ const NavModal = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
+      className={`fixed z-60 inset-0 z-40 md:hidden transition-all duration-300 ${
         isSidebarCollapsed ? 'pointer-events-none' : 'pointer-events-auto'
       }`}
     >
@@ -56,7 +56,7 @@ const NavModal = () => {
 
       {/* Main Modal Container */}
       <div
-        className={`absolute bottom-0 left-0 w-full h-[82vh] transform transition-transform duration-400 ease-out ${
+        className={`absolute z-60 bottom-0 left-0 w-full h-[82vh] transform transition-transform duration-400 ease-out ${
           isSidebarCollapsed ? 'translate-y-full' : 'translate-y-0'
         }`}
       >
